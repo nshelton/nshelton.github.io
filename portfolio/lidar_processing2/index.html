@@ -16,11 +16,12 @@
 
   <link href="https://nshelton.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
-
+ 
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=DM+Mono&family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Major+Mono+Display&display=swap" rel="stylesheet">
 
  
 
@@ -147,7 +148,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/wave">
-          <li class="">wave 8 </li>
+          <li class="">wave 9 </li>
         </a>
       
         
@@ -211,29 +212,29 @@ if (!doNotTrack) {
          <pageTitle>LiDAR Processing pt.2</pageTitle>
          <h3>Mar 2016</h3>
          <p>more experiments in point cloud reconstruction</p>
-<p><img src="/assets/img/lidar2/capitol.jpg" alt="laplacian">
+<p><img src="/img/lidar2/capitol.jpg" alt="laplacian">
 [Texas State Capitol in Austin]</p>
 <p>Issues from last time :</p>
 <h2 id="tile-artifacts">Tile Artifacts</h2>
-<p><img src="/assets/img/lidar2/seam0.jpg" alt="seam0">
+<p><img src="/img/lidar2/seam0.jpg" alt="seam0">
 [Bottom side of mesh]</p>
 <p>First off tried to classify the edges of a mesh and remove the outer shell parts. That&rsquo;s a ton of triangles I could save!</p>
-<p><img src="/assets/img/lidar2/seam1.jpg" alt="seam1">
-<img src="/assets/img/lidar2/seam2.jpg" alt="seam2"></p>
+<p><img src="/img/lidar2/seam1.jpg" alt="seam1">
+<img src="/img/lidar2/seam2.jpg" alt="seam2"></p>
 <p>Then started doing a k - nearest neighbors search between neighboring meshes, and try to tesselate those. But because these has been decimated the vertices were irregular leading to inconsistent merging.</p>
 <p>I started using pyMesh Boolean operator like so</p>
 <p>merged = pymesh.boolean(f1, f2, operation=&quot;union&rdquo;)</p>
 <p>which usually merged tiles with minimal artifacts! As long as there was enough overlap in the tiles.</p>
-<p><img src="/assets/img/lidar2/merge1.jpg" alt="seam1">
-<img src="/assets/img/lidar2/merge2.jpg" alt="seam1"></p>
+<p><img src="/img/lidar2/merge1.jpg" alt="seam1">
+<img src="/img/lidar2/merge2.jpg" alt="seam1"></p>
 <h2 id="parametric-box-fitting-to-the-volume-or-the-point-set">Parametric box fitting! (to the volume or the point set)</h2>
 <p>this could greatly compress the mesh, and allow me to classify points as trees or buildings! then do other cool stuff?</p>
 <p>This was a little ambitious! maybe next time&hellip;</p>
 <h2 id="better-ao">Better AO</h2>
-<p><img src="/assets/img/lidar2/ao.jpg" alt="ao">
+<p><img src="/img/lidar2/ao.jpg" alt="ao">
 [Congress Ave in Downtown Austin, Texas]</p>
 <p>Why reinvent the wheel! I have reconstructions to do! Actually I found a pretty sweet AO generator. The tile artifacts totally destoryed the mesh topology so the UV wrapping didn&rsquo;t work the best, and took forever. But pretty useful tool if you have a decent mesh ! Check out <a href="http://github.prideout.net/">prideout</a>&lsquo;s  <a href="https://github.com/prideout/aobaker">aobaker</a></p>
-<p><img src="/assets/img/lidar2/thumb.jpg" alt="seam1"></p>
+<p><img src="/img/lidar2/thumb.jpg" alt="seam1"></p>
 <h2 id="diferent-subjects">Diferent subjects</h2>
 <ul>
 <li>GeoTiff are way easier to process into a mesh, because they already have a regular grid and you basically just have to create two triangles for each pixel connecting the neighbors, and set each point to the value of the pixel. No volumes necessary. But i&rsquo;d like to do create visualizations of a lot of different cities.</li>
@@ -245,20 +246,20 @@ if (!doNotTrack) {
 <h2 id="other-stuff-i-started-looking-into">Other stuff I started looking into:</h2>
 <h2 id="improved-volume-filtering">Improved Volume filtering</h2>
 <p>The objective here is to get maximum detail, smooth interpolation, no gaps, etc. I came up with a few techniques, each with their pros and cons.</p>
-<p><img src="/assets/img/lidar/blur.jpg" alt="gaussian"></p>
+<p><img src="/img/lidar/blur.jpg" alt="gaussian"></p>
 <h1 id="low-pass--isotropic-diffusion">Low pass / Isotropic Diffusion</h1>
 <p>Basically take each point in the volume and make it fill a sphere somehow. To accomplish this, I mark cells that a point lands in with a very high number. Then run a 3D gaussian blur on the volume. This keeps my field mostly continuous, so reconstructing the isosurface is smooth.</p>
-<p><img src="/assets/img/lidar2/laplacian.jpg" alt="laplacian"></p>
+<p><img src="/img/lidar2/laplacian.jpg" alt="laplacian"></p>
 <h1 id="anisotropic-diffusion">Anisotropic Diffusion</h1>
 <p>The Gaussian is one solution to the heat equation, but we don&rsquo;t want to blur edges, so we should weight the gaussian by the gradient.
 I implemented this wrong using the laplacian early on and moved on. Gave me some weird patterns inside the volume when I ran marching cubes. This is probably part of the optimal solution, but it still doesn&rsquo;t fill holes. I will revisit this with the right equation next time &hellip;</p>
-<p><img src="/assets/img/lidar2/merge3.jpg" alt="seam1">
+<p><img src="/img/lidar2/merge3.jpg" alt="seam1">
 [capturing individual water pipes at UT Austin campus]</p>
 <h1 id="dilation-erosion">Dilation-Erosion</h1>
 <p>This is what I finally came up with, which does fill holes, but leaves some blocky artifacts. This could possibly be improved by changing the morphological operator, but can&rsquo;t be removed entirely.</p>
 <p>The idea is to create the grid at a much higher sample rate than the points are. Then do the same grid filling with the points you have. There will be tons of gaps where points didn&rsquo;t happen to land, but you just dilate the whole volume, and then erode it the same amount.</p>
 <p>I got some really sick detail using this technique. Probably, you want to then blur this high-res grid after that, i just didn&rsquo;t get that far. Maybe the Anisotropic Diffusion comes in handy here</p>
-<p><img src="/assets/img/lidar2/glitch.jpg" alt="seam1"></p>
+<p><img src="/img/lidar2/glitch.jpg" alt="seam1"></p>
 <h2 id="decimation-glitches">decimation glitches!</h2>
 <p>Turns out if you are using floats to store lat and lon, the open source decimator I was using kind of craps itself in some kind of precision thing. Looks cool though. My workaround was, take the mesh and translate it so the center is at the origin, run the decimator, and then apply the same inverse translation when finished. This caused me some headaches though, since if my program crashed or I force-quit then I could have model chunks in different fraes of reference D:</p>
 <h2 id="conclusion">Conclusion</h2>
@@ -295,22 +296,22 @@ I implemented this wrong using the laplacian early on and moved on. Gave me some
   
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
         <div class="box-masonry">
-              <a href="https://nshelton.github.io/portfolio/atlanta/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/atlanta/thumb.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/portfolio/tweet/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/tweet/thumbnail.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/portfolio/atlanta/">Atlanta </a></h4>
+              <h4><a href="https://nshelton.github.io/portfolio/tweet/">tweet</a></h4>
             </div>
         </div>
     </div>
   
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
         <div class="box-masonry">
-              <a href="https://nshelton.github.io/portfolio/tweet/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/tweet/thumbnail.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/portfolio/atlanta/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/atlanta/thumb.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/portfolio/tweet/">tweet</a></h4>
+              <h4><a href="https://nshelton.github.io/portfolio/atlanta/">Atlanta </a></h4>
             </div>
         </div>
     </div>

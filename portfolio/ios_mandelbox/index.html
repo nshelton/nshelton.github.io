@@ -16,11 +16,12 @@
 
   <link href="https://nshelton.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
-
+ 
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=DM+Mono&family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Major+Mono+Display&display=swap" rel="stylesheet">
 
  
 
@@ -147,7 +148,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/wave">
-          <li class="">wave 8 </li>
+          <li class="">wave 9 </li>
         </a>
       
         
@@ -211,7 +212,7 @@ if (!doNotTrack) {
          <pageTitle>iOS mandelbox raymarcher</pageTitle>
          <h3>Aug 2016</h3>
          <p>Mobile fractal visualizer</p>
-<p><img src="/img/iOSShaders/header.jpg" alt="feedback diagram"></p>
+<p><img src="/img/iosshaders/header.jpg" alt="feedback diagram"></p>
 <h2 id="towards-realtime-mobile-raytracing-">Towards realtime mobile raytracing</h2>
 <p>This was an experiment, after using <a href="https://developer.apple.com/reference/scenekit">SceneKit</a> for the Bridge Engine at Occipital in iOS, to see what I could do with solely a <a href="https://developer.apple.com/reference/scenekit/scntechnique">SCNTechnique</a>, full-frame shader. I was really inspired by this talk by Tim Lottes about filtering methods for realtime raymarching. What kind of quality could be achieved on an iPhone6 ?</p>
 
@@ -226,7 +227,7 @@ if (!doNotTrack) {
 <li>full-resolution reconstruction filter with temporal antialiasing</li>
 <li>postprocessing shader (chromatic aberration here)</li>
 </ul>
-<p><img src="/img/iOSShaders/FractalFeedback.jpg" alt="feedback diagram"></p>
+<p><img src="/img/iosshaders/fractalfeedback.jpg" alt="feedback diagram"></p>
 <h2 id="reconstruction-">Reconstruction</h2>
 <p>This shows what is going on every frame, with shaders in boxes and buffers in parallelograms. I&rsquo;ll briefly describe the reconstruction algorithm here. Whenever each low-resolution raymarch is computed, we treat this as an <em>observation</em> and integrate it into the <em>model</em> using backprojection.</p>
 <p>For every pixel in the reconstruction:</p>
@@ -247,7 +248,7 @@ if (!doNotTrack) {
 </li>
 </ul>
 <p>So the result is that you do a quarter of the work (half-res trace) but because you&rsquo;re reconstructing at full res, you get some automatic motion blur from the feedback, and the jittering means that the noise gets evened out and the image converges pretty quickly. I need to tweak the thresholds and weights, but I was happy with the results.</p>
-<p><img src="/img/iOSShaders/TAA.jpg" alt="feedback  ">
+<p><img src="/img/iosshaders/taa.jpg" alt="feedback  ">
 this kind of just looks like a blur here. best results come while moving the camera.</p>
 <h2 id="gallery-">Gallery</h2>
 <p>all screengrabs from my iPhone6. Not all are realtime&hellip; frame rates displayed</p>
