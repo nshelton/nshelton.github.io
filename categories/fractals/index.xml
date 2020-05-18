@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fractals on SHELTRON</title>
-    <link>https://sheltron.netlify.com/categories/fractals/</link>
+    <link>https://nshelton.github.io/categories/fractals/</link>
     <description>Recent content in fractals on SHELTRON</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Feb 2020 00:13:37 -0706</lastBuildDate>
     
-	<atom:link href="https://sheltron.netlify.com/categories/fractals/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nshelton.github.io/categories/fractals/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fractal Path Tracer</title>
-      <link>https://sheltron.netlify.com/portfolio/fractalpathtracing/</link>
+      <link>https://nshelton.github.io/portfolio/fractalpathtracing/</link>
       <pubDate>Thu, 20 Feb 2020 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/fractalpathtracing/</guid>
+      <guid>https://nshelton.github.io/portfolio/fractalpathtracing/</guid>
       <description>I decided to take my fractal rendering to the NEXT LEVEL by implementing a simple compute shader path tracer in unity.
 Code Mostly Lifted from Three Eyed Games tutorial
 Source Code on github
@@ -26,10 +26,10 @@ Renders </description>
     
     <item>
       <title>Ṛta</title>
-      <link>https://sheltron.netlify.com/portfolio/rta/</link>
+      <link>https://nshelton.github.io/portfolio/rta/</link>
       <pubDate>Sat, 30 Dec 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/rta/</guid>
+      <guid>https://nshelton.github.io/portfolio/rta/</guid>
       <description>Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive
   Ṛta is the principle of natural order which regulates and coordinates the operation of the universe and everything within it. In the hymns of the Vedas, Ṛta is described as that which is ultimately responsible for the proper functioning of the natural, moral and sacrificial orders.
 I am excited to share the next version of the FORM fractal visualizer, using a new compute shader surface calculation and rendering architecture.</description>
@@ -37,46 +37,46 @@ I am excited to share the next version of the FORM fractal visualizer, using a n
     
     <item>
       <title>3D Web Fest</title>
-      <link>https://sheltron.netlify.com/portfolio/3dwebfest/</link>
+      <link>https://nshelton.github.io/portfolio/3dwebfest/</link>
       <pubDate>Fri, 30 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/3dwebfest/</guid>
+      <guid>https://nshelton.github.io/portfolio/3dwebfest/</guid>
       <description>&lt;p&gt;Live performance at 3D web fest&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>FORM 0.0 beta</title>
-      <link>https://sheltron.netlify.com/portfolio/form/</link>
+      <link>https://nshelton.github.io/portfolio/form/</link>
       <pubDate>Sun, 11 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/form/</guid>
+      <guid>https://nshelton.github.io/portfolio/form/</guid>
       <description>&lt;p&gt;Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>artandvr</title>
-      <link>https://sheltron.netlify.com/portfolio/artandvr/</link>
+      <link>https://nshelton.github.io/portfolio/artandvr/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/artandvr/</guid>
+      <guid>https://nshelton.github.io/portfolio/artandvr/</guid>
       <description>&lt;p&gt;Art and VR at HACK TEMPLE and The New Parish with Gaslamp Killer&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LEVELS</title>
-      <link>https://sheltron.netlify.com/portfolio/levels/</link>
+      <link>https://nshelton.github.io/portfolio/levels/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/levels/</guid>
+      <guid>https://nshelton.github.io/portfolio/levels/</guid>
       <description>&lt;p&gt;webgl audio-reactive iterative function system&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>iOS mandelbox raymarcher</title>
-      <link>https://sheltron.netlify.com/portfolio/ios_mandelbox/</link>
+      <link>https://nshelton.github.io/portfolio/ios_mandelbox/</link>
       <pubDate>Wed, 10 Aug 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/ios_mandelbox/</guid>
+      <guid>https://nshelton.github.io/portfolio/ios_mandelbox/</guid>
       <description>&lt;p&gt;Mobile fractal visualizer&lt;/p&gt;</description>
     </item>
     

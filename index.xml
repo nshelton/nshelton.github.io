@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SHELTRON</title>
-    <link>https://sheltron.netlify.com/</link>
+    <link>https://nshelton.github.io/</link>
     <description>Recent content on SHELTRON</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Feb 2020 00:13:37 -0706</lastBuildDate>
     
-	<atom:link href="https://sheltron.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nshelton.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fractal Path Tracer</title>
-      <link>https://sheltron.netlify.com/portfolio/fractalpathtracing/</link>
+      <link>https://nshelton.github.io/portfolio/fractalpathtracing/</link>
       <pubDate>Thu, 20 Feb 2020 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/fractalpathtracing/</guid>
+      <guid>https://nshelton.github.io/portfolio/fractalpathtracing/</guid>
       <description>I decided to take my fractal rendering to the NEXT LEVEL by implementing a simple compute shader path tracer in unity.
 Code Mostly Lifted from Three Eyed Games tutorial
 Source Code on github
@@ -26,10 +26,10 @@ Renders </description>
     
     <item>
       <title>Rap Word Cloud</title>
-      <link>https://sheltron.netlify.com/portfolio/wordcloud/</link>
+      <link>https://nshelton.github.io/portfolio/wordcloud/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/wordcloud/</guid>
+      <guid>https://nshelton.github.io/portfolio/wordcloud/</guid>
       <description>An Optimisaiton Journey. Client : Rap Research Lab
 Rendering 5000 TextMeshPro meshes in 1ms for an interactive VR word cloudI started with a naive 5000 TextMeshPro gameobjects, which could take 30ms CPU and GPU, and made a new system that took 1ms CPU and GPU and still looked dope.
 FunctionalityInteractive 3D visualization of words used in a corpus of rap lyrics (See Part 1)
@@ -38,10 +38,10 @@ Interface Features Left Thumb button transitions from Globe View to Word Cloud 
     
     <item>
       <title>Lindsey Stirling</title>
-      <link>https://sheltron.netlify.com/portfolio/lindsey/</link>
+      <link>https://nshelton.github.io/portfolio/lindsey/</link>
       <pubDate>Mon, 26 Aug 2019 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/lindsey/</guid>
+      <guid>https://nshelton.github.io/portfolio/lindsey/</guid>
       <description>   Testing the suit! It didn&amp;rsquo;t work very well with the arms
 IK constraints to make hands match violin (because all the mocap is live we can&amp;rsquo;t touch it up!)
 Team  sheltron : technical director, mocap daniel sierra - unity technical artist aaron lemke - unity artist show director dare matheson - VFX, characters, environments mike krentz - art direction  </description>
@@ -49,28 +49,28 @@ Team  sheltron : technical director, mocap daniel sierra - unity technical artis
     
     <item>
       <title>REZZ</title>
-      <link>https://sheltron.netlify.com/portfolio/rezz/</link>
+      <link>https://nshelton.github.io/portfolio/rezz/</link>
       <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/rezz/</guid>
+      <guid>https://nshelton.github.io/portfolio/rezz/</guid>
       <description>&lt;p&gt;Beyond the Senses EP release&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>T-Pain</title>
-      <link>https://sheltron.netlify.com/portfolio/tpain/</link>
+      <link>https://nshelton.github.io/portfolio/tpain/</link>
       <pubDate>Sat, 01 Jun 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/tpain/</guid>
+      <guid>https://nshelton.github.io/portfolio/tpain/</guid>
       <description>&lt;p&gt;T-Pain&amp;rsquo;s School of Business feature at The Wave&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Light - Kizuna AI / W&amp;W</title>
-      <link>https://sheltron.netlify.com/portfolio/kizuna/</link>
+      <link>https://nshelton.github.io/portfolio/kizuna/</link>
       <pubDate>Sun, 10 Mar 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/kizuna/</guid>
+      <guid>https://nshelton.github.io/portfolio/kizuna/</guid>
       <description>At the Wave VR we made a Music video for Internationally renown producers DJs W&amp;amp;W for their musical collaboration with japanese vtuber Kizuna Ai.
   We had to make this in like a week or two, so we Here&amp;rsquo;s some Unity Workflow Documentation:
 Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly kitbash assets and copious Unity postprocessing Kitbash Neo Tokyo Animation Data The Kizuna mesh and mesh came straight from Activ8 in MikuMikuDance format</description>
@@ -78,64 +78,64 @@ Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly k
     
     <item>
       <title>FractalFlames</title>
-      <link>https://sheltron.netlify.com/portfolio/fractalflames/</link>
+      <link>https://nshelton.github.io/portfolio/fractalflames/</link>
       <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/fractalflames/</guid>
+      <guid>https://nshelton.github.io/portfolio/fractalflames/</guid>
       <description>&lt;p&gt;Fractal Flames&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Magfest VJ</title>
-      <link>https://sheltron.netlify.com/portfolio/magfest/</link>
+      <link>https://nshelton.github.io/portfolio/magfest/</link>
       <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/magfest/</guid>
+      <guid>https://nshelton.github.io/portfolio/magfest/</guid>
       <description>&lt;p&gt;Super MagFest 2019 DJ battle&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>OP-Z</title>
-      <link>https://sheltron.netlify.com/portfolio/op-z/</link>
+      <link>https://nshelton.github.io/portfolio/op-z/</link>
       <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/op-z/</guid>
+      <guid>https://nshelton.github.io/portfolio/op-z/</guid>
       <description>&lt;p&gt;Unity Visuals pack for OP-Z multimedia synthesizer&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Imogen Heap</title>
-      <link>https://sheltron.netlify.com/portfolio/imogenheap/</link>
+      <link>https://nshelton.github.io/portfolio/imogenheap/</link>
       <pubDate>Thu, 23 Aug 2018 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/imogenheap/</guid>
+      <guid>https://nshelton.github.io/portfolio/imogenheap/</guid>
       <description>&lt;p&gt;VR Volumetric Music Video Experience for Imogen Heap&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>See Without Eyes</title>
-      <link>https://sheltron.netlify.com/portfolio/seewithouteyes/</link>
+      <link>https://nshelton.github.io/portfolio/seewithouteyes/</link>
       <pubDate>Thu, 21 Jun 2018 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/seewithouteyes/</guid>
+      <guid>https://nshelton.github.io/portfolio/seewithouteyes/</guid>
       <description>&lt;p&gt;Interactive VR Music video Experience&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ready Player One</title>
-      <link>https://sheltron.netlify.com/portfolio/rpo/</link>
+      <link>https://nshelton.github.io/portfolio/rpo/</link>
       <pubDate>Fri, 09 Mar 2018 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/rpo/</guid>
+      <guid>https://nshelton.github.io/portfolio/rpo/</guid>
       <description>&lt;p&gt;Making of TheWaveVR&amp;rsquo;s Distracted Globe&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ṛta</title>
-      <link>https://sheltron.netlify.com/portfolio/rta/</link>
+      <link>https://nshelton.github.io/portfolio/rta/</link>
       <pubDate>Sat, 30 Dec 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/rta/</guid>
+      <guid>https://nshelton.github.io/portfolio/rta/</guid>
       <description>Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive
   Ṛta is the principle of natural order which regulates and coordinates the operation of the universe and everything within it. In the hymns of the Vedas, Ṛta is described as that which is ultimately responsible for the proper functioning of the natural, moral and sacrificial orders.
 I am excited to share the next version of the FORM fractal visualizer, using a new compute shader surface calculation and rendering architecture.</description>
@@ -143,64 +143,64 @@ I am excited to share the next version of the FORM fractal visualizer, using a n
     
     <item>
       <title>3D Flying Lotus Visuals</title>
-      <link>https://sheltron.netlify.com/portfolio/flylo/</link>
+      <link>https://nshelton.github.io/portfolio/flylo/</link>
       <pubDate>Sun, 23 Jul 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/flylo/</guid>
+      <guid>https://nshelton.github.io/portfolio/flylo/</guid>
       <description>&lt;p&gt;3D Visuals content for Flying Lotus and Strangeloop Studios&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AKTUAL</title>
-      <link>https://sheltron.netlify.com/portfolio/aktual/</link>
+      <link>https://nshelton.github.io/portfolio/aktual/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/aktual/</guid>
+      <guid>https://nshelton.github.io/portfolio/aktual/</guid>
       <description>&lt;p&gt;ASH KOOSHA show in TheWaveVR&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GRIMECRAFT viz</title>
-      <link>https://sheltron.netlify.com/portfolio/grimecraft/</link>
+      <link>https://nshelton.github.io/portfolio/grimecraft/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/grimecraft/</guid>
+      <guid>https://nshelton.github.io/portfolio/grimecraft/</guid>
       <description>&lt;p&gt;VR Visuals in TheWaveVR&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>3D Web Fest</title>
-      <link>https://sheltron.netlify.com/portfolio/3dwebfest/</link>
+      <link>https://nshelton.github.io/portfolio/3dwebfest/</link>
       <pubDate>Fri, 30 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/3dwebfest/</guid>
+      <guid>https://nshelton.github.io/portfolio/3dwebfest/</guid>
       <description>&lt;p&gt;Live performance at 3D web fest&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>N-FOLD</title>
-      <link>https://sheltron.netlify.com/portfolio/nfold/</link>
+      <link>https://nshelton.github.io/portfolio/nfold/</link>
       <pubDate>Tue, 27 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/nfold/</guid>
+      <guid>https://nshelton.github.io/portfolio/nfold/</guid>
       <description>&lt;p&gt;Hyper-Dimensional Odyssey&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>FORM 0.0 beta</title>
-      <link>https://sheltron.netlify.com/portfolio/form/</link>
+      <link>https://nshelton.github.io/portfolio/form/</link>
       <pubDate>Sun, 11 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/form/</guid>
+      <guid>https://nshelton.github.io/portfolio/form/</guid>
       <description>&lt;p&gt;Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>TunnelTek</title>
-      <link>https://sheltron.netlify.com/portfolio/tunneltek/</link>
+      <link>https://nshelton.github.io/portfolio/tunneltek/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/tunneltek/</guid>
+      <guid>https://nshelton.github.io/portfolio/tunneltek/</guid>
       <description>&lt;div class=&#34;embed shadertoy&#34;&gt;
 &lt;iframe width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; src=&#34;https://www.shadertoy.com/embed/4dlBDn?gui=true&amp;t=10&amp;paused=true&amp;muted=false&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
@@ -211,238 +211,238 @@ I am excited to share the next version of the FORM fractal visualizer, using a n
     
     <item>
       <title>artandvr</title>
-      <link>https://sheltron.netlify.com/portfolio/artandvr/</link>
+      <link>https://nshelton.github.io/portfolio/artandvr/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/artandvr/</guid>
+      <guid>https://nshelton.github.io/portfolio/artandvr/</guid>
       <description>&lt;p&gt;Art and VR at HACK TEMPLE and The New Parish with Gaslamp Killer&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Conway&#39;s Life</title>
-      <link>https://sheltron.netlify.com/demos/life/</link>
+      <link>https://nshelton.github.io/demos/life/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/life/</guid>
+      <guid>https://nshelton.github.io/demos/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gray-Scott Reaction Diffusion</title>
-      <link>https://sheltron.netlify.com/demos/turing/</link>
+      <link>https://nshelton.github.io/demos/turing/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/turing/</guid>
+      <guid>https://nshelton.github.io/demos/turing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>julia set</title>
-      <link>https://sheltron.netlify.com/demos/julia/</link>
+      <link>https://nshelton.github.io/demos/julia/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/julia/</guid>
+      <guid>https://nshelton.github.io/demos/julia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mandelbox</title>
-      <link>https://sheltron.netlify.com/demos/mandelbox/</link>
+      <link>https://nshelton.github.io/demos/mandelbox/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/mandelbox/</guid>
+      <guid>https://nshelton.github.io/demos/mandelbox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mandelbulb</title>
-      <link>https://sheltron.netlify.com/demos/mandelbulb/</link>
+      <link>https://nshelton.github.io/demos/mandelbulb/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/mandelbulb/</guid>
+      <guid>https://nshelton.github.io/demos/mandelbulb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Navier-Stokes with vorticity confinement</title>
-      <link>https://sheltron.netlify.com/demos/jupe/</link>
+      <link>https://nshelton.github.io/demos/jupe/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/jupe/</guid>
+      <guid>https://nshelton.github.io/demos/jupe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raymarch Sketch</title>
-      <link>https://sheltron.netlify.com/demos/spherical/</link>
+      <link>https://nshelton.github.io/demos/spherical/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/spherical/</guid>
+      <guid>https://nshelton.github.io/demos/spherical/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reaction-Diffusion Fluid</title>
-      <link>https://sheltron.netlify.com/demos/rdfulid/</link>
+      <link>https://nshelton.github.io/demos/rdfulid/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/rdfulid/</guid>
+      <guid>https://nshelton.github.io/demos/rdfulid/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reaction-Diffusion Fluid 2</title>
-      <link>https://sheltron.netlify.com/demos/rdfulid2/</link>
+      <link>https://nshelton.github.io/demos/rdfulid2/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/rdfulid2/</guid>
+      <guid>https://nshelton.github.io/demos/rdfulid2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sierpinski&#39;s Triangle</title>
-      <link>https://sheltron.netlify.com/demos/sierpinski/</link>
+      <link>https://nshelton.github.io/demos/sierpinski/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/demos/sierpinski/</guid>
+      <guid>https://nshelton.github.io/demos/sierpinski/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Laser Cuts</title>
-      <link>https://sheltron.netlify.com/portfolio/laser/</link>
+      <link>https://nshelton.github.io/portfolio/laser/</link>
       <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/laser/</guid>
+      <guid>https://nshelton.github.io/portfolio/laser/</guid>
       <description>some laser cuts made at the Tech Shop in Austin Many designs from &amp;amp; inspired by George Hart
 {&amp;lt;gallery &amp;ldquo;sculpture/thumbnail&amp;quot;&amp;gt;}</description>
     </item>
     
     <item>
       <title>Paintings</title>
-      <link>https://sheltron.netlify.com/portfolio/watercolor/</link>
+      <link>https://nshelton.github.io/portfolio/watercolor/</link>
       <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/watercolor/</guid>
+      <guid>https://nshelton.github.io/portfolio/watercolor/</guid>
       <description>&lt;p&gt;Some paintings I did in high school &amp;amp; college&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sketchbook </title>
-      <link>https://sheltron.netlify.com/portfolio/sketchbook0/</link>
+      <link>https://nshelton.github.io/portfolio/sketchbook0/</link>
       <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/sketchbook0/</guid>
+      <guid>https://nshelton.github.io/portfolio/sketchbook0/</guid>
       <description>My sketchbook from 2009
 </description>
     </item>
     
     <item>
       <title>Sketchbook 2</title>
-      <link>https://sheltron.netlify.com/portfolio/sketchbook1/</link>
+      <link>https://nshelton.github.io/portfolio/sketchbook1/</link>
       <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/sketchbook1/</guid>
+      <guid>https://nshelton.github.io/portfolio/sketchbook1/</guid>
       <description>My sketchbook from 2013
 </description>
     </item>
     
     <item>
       <title>occipital bridge</title>
-      <link>https://sheltron.netlify.com/portfolio/bridge/</link>
+      <link>https://nshelton.github.io/portfolio/bridge/</link>
       <pubDate>Wed, 21 Dec 2016 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/bridge/</guid>
+      <guid>https://nshelton.github.io/portfolio/bridge/</guid>
       <description>&lt;p&gt;Mobile mixed reality graphics&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>COLORS</title>
-      <link>https://sheltron.netlify.com/portfolio/colors/</link>
+      <link>https://nshelton.github.io/portfolio/colors/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/colors/</guid>
+      <guid>https://nshelton.github.io/portfolio/colors/</guid>
       <description>&lt;p&gt;Audio-reactive LED wall Installation with Alex Stickels. Shown at &amp;lsquo;The Art of Dying&amp;rsquo; at The Laundry SF&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LEVELS</title>
-      <link>https://sheltron.netlify.com/portfolio/levels/</link>
+      <link>https://nshelton.github.io/portfolio/levels/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/levels/</guid>
+      <guid>https://nshelton.github.io/portfolio/levels/</guid>
       <description>&lt;p&gt;webgl audio-reactive iterative function system&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>iOS mandelbox raymarcher</title>
-      <link>https://sheltron.netlify.com/portfolio/ios_mandelbox/</link>
+      <link>https://nshelton.github.io/portfolio/ios_mandelbox/</link>
       <pubDate>Wed, 10 Aug 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/ios_mandelbox/</guid>
+      <guid>https://nshelton.github.io/portfolio/ios_mandelbox/</guid>
       <description>&lt;p&gt;Mobile fractal visualizer&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LiDAR Processing</title>
-      <link>https://sheltron.netlify.com/portfolio/lidar_processing/</link>
+      <link>https://nshelton.github.io/portfolio/lidar_processing/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/lidar_processing/</guid>
+      <guid>https://nshelton.github.io/portfolio/lidar_processing/</guid>
       <description>&lt;p&gt;surface reconstruction from point clouds&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LiDAR Processing pt.2</title>
-      <link>https://sheltron.netlify.com/portfolio/lidar_processing2/</link>
+      <link>https://nshelton.github.io/portfolio/lidar_processing2/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/lidar_processing2/</guid>
+      <guid>https://nshelton.github.io/portfolio/lidar_processing2/</guid>
       <description>&lt;p&gt;more experiments in point cloud reconstruction&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>this._node</title>
-      <link>https://sheltron.netlify.com/portfolio/this._node/</link>
+      <link>https://nshelton.github.io/portfolio/this._node/</link>
       <pubDate>Fri, 20 Nov 2015 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/this._node/</guid>
+      <guid>https://nshelton.github.io/portfolio/this._node/</guid>
       <description>&lt;p&gt;Interactive Facebook Graph Visualization&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>capyac</title>
-      <link>https://sheltron.netlify.com/portfolio/capyac/</link>
+      <link>https://nshelton.github.io/portfolio/capyac/</link>
       <pubDate>Tue, 13 Oct 2015 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/capyac/</guid>
+      <guid>https://nshelton.github.io/portfolio/capyac/</guid>
       <description>&lt;p&gt;Live performance of Audio-Reactive Shaders&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Atlanta </title>
-      <link>https://sheltron.netlify.com/portfolio/atlanta/</link>
+      <link>https://nshelton.github.io/portfolio/atlanta/</link>
       <pubDate>Sat, 18 Jul 2015 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/atlanta/</guid>
+      <guid>https://nshelton.github.io/portfolio/atlanta/</guid>
       <description>&lt;p&gt;geospatial vertex shader&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>tweet</title>
-      <link>https://sheltron.netlify.com/portfolio/tweet/</link>
+      <link>https://nshelton.github.io/portfolio/tweet/</link>
       <pubDate>Sat, 18 Jul 2015 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/tweet/</guid>
+      <guid>https://nshelton.github.io/portfolio/tweet/</guid>
       <description>&lt;p&gt;visual tweet and population density visualization&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Synesthesia</title>
-      <link>https://sheltron.netlify.com/portfolio/synesthesia/</link>
+      <link>https://nshelton.github.io/portfolio/synesthesia/</link>
       <pubDate>Sat, 16 May 2015 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/synesthesia/</guid>
+      <guid>https://nshelton.github.io/portfolio/synesthesia/</guid>
       <description>realtime reactive VJ software
 Gravity Current&amp;rsquo;s Synesthesia In June 2015 I worked with Gravity Current on their new Synesthesia software for live reactive visuals. For this project I created two &amp;ldquo;Scenes&amp;rdquo; that played at a couple of shows in Austin:
 Looper&amp;rsquo;s night @ Strange Brew Featured my reaction diffusion system ported to C++ OpenGL with a render-to-texture feedback loop for simulation. This was a sweet event not only because of all the talented musicians, but we were able to get MIDI data from the loop pedals into Synesthesia and trigger different layers based on which loops were going.</description>
@@ -450,10 +450,10 @@ Looper&amp;rsquo;s night @ Strange Brew Featured my reaction diffusion system po
     
     <item>
       <title>Lynx Laboratories</title>
-      <link>https://sheltron.netlify.com/portfolio/lynx/</link>
+      <link>https://nshelton.github.io/portfolio/lynx/</link>
       <pubDate>Sat, 01 Feb 2014 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/lynx/</guid>
+      <guid>https://nshelton.github.io/portfolio/lynx/</guid>
       <description>First realtime mobile 3D scanner
 This product was a fully mobile device (box) that could do real-time 3D scanning totally on the device. No cloud or offline processing.
 Back at UT I joined a research group called the UT Perception lab. There we worked on realtime 3D reconstruction techniques using GPU processing. I helped implement Kinect Fusion in CUDA, a CUDA raytracer for scanning volume visualizaiton and other 3D reconstruction techniques using heightmaps on manifolds.</description>
@@ -461,10 +461,10 @@ Back at UT I joined a research group called the UT Perception lab. There we work
     
     <item>
       <title>OpenSWR</title>
-      <link>https://sheltron.netlify.com/portfolio/openswr/</link>
+      <link>https://nshelton.github.io/portfolio/openswr/</link>
       <pubDate>Sat, 01 Feb 2014 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/openswr/</guid>
+      <guid>https://nshelton.github.io/portfolio/openswr/</guid>
       <description>Low-level OpenGL driver development
 video: isosurface extraction and realtime rendering of a shit ton of triangles on a xeon phi cluster (no GPUs!)
 In 2015 I contracted for Intel&amp;rsquo;s visualization department on an OpenGL driver optimised for many-core intel supercomputer clusters. With that many CPUs, you can treat the network as a GPU, with each core doing some work in a Tile-Based Deferred Rendering (TBDR) pipeline. This was built on the Mesa3D graphics library and greatly improved frame rates on certain systems compared to the built in software renderer in Mesa3D (llvmpipe).</description>

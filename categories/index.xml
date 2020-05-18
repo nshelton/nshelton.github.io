@@ -2,147 +2,147 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on SHELTRON</title>
-    <link>https://sheltron.netlify.com/categories/</link>
+    <link>https://nshelton.github.io/categories/</link>
     <description>Recent content in Categories on SHELTRON</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Feb 2020 00:13:37 -0706</lastBuildDate>
     
-	<atom:link href="https://sheltron.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nshelton.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>fractals</title>
-      <link>https://sheltron.netlify.com/categories/fractals/</link>
+      <link>https://nshelton.github.io/categories/fractals/</link>
       <pubDate>Thu, 20 Feb 2020 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/fractals/</guid>
+      <guid>https://nshelton.github.io/categories/fractals/</guid>
       <description></description>
     </item>
     
     <item>
       <title>unity</title>
-      <link>https://sheltron.netlify.com/categories/unity/</link>
+      <link>https://nshelton.github.io/categories/unity/</link>
       <pubDate>Thu, 20 Feb 2020 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/unity/</guid>
+      <guid>https://nshelton.github.io/categories/unity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ml</title>
-      <link>https://sheltron.netlify.com/categories/ml/</link>
+      <link>https://nshelton.github.io/categories/ml/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/ml/</guid>
+      <guid>https://nshelton.github.io/categories/ml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vr</title>
-      <link>https://sheltron.netlify.com/categories/vr/</link>
+      <link>https://nshelton.github.io/categories/vr/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/vr/</guid>
+      <guid>https://nshelton.github.io/categories/vr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vj</title>
-      <link>https://sheltron.netlify.com/categories/vj/</link>
+      <link>https://nshelton.github.io/categories/vj/</link>
       <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/vj/</guid>
+      <guid>https://nshelton.github.io/categories/vj/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wave</title>
-      <link>https://sheltron.netlify.com/categories/wave/</link>
+      <link>https://nshelton.github.io/categories/wave/</link>
       <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/wave/</guid>
+      <guid>https://nshelton.github.io/categories/wave/</guid>
       <description></description>
     </item>
     
     <item>
       <title>webgl</title>
-      <link>https://sheltron.netlify.com/categories/webgl/</link>
+      <link>https://nshelton.github.io/categories/webgl/</link>
       <pubDate>Fri, 30 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/webgl/</guid>
+      <guid>https://nshelton.github.io/categories/webgl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>demo</title>
-      <link>https://sheltron.netlify.com/categories/demo/</link>
+      <link>https://nshelton.github.io/categories/demo/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/demo/</guid>
+      <guid>https://nshelton.github.io/categories/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>installation</title>
-      <link>https://sheltron.netlify.com/categories/installation/</link>
+      <link>https://nshelton.github.io/categories/installation/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/installation/</guid>
+      <guid>https://nshelton.github.io/categories/installation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ar</title>
-      <link>https://sheltron.netlify.com/categories/ar/</link>
+      <link>https://nshelton.github.io/categories/ar/</link>
       <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/ar/</guid>
+      <guid>https://nshelton.github.io/categories/ar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>art</title>
-      <link>https://sheltron.netlify.com/categories/art/</link>
+      <link>https://nshelton.github.io/categories/art/</link>
       <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/art/</guid>
+      <guid>https://nshelton.github.io/categories/art/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mobile</title>
-      <link>https://sheltron.netlify.com/categories/mobile/</link>
+      <link>https://nshelton.github.io/categories/mobile/</link>
       <pubDate>Wed, 21 Dec 2016 00:13:37 -0706</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/mobile/</guid>
+      <guid>https://nshelton.github.io/categories/mobile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>3DScanning</title>
-      <link>https://sheltron.netlify.com/categories/3dscanning/</link>
+      <link>https://nshelton.github.io/categories/3dscanning/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/3dscanning/</guid>
+      <guid>https://nshelton.github.io/categories/3dscanning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dataviz</title>
-      <link>https://sheltron.netlify.com/categories/dataviz/</link>
+      <link>https://nshelton.github.io/categories/dataviz/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/dataviz/</guid>
+      <guid>https://nshelton.github.io/categories/dataviz/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://sheltron.netlify.com/categories/python/</link>
+      <link>https://nshelton.github.io/categories/python/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/categories/python/</guid>
+      <guid>https://nshelton.github.io/categories/python/</guid>
       <description></description>
     </item>
     

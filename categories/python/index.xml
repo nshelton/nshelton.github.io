@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on SHELTRON</title>
-    <link>https://sheltron.netlify.com/categories/python/</link>
+    <link>https://nshelton.github.io/categories/python/</link>
     <description>Recent content in python on SHELTRON</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Mar 2016 20:32:03 -0800</lastBuildDate>
     
-	<atom:link href="https://sheltron.netlify.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nshelton.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>LiDAR Processing</title>
-      <link>https://sheltron.netlify.com/portfolio/lidar_processing/</link>
+      <link>https://nshelton.github.io/portfolio/lidar_processing/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/lidar_processing/</guid>
+      <guid>https://nshelton.github.io/portfolio/lidar_processing/</guid>
       <description>&lt;p&gt;surface reconstruction from point clouds&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LiDAR Processing pt.2</title>
-      <link>https://sheltron.netlify.com/portfolio/lidar_processing2/</link>
+      <link>https://nshelton.github.io/portfolio/lidar_processing2/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://sheltron.netlify.com/portfolio/lidar_processing2/</guid>
+      <guid>https://nshelton.github.io/portfolio/lidar_processing2/</guid>
       <description>&lt;p&gt;more experiments in point cloud reconstruction&lt;/p&gt;</description>
     </item>
     
