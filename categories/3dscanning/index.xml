@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3DScanning on SHELTRON</title>
+    <link>https://sheltron.netlify.com/categories/3dscanning/</link>
+    <description>Recent content in 3DScanning on SHELTRON</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Mar 2016 20:32:03 -0800</lastBuildDate>
+    
+	<atom:link href="https://sheltron.netlify.com/categories/3dscanning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LiDAR Processing</title>
+      <link>https://sheltron.netlify.com/portfolio/lidar_processing/</link>
+      <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/lidar_processing/</guid>
+      <description>&lt;p&gt;surface reconstruction from point clouds&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LiDAR Processing pt.2</title>
+      <link>https://sheltron.netlify.com/portfolio/lidar_processing2/</link>
+      <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/lidar_processing2/</guid>
+      <description>&lt;p&gt;more experiments in point cloud reconstruction&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lynx Laboratories</title>
+      <link>https://sheltron.netlify.com/portfolio/lynx/</link>
+      <pubDate>Sat, 01 Feb 2014 20:32:03 -0800</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/lynx/</guid>
+      <description>First realtime mobile 3D scanner
+This product was a fully mobile device (box) that could do real-time 3D scanning totally on the device. No cloud or offline processing.
+Back at UT I joined a research group called the UT Perception lab. There we worked on realtime 3D reconstruction techniques using GPU processing. I helped implement Kinect Fusion in CUDA, a CUDA raytracer for scanning volume visualizaiton and other 3D reconstruction techniques using heightmaps on manifolds.</description>
+    </item>
+    
+  </channel>
+</rss>

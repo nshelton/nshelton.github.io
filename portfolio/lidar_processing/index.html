@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>LiDAR Processing</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="https://sheltron.netlify.com/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://sheltron.netlify.com/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://sheltron.netlify.com/css/owl.carousel.css">
+<link rel="stylesheet" href="https://sheltron.netlify.com/css/owl.theme.css">
+
+
+  <link href="https://sheltron.netlify.com/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=DM+Mono&family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://sheltron.netlify.com/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://sheltron.netlify.com/img/favicon.png">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26353276-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class=" col-sm-4 col-md-2 sidebar-offcanvas d-xs-block">
+    <br>
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading">
+      <a href="https://sheltron.netlify.com">
+        SHELTRON
+      </a> 
+    </h1>
+    <br>
+    <p class="social">
+  
+  
+  
+  <a href="https://twitter.com/Sheltron3030" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://www.instagram.com/nshelton" title="" class="external instagram">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  <a href="mailto:nshelton@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/ngshelton/" data-animate-hover="pulse" class="external">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+  <a href="https://github.com/nshelton" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+</p>
+
+    <br>
+
+    <ul class="sidebar-links">
+      
+        <a href="https://sheltron.netlify.com/about/">
+            <li>about/ </li>
+        </a> 
+      
+        <a href="https://sheltron.netlify.com/resources/">
+            <li>resources/ </li>
+        </a> 
+      
+        <a href="https://sheltron.netlify.com/portfolio/">
+            <li>portfolio/ </li>
+        </a> 
+      
+        <a href="https://sheltron.netlify.com/demos/">
+            <li>demos/ </li>
+        </a> 
+      
+    </ul>
+    <br>
+      
+
+    <ul class="sidebar-menu">
+      
+        
+        <a  href="/categories/unity">
+          <li class="">unity 19 </li>
+        </a>
+      
+        
+        <a  href="/categories/webgl">
+          <li class="">webgl 15 </li>
+        </a>
+      
+        
+        <a  href="/categories/vj">
+          <li class="">vj 12 </li>
+        </a>
+      
+        
+        <a  href="/categories/vr">
+          <li class="">vr 12 </li>
+        </a>
+      
+        
+        <a  href="/categories/demo">
+          <li class="">demo 10 </li>
+        </a>
+      
+        
+        <a  href="/categories/wave">
+          <li class="">wave 8 </li>
+        </a>
+      
+        
+        <a  href="/categories/fractals">
+          <li class="">fractals 7 </li>
+        </a>
+      
+        
+        <a  href="/categories/dataviz">
+          <li class="">dataviz 6 </li>
+        </a>
+      
+        
+        <a  href="/categories/art">
+          <li class="">art 4 </li>
+        </a>
+      
+        
+        <a  href="/categories/3dscanning">
+          <li class="">3dscanning 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/installation">
+          <li class="">installation 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/ml">
+          <li class="">ml 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/python">
+          <li class="">python 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/ar">
+          <li class="">ar 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/mobile">
+          <li class="">mobile 1 </li>
+        </a>
+      
+    </ul>
+
+
+  </div>
+</div>
+ 
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="row">
+
+<br><br><br>
+    <div class="col-lg-12">
+      <div class="content-column-content">
+         <pageTitle>LiDAR Processing</pageTitle>
+         <h3>Mar 2016</h3>
+         <p>surface reconstruction from point clouds</p>
+<p>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/ao.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/ao.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/blender.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/blender.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/blur.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/blur.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/dec.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/dec.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/gallery" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/gallery" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/gaps.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/gaps.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/marchingcubes.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/marchingcubes.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/meshlab.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/meshlab.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/originalmesh.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/originalmesh.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/points.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/points.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/smooth.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/smooth.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/snapshot00.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/snapshot00.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/snapshot01.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/snapshot01.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/snapshot02.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/snapshot02.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/snapshot03.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/snapshot03.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/triangulation.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/triangulation.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://sheltron.netlify.com/img/lidar/volume.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://sheltron.netlify.com/img/lidar/volume.jpg" class="img-fluid"/></a>
+
+
+Around Congress ave in Austin, TX</p>
+<h2 id="lidar-processing-experiments-">LiDAR Processing Experiments</h2>
+<p>Early 2016 I bought a LiDAR scan of all of Travis county! This seemed super cool, but visualizing it was hard since the only option is really just to color code based on elevation, because there&rsquo;s no information about surfaces. You could do some whack normal calculations based on neighboring points, but check out how erratic this sampling pattern is.</p>
+<p>Why are the points so close together? Was there an error in the processing? Why is there a little hole over there? Nobody knows. I need a technique that can handle this non-uniform sampling pattern.</p>
+<p><img src="/img/lidar/points.jpg" alt="lidar">
+Is this the best we can do???</p>
+<p>No! Let&rsquo;s do some 3D reconstruction.</p>
+<h2 id="3d-delaunay-triangulation">3D Delaunay triangulation</h2>
+<p>This is the most obvious thing to do, but the results weren&rsquo;t that great. And the elevation changes were so much bigger than the ground plane changes that I had to project all the points on the ground, do the triangulation in 2d, and then extend the point back up into the z dimension. So the results were super noisy because of this technique:</p>
+<p><img src="/img/lidar/triangulation.jpg" alt="lidar"></p>
+<h2 id="volumetric-grid-sampling-">Volumetric Grid sampling</h2>
+<p>Volumetric reconstruction techniques are very common because of the parallel nature of the processing and the simple algorithms. The downside is that you are storing data for the whole grid, which goes up cubically in the resolution of the reconstruction, limiting the size. Still, I don&rsquo;t really care because this is an offline algorithm and I can process the data in tiles. Probably the most famous technique for this is Kinect Fusion.</p>
+<p><img src="/img/lidar/volume.jpg" alt="lidar">
+<img src="/img/lidar/marchingCubes.jpg" alt="lidar">
+<img src="/img/lidar/gaps.jpg" alt="lidar">
+<img src="/img/lidar/smooth.jpg" alt="lidar"></p>
+<p>So I make 500x500x500 voxel cube array, and then partition the LiDAR points into chunks that are more or less 500x500 points. The goal is to sample the point cloud at as close to the same frequency as the LiDAR scan as possible so we don&rsquo;t lose any information, but still have enough to extract a surface from the volume. In the images above, the grid resolution was too small, so you can get volume cells that are empty, even on a surface!</p>
+<p>I didn&rsquo;t make a visualizer for the volume directly, since I knew I wanted to make a mesh anyways. I could do some cool parallel GPU ray marching but Marching Cubes is really fast so I just found some code to do that. At first the results weren&rsquo;t great but that brings us to</p>
+<h2 id="3d-volume-filtering-">3D Volume Filtering</h2>
+<p><img src="/img/lidar/blur.jpg" alt="lidar"></p>
+<p>I was getting a lot of noise in the data, with some gaps in between points or spurious readings around in the air. So I wanted to run a low-pass filter on the volume. This is equivalent to blurring an image in 2D, but instead I&rsquo;m blurring the &ldquo;density&rdquo; values in the volume in 3D. I started with a box filter but that made everything look really blocky. Ideally I want to do a gaussian. And, since the Gaussian Blur is separable, so I can run 3 1-dimensional blurs, with precomputed gaussian weights. I used a 5 tap blur.</p>
+<p>I also changed the point integration so that, for a given Lidar point, instead of just increasing the density of the cell it falls in to, it will increase the density of every cell beneath that cell. This assumes that every point is a</p>
+<h2 id="decimation-">Decimation</h2>
+<p><img src="/img/lidar/dec.jpg" alt="lidar"></p>
+<p>So now I have this super high quality mesh but I&rsquo;ve processed one city block and I have 60 million triangles or something stupid. See above, the marching cube output has a point one the corner of every volume cell. So I need to simplify the mesh with quadric edge-collapse decimation. This is named after the super brutal military discipline used in the Roman Army. The mesh processing is pretty brutal too. Except, I must be doing something wrong in Meshlab, or Meshlab kind of sucks. Don&rsquo;t get me wrong, I love Meshlab. But half of the tools don&rsquo;t work out of the box. I ended up using OpenMesh to do the decimation, using a Cinder app, and using their command line sample. I suspect this can be slightly improved by tweaking but I got great results out of the box.</p>
+<p><img src="/img/lidar/meshlab.jpg" alt="lidar">
+COM ON MESHLAB, YOU CALL THAT DECIMATION? MORE LIKE MASHED POTATOES</p>
+<h2 id="rendering-">Rendering</h2>
+<p>So we have a reasonably sized mesh, where we can load the whole thing into GPU memory and get a realtime frame rate. I&rsquo;ve always loved the visual from a good Ambient Occlusion effect, because it gives you a tremendous amount of spatial perception that you don&rsquo;t get with simple surface normal shading. Especially with cityscapes, this is really useful to make out small details. Similar to the way shadows work, our brains have been trained to process these subtle lighting cues to infer 3D structure. Just look at the difference! (using Blender)</p>
+<p><img src="/img/lidar/blender.jpg" alt="lidar"> 
+<img src="/img/lidar/ao.jpg" alt="lidar"></p>
+<p>In the future, I want to make a custom ambient occlusion implementation to make some really nice renders. Something like this genius technique described by Evan Wallace here. But first, I have to figure out how to parameterize the surface to build a texture map - and make sure the the sides of buildings have enough space in the map to get a shadow gradient up the side.</p>
+<h1 id="future-work-">Future Work</h1>
+<ul>
+<li>
+<p>There&rsquo;s still some obvious ugly grid lines as an artifact from my tile generation. I should clean the surface generation up and get the tiles to have the same vertices on edges so I can merge them.</p>
+</li>
+<li>
+<p>Parametric box fitting! (to the volume or the point set) this could greatly compress the mesh, and allow me to classify points as trees or buildings! then do other cool stuff?</p>
+</li>
+<li>
+<p>Custom ambient occlusion rendering</p>
+</li>
+<li>
+<p>Convert the rest of the scan!</p>
+</li>
+<li>
+<p>I downloaded a GeoTiff of LiDAR scan of downtown San Francisco - GeoTiff are way easier to process into a mesh, because they already have a regular grid and you basically just have to create two triangles for each pixel connecting the neighbors, and set each point to the value of the pixel. No volumes necessary. But i&rsquo;d like to do create visualizations of a lot of different cities.</p>
+</li>
+<li>
+<p>Time comparison - Austin is growing super fast and this scan is already 5 years out of date. Now, where could I get an updated scan data&hellip; Google maps? Apple Maps? Going to try using a GLTrace to rip out the vertex positions&hellip; is that allowed?</p>
+</li>
+</ul>
+<p><a href="https://sheltron.netlify.com/portfolio/lidar_processing2/">Part II</a></p>
+        
+      </div>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <h1>Related:</h1>
+    
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+              <a href="https://sheltron.netlify.com/portfolio/lidar_processing2/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://sheltron.netlify.com/img/lidar2/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://sheltron.netlify.com/portfolio/lidar_processing2/">LiDAR Processing pt.2</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+              <a href="https://sheltron.netlify.com/portfolio/this._node/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://sheltron.netlify.com/img/thisnode/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://sheltron.netlify.com/portfolio/this._node/">this._node</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+              <a href="https://sheltron.netlify.com/portfolio/tweet/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://sheltron.netlify.com/img/tweet/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://sheltron.netlify.com/portfolio/tweet/">tweet</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+              <a href="https://sheltron.netlify.com/portfolio/atlanta/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://sheltron.netlify.com/img/atlanta/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://sheltron.netlify.com/portfolio/atlanta/">Atlanta </a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+              <a href="https://sheltron.netlify.com/portfolio/lynx/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://sheltron.netlify.com/img/lynx/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://sheltron.netlify.com/portfolio/lynx/">Lynx Laboratories</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+              <a href="https://sheltron.netlify.com/portfolio/openswr/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://sheltron.netlify.com/img/openswr/intel-logo.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://sheltron.netlify.com/portfolio/openswr/">OpenSWR</a></h4>
+            </div>
+        </div>
+    </div>
+   
+
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://sheltron.netlify.com/js/jquery.min.js"></script>
+<script src="https://sheltron.netlify.com/js/bootstrap.min.js"></script>
+<script src="https://sheltron.netlify.com/js/jquery.cookie.js"> </script>
+<script src="https://sheltron.netlify.com/js/ekko-lightbox.js"></script>
+<script src="https://sheltron.netlify.com/js/jquery.scrollTo.min.js"></script>
+<script src="https://sheltron.netlify.com/js/masonry.pkgd.min.js"></script>
+<script src="https://sheltron.netlify.com/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://sheltron.netlify.com/js/owl.carousel.min.js"></script>
+<script src="https://sheltron.netlify.com/js/front.js"></script>
+
+
+
+</body>
+</html>

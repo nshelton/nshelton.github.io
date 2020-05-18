@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ml on SHELTRON</title>
+    <link>https://sheltron.netlify.com/categories/ml/</link>
+    <description>Recent content in ml on SHELTRON</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sheltron.netlify.com/categories/ml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rap Word Cloud</title>
+      <link>https://sheltron.netlify.com/portfolio/wordcloud/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/wordcloud/</guid>
+      <description>An Optimisaiton Journey. Client : Rap Research Lab
+Rendering 5000 TextMeshPro meshes in 1ms for an interactive VR word cloudI started with a naive 5000 TextMeshPro gameobjects, which could take 30ms CPU and GPU, and made a new system that took 1ms CPU and GPU and still looked dope.
+FunctionalityInteractive 3D visualization of words used in a corpus of rap lyrics (See Part 1)
+Interface Features Left Thumb button transitions from Globe View to Word Cloud view Right hand controller has a “laser” which intersects with words to select them Clicking word with laser transports user to the word Words can also be selected with Right Hand controller Interaction point Selecting word with Right hand shows usage over time of the word and 10 similar words Timeline View Pressing both grips allows user to scale and rotate the word cloud.</description>
+    </item>
+    
+    <item>
+      <title>Lynx Laboratories</title>
+      <link>https://sheltron.netlify.com/portfolio/lynx/</link>
+      <pubDate>Sat, 01 Feb 2014 20:32:03 -0800</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/lynx/</guid>
+      <description>First realtime mobile 3D scanner
+This product was a fully mobile device (box) that could do real-time 3D scanning totally on the device. No cloud or offline processing.
+Back at UT I joined a research group called the UT Perception lab. There we worked on realtime 3D reconstruction techniques using GPU processing. I helped implement Kinect Fusion in CUDA, a CUDA raytracer for scanning volume visualizaiton and other 3D reconstruction techniques using heightmaps on manifolds.</description>
+    </item>
+    
+  </channel>
+</rss>

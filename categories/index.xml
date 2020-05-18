@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on SHELTRON</title>
+    <link>https://sheltron.netlify.com/categories/</link>
+    <description>Recent content in Categories on SHELTRON</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Feb 2020 00:13:37 -0706</lastBuildDate>
+    
+	<atom:link href="https://sheltron.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>fractals</title>
+      <link>https://sheltron.netlify.com/categories/fractals/</link>
+      <pubDate>Thu, 20 Feb 2020 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/fractals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unity</title>
+      <link>https://sheltron.netlify.com/categories/unity/</link>
+      <pubDate>Thu, 20 Feb 2020 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/unity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ml</title>
+      <link>https://sheltron.netlify.com/categories/ml/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vr</title>
+      <link>https://sheltron.netlify.com/categories/vr/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/vr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vj</title>
+      <link>https://sheltron.netlify.com/categories/vj/</link>
+      <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/vj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wave</title>
+      <link>https://sheltron.netlify.com/categories/wave/</link>
+      <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/wave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webgl</title>
+      <link>https://sheltron.netlify.com/categories/webgl/</link>
+      <pubDate>Fri, 30 Jun 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/webgl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>demo</title>
+      <link>https://sheltron.netlify.com/categories/demo/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>installation</title>
+      <link>https://sheltron.netlify.com/categories/installation/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/installation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ar</title>
+      <link>https://sheltron.netlify.com/categories/ar/</link>
+      <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/ar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>art</title>
+      <link>https://sheltron.netlify.com/categories/art/</link>
+      <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mobile</title>
+      <link>https://sheltron.netlify.com/categories/mobile/</link>
+      <pubDate>Wed, 21 Dec 2016 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3DScanning</title>
+      <link>https://sheltron.netlify.com/categories/3dscanning/</link>
+      <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/3dscanning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dataviz</title>
+      <link>https://sheltron.netlify.com/categories/dataviz/</link>
+      <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/dataviz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://sheltron.netlify.com/categories/python/</link>
+      <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
+      
+      <guid>https://sheltron.netlify.com/categories/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

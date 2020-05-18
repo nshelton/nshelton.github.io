@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vr on SHELTRON</title>
+    <link>https://sheltron.netlify.com/categories/vr/</link>
+    <description>Recent content in vr on SHELTRON</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sheltron.netlify.com/categories/vr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rap Word Cloud</title>
+      <link>https://sheltron.netlify.com/portfolio/wordcloud/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/wordcloud/</guid>
+      <description>An Optimisaiton Journey. Client : Rap Research Lab
+Rendering 5000 TextMeshPro meshes in 1ms for an interactive VR word cloudI started with a naive 5000 TextMeshPro gameobjects, which could take 30ms CPU and GPU, and made a new system that took 1ms CPU and GPU and still looked dope.
+FunctionalityInteractive 3D visualization of words used in a corpus of rap lyrics (See Part 1)
+Interface Features Left Thumb button transitions from Globe View to Word Cloud view Right hand controller has a “laser” which intersects with words to select them Clicking word with laser transports user to the word Words can also be selected with Right Hand controller Interaction point Selecting word with Right hand shows usage over time of the word and 10 similar words Timeline View Pressing both grips allows user to scale and rotate the word cloud.</description>
+    </item>
+    
+    <item>
+      <title>REZZ</title>
+      <link>https://sheltron.netlify.com/portfolio/rezz/</link>
+      <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/rezz/</guid>
+      <description>&lt;p&gt;Beyond the Senses EP release&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>T-Pain</title>
+      <link>https://sheltron.netlify.com/portfolio/tpain/</link>
+      <pubDate>Sat, 01 Jun 2019 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/tpain/</guid>
+      <description>&lt;p&gt;T-Pain&amp;rsquo;s School of Business feature at The Wave&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Imogen Heap</title>
+      <link>https://sheltron.netlify.com/portfolio/imogenheap/</link>
+      <pubDate>Thu, 23 Aug 2018 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/imogenheap/</guid>
+      <description>&lt;p&gt;VR Volumetric Music Video Experience for Imogen Heap&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>See Without Eyes</title>
+      <link>https://sheltron.netlify.com/portfolio/seewithouteyes/</link>
+      <pubDate>Thu, 21 Jun 2018 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/seewithouteyes/</guid>
+      <description>&lt;p&gt;Interactive VR Music video Experience&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ready Player One</title>
+      <link>https://sheltron.netlify.com/portfolio/rpo/</link>
+      <pubDate>Fri, 09 Mar 2018 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/rpo/</guid>
+      <description>&lt;p&gt;Making of TheWaveVR&amp;rsquo;s Distracted Globe&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ṛta</title>
+      <link>https://sheltron.netlify.com/portfolio/rta/</link>
+      <pubDate>Sat, 30 Dec 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/rta/</guid>
+      <description>Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive
+  Ṛta is the principle of natural order which regulates and coordinates the operation of the universe and everything within it. In the hymns of the Vedas, Ṛta is described as that which is ultimately responsible for the proper functioning of the natural, moral and sacrificial orders.
+I am excited to share the next version of the FORM fractal visualizer, using a new compute shader surface calculation and rendering architecture.</description>
+    </item>
+    
+    <item>
+      <title>AKTUAL</title>
+      <link>https://sheltron.netlify.com/portfolio/aktual/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/aktual/</guid>
+      <description>&lt;p&gt;ASH KOOSHA show in TheWaveVR&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GRIMECRAFT viz</title>
+      <link>https://sheltron.netlify.com/portfolio/grimecraft/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/grimecraft/</guid>
+      <description>&lt;p&gt;VR Visuals in TheWaveVR&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>N-FOLD</title>
+      <link>https://sheltron.netlify.com/portfolio/nfold/</link>
+      <pubDate>Tue, 27 Jun 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/nfold/</guid>
+      <description>&lt;p&gt;Hyper-Dimensional Odyssey&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FORM 0.0 beta</title>
+      <link>https://sheltron.netlify.com/portfolio/form/</link>
+      <pubDate>Sun, 11 Jun 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/form/</guid>
+      <description>&lt;p&gt;Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>artandvr</title>
+      <link>https://sheltron.netlify.com/portfolio/artandvr/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/artandvr/</guid>
+      <description>&lt;p&gt;Art and VR at HACK TEMPLE and The New Parish with Gaslamp Killer&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

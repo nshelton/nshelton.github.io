@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>installation on SHELTRON</title>
+    <link>https://sheltron.netlify.com/categories/installation/</link>
+    <description>Recent content in installation on SHELTRON</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Feb 2017 00:13:37 -0706</lastBuildDate>
+    
+	<atom:link href="https://sheltron.netlify.com/categories/installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>artandvr</title>
+      <link>https://sheltron.netlify.com/portfolio/artandvr/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/artandvr/</guid>
+      <description>&lt;p&gt;Art and VR at HACK TEMPLE and The New Parish with Gaslamp Killer&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>COLORS</title>
+      <link>https://sheltron.netlify.com/portfolio/colors/</link>
+      <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/colors/</guid>
+      <description>&lt;p&gt;Audio-reactive LED wall Installation with Alex Stickels. Shown at &amp;lsquo;The Art of Dying&amp;rsquo; at The Laundry SF&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

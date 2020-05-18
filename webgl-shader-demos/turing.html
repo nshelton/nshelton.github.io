@@ -1,0 +1,587 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Reaction-Diffusion</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+
+			body {
+				background:#ffffff;
+				color:#000;
+				padding:0;
+				margin:0;
+				overflow:hidden;
+			}
+
+			#about {
+				color:white;	
+				font-family: monospace;
+				font-size:15px;
+				position: absolute;
+				background-color:rgba(0,0,0,0.75);
+				margin:20px;
+				left:246px;
+				top:0px;
+				padding:20px;
+				/*width: 500px;*/
+				display:none;
+			}
+
+			#menu:hover {
+				opacity: 1.0;
+			}
+			#menu {
+				opacity: 0.5;
+				color:white;
+				font-family: monospace;
+				font-size:10px;
+				position: absolute;
+				left:0;
+				top:0px;
+				margin:20px;
+				background-color: black;
+				width:226px;
+
+			}
+			#menu div {
+				margin:5px;
+			}
+
+			h1 {
+				  margin-bottom: 0;
+			}
+			a {
+				text-decoration: none;
+				color:white;
+			}
+			.button.on {
+				background-color: white;
+				color: black;
+			}
+			.button {
+				color: white;
+				float: left;
+				text-align: center;
+				border:1px solid white;
+				padding:5px;
+				cursor:pointer;
+			}
+			hr {
+				width: 100%;
+				margin-top: 15px;
+				padding:0;
+				border: 1px solid white;
+			}
+
+			.option {
+				width:50px;
+			}
+
+			input {
+				width: 90%;
+				margin: 0 5%;
+				padding: 0;
+			}
+			#info_button {
+				float:right;
+			}
+
+		</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26353276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+		<script type="text/javascript" src="./lib/GLOW.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"> </script>
+		<script type="text/javascript"
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script id="vs" type="x-shader/x-vertex">
+			attribute 	vec3 	vertices;
+			attribute   vec2	uvs;
+			varying 	vec2	uv;
+
+			void main(void)
+			{
+				uv = uvs;
+
+				vec2 warp = vertices.xy;
+				warp += 0.0001*(vertices.xy );
+				gl_Position = vec4(warp, 1.0, 1.0 );
+
+			}
+
+		</script>
+		
+		<script id="fs-v-blur" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	world;
+			uniform vec2		pixelsize;
+
+			void main()
+			{
+				vec2 e = pixelsize;
+				gl_FragColor = texture2D(world, uv); 
+			}
+		</script>
+
+		<script id="fs-h-blur" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	world;
+			uniform vec2		pixelsize;
+			uniform vec2 		params;
+			uniform vec2 		mouse;
+			uniform float 		time;
+
+			void main()
+			{
+				vec2 cell = texture2D(world,uv).xy;
+				vec2 e = pixelsize/2.0  + 0.01 *length(uv - 0.5) * (sin(time + length(uv - 0.5)* 40.)* 0.5 + 0.5);;
+
+				vec2 dx = vec2(1.0, 0.0) * e.x;
+				vec2 dy = vec2(0.0, 1.0) * e.y;
+
+				vec2 laplacian = 
+					texture2D(world, fract(uv + dx)).xy * 0.25 +
+					texture2D(world, fract(uv - dx)).xy * 0.25 +
+					texture2D(world, fract(uv + dy)).xy * 0.25 +
+					texture2D(world, fract(uv - dy)).xy * 0.25 -
+					cell;
+
+				float reaction = cell.r * cell.g * cell.g;
+
+				float dt = 0.9;
+
+				float f = params.x;
+				float k = params.y;
+
+				// equation
+				cell.r += dt * (0.90 * laplacian.r - reaction + f * (1. - cell.r));
+				cell.g += dt * (0.45 * laplacian.g + reaction - (k + f) * cell.g );
+
+				vec2 diff = abs(mouse - uv);
+
+				if(diff.x < e.x && diff.y < e.y)
+					cell = vec2(0., 1.);
+
+				gl_FragColor = min(max(vec4(0.), vec4(cell, 0., 0.)), vec4(1.));
+			}
+
+		</script>
+
+
+		<script id="fs-render" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			#define TWO_PI 3.141519 * 2.
+			#define PI 3.141519
+			varying vec2  		uv;
+			uniform sampler2D 	world;
+			uniform float  		style;
+			uniform vec2  		pixelsize;
+
+			void main()
+			{
+				vec4 val = texture2D(world, uv);
+				vec3 color;
+				if( style  == 0.0 ){
+
+					if( val.y < 0.2 ) 
+						color = mix( vec3(1.,0.,0.), vec3(1.,1.,0.), val.y* 4.);
+					else 
+						color = mix( vec3(1.,1.,0.), vec3(0.,1.,1.), (val.y - 0.2) * 4. );
+
+				}
+				if( style  == 1.0 ){
+					vec2 e = pixelsize;
+
+					// 3D SHADINGGGGG 
+					float p = texture2D(world, uv).y;
+					float u = p - texture2D(world, uv - vec2(0.0, e.y)).y ;
+					float r = p - texture2D(world, uv - vec2(e.x, 0.0)).y;
+
+					vec3 dy = normalize(vec3(0., e.y, u/7.));
+					vec3 dx = normalize(vec3(e.x ,0., r/7.));
+
+					vec3 n = cross(dx,dy);
+					float shade = dot(n, normalize(vec3(-0.1, 0.5, 1.)));
+
+					vec3 specular = vec3(0.9,0.7,1.) * pow(shade, 20.);
+
+					color = specular + shade * vec3( mix(vec3(1.), vec3(.5), smoothstep(0.01, 0.2, p))); 
+
+				}
+				if( style  == 2.0 ) {
+					vec2 e = pixelsize;
+
+					// 3D SHADINGGGGG 
+					float p = texture2D(world, uv).y;
+					float u = p -texture2D(world, uv - vec2(0.0, e.y)).y ;
+					float r = p - texture2D(world, uv - vec2(e.x, 0.0)).y;
+
+					vec3 dy = normalize(vec3(0., e.y, u/7.));
+					vec3 dx = normalize(vec3(e.x ,0., r/7.));
+
+					vec3 n = cross(dy,dx);
+					float shade = 0.1 + dot(n, normalize(vec3(0., 0., -1.)));
+
+					color = (1. - n ) * shade * vec3( p * 3.); //vec3((atan(n.y,n.x) + PI/2. )/ PI, acos(n.z), 0.0) ;
+					
+				}
+				
+				gl_FragColor = vec4(color, 1.0);
+			}
+		</script>
+
+		<script>
+		function gup( name, url ) {
+		  if (!url) url = location.href
+		  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		  var regexS = "[\\?&]"+name+"=([^&#]*)";
+		  var regex = new RegExp( regexS );
+		  var results = regex.exec( url );
+		  return results == null ? null : results[1];
+		}
+
+
+
+		function genSeed(w, h, rad) {
+			var noise = []
+			for( var i = 0; i < w * h * 4; i ++) {
+				noise.push(0);
+			}
+
+			hw = Math.floor((w)/2); hh = Math.floor((h)/2);
+
+			var stride = w * 4;
+
+			for ( var x = 0; x < w; x ++) {
+				for ( var y = 0; y < h; y ++) {
+					var i = y * stride + 4 * x;
+
+					if ( (x-hw) * (x-hw) + (y - hh) * (y - hh) < rad ){
+						noise[i + 0] = 0;
+						noise[i + 1] = 1;
+
+					} else {
+						noise[i + 0] = 1;
+						noise[i + 1] = 0;
+					}
+
+					noise[i + 2] = 1;
+					noise[i + 3] = 1;
+				}
+			}
+
+
+			return noise;
+		}
+	
+		var h_blur;
+
+		function run(scale, feed, kill) {
+
+			var container = document.getElementById( 'container' );
+			var context;
+
+			// init
+			context = new GLOW.Context();
+			container.appendChild( context.domElement );
+
+			var w = Math.round(container.clientWidth / scale);
+			var h = Math.round(container.clientHeight / scale);
+
+			// random world Texture generation
+			var noise = []
+
+
+			noise = genSeed(w,h,1.1);
+
+        	ext = GL.getExtension("OES_texture_float") && GL.getExtension("OES_texture_float_linear");
+
+
+			var worldFBO = new GLOW.FBO( { 
+				width: w,
+				height: h,
+			    depth: false,
+			    data: new Float32Array( noise ),
+			    type: GL.FLOAT,
+				// minFilter: GL.NEAREST,
+				// magFilter: GL.NEAREST
+			});
+
+			var worldFBOSwap = new GLOW.FBO( { 
+				width: w,
+				height: h,
+			    depth: false,
+			    data: new Float32Array( noise ),
+			    type: GL.FLOAT,
+				// minFilter: GL.NEAREST,
+				// magFilter: GL.NEAREST
+			});
+
+			var renderShader = {
+				data: {
+					vertices: GLOW.Geometry.Plane.vertices(),
+					uvs: GLOW.Geometry.Plane.uvs(),
+					world: worldFBO,
+					pixelsize: new GLOW.Vector2(1 / w , 1/ h ),
+					style: new GLOW.Float(1)
+				},
+				indices: GLOW.Geometry.Plane.indices(),
+				vertexShader: document.getElementById( 'vs' ).textContent,
+				fragmentShader: document.getElementById( 'fs-render' ).textContent
+			}
+
+			var hBlurShader = {
+				data: {
+					vertices: GLOW.Geometry.Plane.vertices(),
+					uvs: GLOW.Geometry.Plane.uvs(),
+					world: worldFBOSwap,
+					pixelsize: new GLOW.Vector2(1 / w , 1/ h ),
+					params: new GLOW.Vector2(feed, kill),
+					mouse: new GLOW.Vector2(-1, -1),
+					time: new GLOW.Float(0)
+				},
+				indices: GLOW.Geometry.Plane.indices(),
+				vertexShader: document.getElementById( 'vs' ).textContent,
+				fragmentShader: document.getElementById( 'fs-h-blur' ).textContent
+			}
+
+			var vBlurShader = {
+				data: {
+					vertices: GLOW.Geometry.Plane.vertices(),
+					uvs: GLOW.Geometry.Plane.uvs(),
+					world: worldFBO,
+					pixelsize: new GLOW.Vector2(1 / w , 1/ h )
+				},
+				indices: GLOW.Geometry.Plane.indices(),
+				vertexShader: document.getElementById( 'vs' ).textContent,
+				fragmentShader: document.getElementById( 'fs-v-blur' ).textContent
+			}
+
+
+			renderer = new GLOW.Shader( renderShader );
+			h_blur = new GLOW.Shader( hBlurShader );
+			v_blur = new GLOW.Shader( vBlurShader );
+
+			$("#feedrate").val(1000 * h_blur.params.value[0])
+			$("#killrate").val(1000 * h_blur.params.value[1]);
+
+			$("input").mousemove (function(e) {
+				h_blur.params.set(
+					$("#feedrate").val() / 1000 + $("#feedrate_fine").val()/10000,
+					$("#killrate").val() / 1000 + $("#killrate_fine").val()/10000
+				);
+				$("#kill_num").text(h_blur.params.value[1].toPrecision(3))
+				$("#feed_num").text(h_blur.params.value[0].toPrecision(3))
+			});
+
+			$("input").mouseup( function(e)  {
+				var new_url = 
+				"?r="+scale+
+				"&f="+h_blur.params.value[0].toPrecision(3)+
+				"&k="+h_blur.params.value[1].toPrecision(3);
+
+				window.history.pushState({"html":document.html,"pageTitle":document.pageTitle},"", new_url);
+
+			})
+
+
+			// drawing
+			var drag = false;
+			$("canvas").mousedown(function(event) {
+				drag = true;
+				h_blur.mouse.set(
+					event.pageX / window.innerWidth,
+					1.0 - event.pageY /window.innerHeight);
+			});
+
+			$("canvas").mouseup(function(event) {drag = false});
+
+			$("canvas").mousemove(function(event) {
+				if(drag)
+					h_blur.mouse.set(
+						 event.pageX / window.innerWidth,
+						 1.0 - event.pageY /window.innerHeight);
+			});
+
+
+			$("*").mouseup(function(event) {
+				h_blur.mouse.set(-1,-1);
+			});
+
+			// button
+			$(".render").click (function() {
+				$(".render").removeClass("on");
+				$(this).addClass("on");
+				var next_res = $(".render.on").attr("data");
+				renderer.style.set(next_res);
+
+			});
+
+			$(".preset").click (function() {
+				$(".preset").removeClass("on");
+				$(this).addClass("on");
+				var next_preset = $(".preset.on").attr("data").split("|");
+
+				var new_url = location.href.split("?")[0];
+				new_url += "?r="+scale+"&f="+next_preset[0]+"&k="+next_preset[1];
+				window.location = new_url;
+
+			});
+
+			$(".res").click (function() {
+				$(".res").removeClass("on");
+				$(this).addClass("on");
+				var next_res = $(".res.on").attr("data")
+
+				var new_url = location.href.split("?")[0];
+				new_url += "?r="+next_res+"&f="+feed+"&k="+kill;
+				window.location = new_url;
+
+			});
+			
+			setInterval( render, 1000/100 );
+
+			var frame = 0;
+			function render() {
+
+				context.cache.clear();
+
+				for(var i = 0; i < 5 ; i++) {
+					worldFBOSwap.bind();
+					context.cache.clear();
+					v_blur.draw();
+					worldFBOSwap.unbind();
+
+					// // COPY FBO SWAP to FBO
+					worldFBO.bind();
+					context.cache.clear();
+					h_blur.draw();
+					worldFBO.unbind();
+				}
+
+				// Render FBO to screen
+				renderer.draw();
+				frame++;
+				$("#iter").text(frame)
+    			h_blur.time.add(0.05);
+
+			}
+		}
+
+		$(document).ready(function() {
+
+			var controls_visible = true;
+			var about_visible = false;
+			$(".toggle").click( function() { 
+
+				if(controls_visible){
+					$('#controls').slideUp() 
+					controls_visible = !controls_visible;
+					$(this).text("↓	Controls");
+				} else {
+					$('#controls').slideDown() 
+					controls_visible = !controls_visible;
+					$(this).text("↑Hide");
+
+				}
+
+			});
+			$("#info_button").click( function() { 
+
+				if(about_visible){
+					$('#about').slideUp() 
+					about_visible = !about_visible;
+					$(this).text("More Info ↓");
+				} else {
+					$('#about').slideDown() 
+					about_visible = !about_visible;
+					$(this).text("Hide Info ↑");
+
+				}
+
+			});
+
+			var res = gup("r") || 2;
+			var f = gup("f") || 0.017;
+			var k = gup("k") || 0.051; 
+
+			run(res, f, k);
+		});
+
+
+		
+
+		</script>
+	</head>
+	<body id="container">
+			
+			<div id="about">
+				<p><u><a href="http://groups.csail.mit.edu/mac/projects/amorphous/GrayScott/" ><b>Gray-Scott</b></a></u> is a type of <u><a href="http://en.wikipedia.org/wiki/Reaction%E2%80%93diffusion_system" > reaction-diffusion system</a></u>. There are two chemicals, \(A\) and \(B\)</p> 
+				<p>They diffuse at different rates \(D_A\) and \(D_B\), and they react with the chemical formula \(A + 2B \rightarrow 3A\).
+					$$ \frac{\partial A}{\partial t} = D_A \nabla ^2 A  + AB^2$$
+					$$ \frac{\partial B}{\partial t} = D_B \nabla ^2 B  - AB^2$$
+				<p> Basically, \(A\) consumes \(B\) and spreads out.</p> 
+				<p> To keep the concentrations of \(A\) and \(B\) between 0 and 1, there is a "kill" term \( -(f + k)B \) subtracted from \(B\) to keep it from blowing up, and a "feed" term \( f(1 - A) \) added to \(A\) to make sure there is always some \(A\) for \(B\) to consume. Therefore the \(k\) and \(f\) are parameters we are interested in. Adding these terms yields the Gray-Scott equations:</p>
+					$$ \frac{\partial A}{\partial t} = D_A \nabla ^2 A -AB^2 +f(1 - A)$$
+					$$ \frac{\partial B}{\partial t} = D_B \nabla ^2 B +AB^2-(f + k)B $$
+				<p> where we set \(\frac{D_A}{D_B} = 2 \) (\(B\) diffuses twice as fast as \(A\)) and vary \(f\) and \(k\). You can see these parameters in the url of this page, and change them with sliders on the left (coarse and fine control). For the majority of these values, nothing interesting happens - either A blows up and fills the entire plane or dies. Hovever, there is a curve in the \(fk\)) plane where a bunch of really interesting patterns emerge: to see the parameter space and read more, look here: <u> <a href='http://mrob.com/pub/comp/xmorphia/'> http://mrob.com/pub/comp/xmorphia/</a></u> 	 </p>
+
+				<p>
+
+			</div>
+		<img src="../img/reaction.png" style="display:none">
+		<div id="menu">	
+			<div><div>
+				<h1> Gray-Scott Simulation</h1>
+				<span id="iter"> 0 </span> Iterations  <br>
+			</div></div>
+			<hr>
+
+
+			<div id="controls">
+				<div class="title" style="float:left; width:100%"> Grid Resolution</div>
+				<div class="button option res" data="10"> Low</div>
+				<div class="button option res" data="5"> Med</div>
+				<div class="button option res" data="2"> High</div> <br>
+				<div class="title" style="float:left; width:100%"> Render </div>
+				<div class="button option render" data="0"> Flat </div>
+				<div class="button option render on" data="1"> Shiny </div>
+				<div class="button option render" data="2"> Xray </div> <br>
+				<div class="title" style="float:left; width:100%"> Preset </div>
+				<div class="button option preset" data="0.054|0.063"> Coral </div>
+				<div class="button option preset" data="0.028|0.061"> Mitosis </div>
+				<div class="button option preset" data="0.022|0.048"> Resonant </div> <br>
+				<div class="title" style="float:left; width:100%">Kill Rate <span id="kill_num"> </span></div>
+				<input type = "range" id="killrate"> </input>
+				<input type = "range" id="killrate_fine" value = 0> 
+				<div class="title" style="float:left; width:100%">Feed Rate <span id="feed_num"> <span></div>
+				<input type = "range" id="feedrate"> 
+				<input type = "range" id="feedrate_fine" value = 0> 
+			</div>
+			<div>
+				<span class="toggle" style="cursor:pointer;" style="float:left;"> Hide Controls </span>
+				<span id="info_button"  style="cursor:pointer;"> Info </span>
+			</div>
+		</div>
+		</div>
+
+
+	</body>
+</html>

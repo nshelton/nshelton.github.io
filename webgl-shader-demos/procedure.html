@@ -1,0 +1,566 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>procedure</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				background:#333333;
+				margin:0;
+				overflow:hidden;
+			}
+			#container {
+				position: absolute;
+			}
+			#overlay {
+				padding:20px 10% ;
+				text-align: center;
+				color: white;
+				font-family: monospace;
+				position: absolute;
+				width: 80%;
+				background-color: rgba(0,0,0,0.2);
+			}
+			h1 {
+				margin:10px;
+				padding:0;
+			}
+			h2 {
+				margin:10px;
+				padding:0;
+			}
+			a {
+				color:#8ff;
+			}
+		</style>
+		<script type="text/javascript" src="./lib/GLOW.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"> </script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+		
+		<script id="vs" type="x-shader/x-vertex">
+			attribute 	vec3 	vertices;
+			attribute   vec2	uvs;
+			varying 	vec2	uv;
+			uniform 	float 	width;
+			uniform 	float 	height;
+
+			void main(void) {
+				uv = (uvs - 0.5) * vec2(width, height);
+				gl_Position = vec4( vertices.x, vertices.y, 1.0, 1.0 );
+			}
+		</script>
+
+		<script id="fs" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+
+
+			// Cellular noise ("Worley noise") in 2D in GLSL.
+			// Copyright (c) Stefan Gustavson 2011-04-19. All rights reserved.
+			// This code is released under the conditions of the MIT license.
+			// See LICENSE file for details.
+
+			// Permutation polynomial: (34x^2 + x) mod 289
+			vec3 permute_worley(vec3 x) {
+			  return mod((34.0 * x + 1.0) * x, 289.0);
+			}
+
+			// Cellular noise, returning F1 and F2 in a vec2.
+			// Standard 3x3 search window for good F1 and F2 values
+			vec2 cellular(vec2 P, float jitter) {
+
+				#define K 0.142857142857 // 1/7
+				#define Ko 0.428571428571 // 3/7
+
+				vec2 Pi = mod(floor(P), 289.0);
+			 	vec2 Pf = fract(P);
+				vec3 oi = vec3(-1.0, 0.0, 1.0);
+				vec3 of = vec3(-0.5, 0.5, 1.5);
+				vec3 px = permute_worley(Pi.x + oi);
+				vec3 p = permute_worley(px.x + Pi.y + oi); // p11, p12, p13
+				vec3 ox = fract(p*K) - Ko;
+				vec3 oy = mod(floor(p*K),7.0)*K - Ko;
+				vec3 dx = Pf.x + 0.5 + jitter*ox;
+				vec3 dy = Pf.y - of + jitter*oy;
+				vec3 d1 = dx * dx + dy * dy; // d11, d12 and d13, squared
+				p = permute_worley(px.y + Pi.y + oi); // p21, p22, p23
+				ox = fract(p*K) - Ko;
+				oy = mod(floor(p*K),7.0)*K - Ko;
+				dx = Pf.x - 0.5 + jitter*ox;
+				dy = Pf.y - of + jitter*oy;
+				vec3 d2 = dx * dx + dy * dy; // d21, d22 and d23, squared
+				p = permute_worley(px.z + Pi.y + oi); // p31, p32, p33
+				ox = fract(p*K) - Ko;
+				oy = mod(floor(p*K),7.0)*K - Ko;
+				dx = Pf.x - 1.5 + jitter*ox;
+				dy = Pf.y - of + jitter*oy;
+				vec3 d3 = dx * dx + dy * dy; // d31, d32 and d33, squared
+				// Sort out the two smallest distances (F1, F2)
+				vec3 d1a = min(d1, d2);
+				d2 = max(d1, d2); // Swap to keep candidates for F2
+				d2 = min(d2, d3); // neither F1 nor F2 are now in d3
+				d1 = min(d1a, d2); // F1 is now in d1
+				d2 = max(d1a, d2); // Swap to keep candidates for F2
+				d1.xy = (d1.x < d1.y) ? d1.xy : d1.yx; // Swap if smaller
+				d1.xz = (d1.x < d1.z) ? d1.xz : d1.zx; // F1 is in d1.x
+				d1.yz = min(d1.yz, d2.yz); // F2 is now not in d2.yz
+				d1.y = min(d1.y, d1.z); // nor in  d1.z
+				d1.y = min(d1.y, d2.x); // F2 is in d1.y, we're done.
+				return sqrt(d1.xy);
+			}
+
+			//
+			// Description : Array and textureless GLSL 2D/3D/4D simplex 
+			//               noise functions.
+			//      Author : Ian McEwan, Ashima Arts.
+			//  Maintainer : ijm
+			//     Lastmod : 20110822 (ijm)
+			//     License : Copyright (C) 2011 Ashima Arts. All rights reserved.
+			//               Distributed under the MIT License. See LICENSE file.
+			//               https://github.com/ashima/webgl-noise
+			// 
+
+			vec3 mod289(vec3 x) {
+			  return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+
+			vec4 mod289(vec4 x) {
+			  return x - floor(x * (1.0 / 289.0)) * 289.0;
+			}
+
+			vec4 permute(vec4 x) {
+			     return mod289(((x*34.0)+1.0)*x);
+			}
+
+			vec4 taylorInvSqrt(vec4 r)
+			{
+			  return 1.79284291400159 - 0.85373472095314 * r;
+			}
+
+			float snoise(vec3 v)
+			  { 
+			  const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
+			  const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
+
+			  // First corner
+			  vec3 i  = floor(v + dot(v, C.yyy) );
+			  vec3 x0 =   v - i + dot(i, C.xxx) ;
+
+			  // Other corners
+			  vec3 g = step(x0.yzx, x0.xyz);
+			  vec3 l = 1.0 - g;
+			  vec3 i1 = min( g.xyz, l.zxy );
+			  vec3 i2 = max( g.xyz, l.zxy );
+
+			  //   x0 = x0 - 0.0 + 0.0 * C.xxx;
+			  //   x1 = x0 - i1  + 1.0 * C.xxx;
+			  //   x2 = x0 - i2  + 2.0 * C.xxx;
+			  //   x3 = x0 - 1.0 + 3.0 * C.xxx;
+			  vec3 x1 = x0 - i1 + C.xxx;
+			  vec3 x2 = x0 - i2 + C.yyy; // 2.0*C.x = 1/3 = C.y
+			  vec3 x3 = x0 - D.yyy;      // -1.0+3.0*C.x = -0.5 = -D.y
+
+			  // Permutations
+			  i = mod289(i); 
+			  vec4 p = permute( permute( permute( 
+			             i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
+			           + i.y + vec4(0.0, i1.y, i2.y, 1.0 )) 
+			           + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+
+			  // Gradients: 7x7 points over a square, mapped onto an octahedron.
+			  // The ring size 17*17 = 289 is close to a multiple of 49 (49*6 = 294)
+			  float n_ = 0.142857142857; // 1.0/7.0
+			  vec3  ns = n_ * D.wyz - D.xzx;
+
+			  vec4 j = p - 49.0 * floor(p * ns.z * ns.z);  //  mod(p,7*7)
+
+			  vec4 x_ = floor(j * ns.z);
+			  vec4 y_ = floor(j - 7.0 * x_ );    // mod(j,N)
+
+			  vec4 x = x_ *ns.x + ns.yyyy;
+			  vec4 y = y_ *ns.x + ns.yyyy;
+			  vec4 h = 1.0 - abs(x) - abs(y);
+
+			  vec4 b0 = vec4( x.xy, y.xy );
+			  vec4 b1 = vec4( x.zw, y.zw );
+
+			  //vec4 s0 = vec4(lessThan(b0,0.0))*2.0 - 1.0;
+			  //vec4 s1 = vec4(lessThan(b1,0.0))*2.0 - 1.0;
+			  vec4 s0 = floor(b0)*2.0 + 1.0;
+			  vec4 s1 = floor(b1)*2.0 + 1.0;
+			  vec4 sh = -step(h, vec4(0.0));
+
+			  vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+			  vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+
+			  vec3 p0 = vec3(a0.xy,h.x);
+			  vec3 p1 = vec3(a0.zw,h.y);
+			  vec3 p2 = vec3(a1.xy,h.z);
+			  vec3 p3 = vec3(a1.zw,h.w);
+
+			  //Normalise gradients
+			  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
+			  p0 *= norm.x;
+			  p1 *= norm.y;
+			  p2 *= norm.z;
+			  p3 *= norm.w;
+
+			  // Mix final noise value
+			  vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+			  m = m * m;
+			  return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1), 
+			                                dot(p2,x2), dot(p3,x3) ) );
+			  }
+
+			vec3 snoiseVec3( vec3 x ){
+			  float s  = snoise(vec3( x ));
+			  float s1 = snoise(vec3( x.y - 19.1 , x.z + 33.4 , x.x + 47.2 ));
+			  float s2 = snoise(vec3( x.z + 74.2 , x.x - 124.5 , x.y + 99.4 ));
+			  vec3 c = vec3( s , s1 , s2 );
+			  return c;
+
+			}
+
+			vec3 curlNoise( vec3 p ){
+			  const float e = .1;
+			  vec3 dx = vec3( e   , 0.0 , 0.0 );
+			  vec3 dy = vec3( 0.0 , e   , 0.0 );
+			  vec3 dz = vec3( 0.0 , 0.0 , e   );
+
+			  vec3 p_x0 = snoiseVec3( p - dx );
+			  vec3 p_x1 = snoiseVec3( p + dx );
+			  vec3 p_y0 = snoiseVec3( p - dy );
+			  vec3 p_y1 = snoiseVec3( p + dy );
+			  vec3 p_z0 = snoiseVec3( p - dz );
+			  vec3 p_z1 = snoiseVec3( p + dz );
+
+			  float x = p_y1.z - p_y0.z - p_z1.y + p_z0.y;
+			  float y = p_z1.x - p_z0.x - p_x1.z + p_x0.z;
+			  float z = p_x1.y - p_x0.y - p_y1.x + p_y0.x;
+
+			  const float divisor = 1.0 / ( 2.0 * e );
+			  return normalize( vec3( x , y , z ) * divisor );
+
+			}
+
+			uniform	sampler2D 	noise;
+			uniform	float 		time;
+			varying	vec2  		uv;
+			uniform	float 		mouseX;
+			uniform	float 		mouseY;
+			uniform	float 		scale;
+			uniform	float 		effect;
+			uniform	float 		height;
+			uniform	float 		width;
+
+			vec4 fbm(vec2 uv, float theta, float scale) {
+				vec4 r = vec4(0.);
+
+				mat2 rot = mat2(cos(theta), sin(theta), -sin(theta), cos(theta)); 
+				rot *= scale;
+
+			  	r += 0.01 * texture2D(noise, uv); uv *= rot;
+			  	r += 0.02 * texture2D(noise, uv); uv *= rot;
+			  	r += 0.03 * texture2D(noise, uv); uv *= rot;
+			  	r += 0.06 * texture2D(noise, uv); uv *= rot;
+			  	r += 0.12 * texture2D(noise, uv); uv *= rot;
+			  	r += 0.25 * texture2D(noise, uv); uv *= rot;
+			  	r += 0.50 * texture2D(noise, uv); uv *= rot;
+
+				return r / 0.99;
+			}
+
+
+			vec2 worleyfBm(vec2 uv, float theta, float scale, float jitter) {
+				vec2 r = vec2(0.);
+				mat2 rot = mat2(cos(theta), sin(theta), -sin(theta), cos(theta)); 
+				rot *= scale;
+
+			  	r += 0.06 * cellular(uv, jitter); uv *= rot;
+			  	r += 0.12 * cellular(uv, jitter); uv *= rot;
+			  	r += 0.25 * cellular(uv, jitter); uv *= rot;
+			  	r += 0.50 * cellular(uv, jitter); uv *= rot;
+
+				return r / 0.93;
+			}
+
+			vec3 interferenceColors(float i) {
+				vec3 c1 = vec3(1.0,0.0,1.0);
+				vec3 c2 = vec3(0.0,0.0,0.0); 
+				vec3 c3 = vec3(0.0,1.0,1.0);
+				if (i > 0.0 ) {
+					return mix(c2, c1, pow(i, 0.5));
+				} else {
+					return mix(c2, c3, pow(-i,0.5));
+				}
+			}
+
+			vec3 colorScheme2(float i) {
+				vec3 c1 = vec3(0.,0.5,0.9);
+				vec3 c2 = vec3(0.1,0.1,0.0); 
+				return mix(c1, c2, i/2. + 0.5);
+			}
+
+			vec3 cie2rgb(vec3 c) {
+				mat3 A = mat3(
+					2.3706743,-0.9000405,-0.4706338,
+					-0.5138850,1.4253036,0.0885814,
+					0.0052982,-0.0146949,1.0093968);
+				return c * A;
+			}
+
+			vec3 pinkColors(float i) {
+				vec3 c1 = vec3(1.1,0.6,0.1);
+				vec3 c2 = vec3(0.1,0.6,0.5); 
+				return cie2rgb(mix(c1, c2, i/2. + 0.5));
+			}
+
+			vec3 rockColors(float i) {
+				vec3 c1 = vec3(146.,73.,55.)/255.;
+				vec3 c2 = vec3(0.);
+				vec3 c3 = vec3(1.,1.,1.);
+				if (i > 0.0 ) {
+					return mix(c2, c1, i);
+				} else {
+					return mix(c2, c3, -i);
+				}
+			}
+
+			vec3 plants(float i) {
+				vec3 c1 = vec3(0.5, 1., 0.);
+				vec3 c2 = vec3(0., 0., 0.); 
+				return mix(c1, c2, i/2. + 0.5);
+			}
+			vec3 colorScheme3(float i) {
+				vec3 c1 = vec3(0.0, 0.0, 0.0);
+				vec3 c2 = vec3(0.5, 0., 0.9); 
+				return mix(c1, c2, i/2. + 0.5);
+			}
+
+			vec3 clouds(float i) {
+				vec3 c1 = vec3(0., 0., 0.5);
+				vec3 c2 = vec3(1., 0.1, 0.); 
+				return mix(c2, c1, pow(i,2.));
+			}
+
+			#define PI 3.1415
+			void main() {
+
+				vec4 frag;
+
+				if ( effect == 0.) {
+					float s = snoise(vec3(uv/(mouseX*400.), time / 3.));
+					frag = vec4(colorScheme2(s), 1.);
+
+				} else if (effect == 1.) {
+
+					vec2 norm_uv = uv - 0.5;
+
+					float freq = (0.5 - (mouseY - 0.5)) /10.;
+					float theta = 1.256637062 + (mouseX - 0.5); //(mouseX - 0.5)* 10.;
+					mat2 rot = mat2(cos(theta), sin(theta), -sin(theta), cos(theta)); 
+					float r;
+
+					r =  sin(norm_uv.x * freq); norm_uv *= rot;
+					r *= sin(norm_uv.x * freq); norm_uv *= rot;
+					r *= sin(norm_uv.x * freq); norm_uv *= rot;
+					r *= sin(norm_uv.x * freq); norm_uv *= rot;
+					r *= sin(norm_uv.x * freq); norm_uv *= rot;
+					// r *= sin(norm_uv.x /freq) ;
+
+					frag = vec4(interferenceColors(r), 1.);
+
+				} else if (effect == 2.) {
+
+					vec4 nfbm = fbm(uv/height, mouseY / 5., 0.5 + (mouseX-0.5)/4.);
+					frag = vec4(nfbm.x);
+
+				} else if (effect == 3.) {
+
+					vec4 nfbm = fbm(uv/height, 3.14, 0.5 + (mouseY-0.5)/4.);
+					float f = sin(mouseX * uv.x/width * 60. + (mouseX - 0.5) * 100. * (nfbm.x - 0.5));
+					frag = vec4(rockColors(f), 1.);
+
+				} else if (effect == 4.) {
+
+					float s = snoise(vec3(uv/(mouseY*1000.), time / 30.));
+					float f = sin(mouseX * uv.y/height * 60. + (mouseX - 0.5) * 20. * s);
+					frag = vec4(pinkColors(f), 1.);
+
+				} else if (effect == 5.) {
+
+					float sq2 = sqrt(2.);
+					vec2 worley = cellular(uv/width * 100. * mouseY, 0.25 + mouseX + sin(time)/5.) / sq2;
+					frag = vec4(0.5, 1., 0., 1.) * (1. - worley.x);
+
+				} else if (effect == 6.) {
+
+					float sq2 = sqrt(2.);
+					vec2 worley = cellular(uv/width * 60. * mouseY, 1.);
+					float v = 
+						sin(uv.x/width  * 10. + (worley.x) * 10. * (mouseX - 0.5) + time/5.);
+
+					frag = vec4(plants(v), 1.);
+
+				} else if (effect == 7.) {
+
+					vec2 w = cellular(uv/(mouseX*400.),  pow(sin(mouseY* PI), 2.) );
+					
+					frag = vec4(vec3(sqrt(w.y - w.x)), 1.);
+
+				} else if (effect == 8.) {
+
+					vec2 new_uv = uv / (20. * mouseY) + vec2(time/30.,0.);
+					vec2 w = worleyfBm(new_uv, 0., 0.5, (mouseX - 0.5)*2.);
+					frag = vec4(0.5, 1., 1., 1.) * pow(w.y, 4.);	
+
+				} else if (effect == 9.) {
+
+					//  Worley Noise mod by fBm
+					vec4 nfbm = fbm(uv/height, 3.14, 0.5) - 0.5;
+					vec2 w = worleyfBm(uv/((mouseX+ 0.2) * 30.) + nfbm.xy*20.*mouseY, 
+						2., 0.5 + sin(time/30.) / 4.,
+						1. );
+
+					frag = vec4(clouds(w.x) , 1.);
+
+				} else if (effect == 10.) {
+
+					// Threshold Worley Noise
+					vec2 w = cellular(uv/((mouseX+ 0.2) * 50.) + vec2(time/4., 0.0), sin(time/4.));
+					w.x = abs(w.x * 2. - 1.);
+					float c = mix(0., 1., smoothstep(mouseY/2.,mouseY/2.+0.05,w.x ));
+					frag = vec4(c,c,c, 1.);
+
+				} else if (effect == 11.) {
+
+					
+				} 
+
+
+
+				gl_FragColor = frag;
+			}
+
+		</script>
+
+
+		<script>
+		$(document).ready(function() {
+			var container = document.getElementById( 'container' );
+			var context;
+			var n_fx = 11;
+
+			// init
+			context = new GLOW.Context();
+			container.appendChild( context.domElement );
+
+			var w = 1024; //Math.round(container.clientWidth);
+			var h = 1024; //Math.round(container.clientHeight);
+
+			// random Texture generation
+			var noise = []
+			for( var i = 0; i < w * h * 4; i ++) {
+				noise[i] = Math.random() * 255;
+			}
+
+			// noise_tex.minFilter = THREE.LinearFilter;
+			// noise_tex.wrapS = noise_tex.wrapT = THREE.ClampToEdgeWrapping;
+
+			var renderShader = {
+				data: {
+					vertices: GLOW.Geometry.Plane.vertices(),
+					uvs: GLOW.Geometry.Plane.uvs(),
+					noise:  new GLOW.Texture( {
+						width: w,
+						height: h,
+						data: new Uint8Array(noise),
+					}),
+					time: new GLOW.Float(0),
+					width: new GLOW.Float(window.innerWidth),
+					height: new GLOW.Float(window.innerHeight),
+					mouseX: new GLOW.Float(0),
+					mouseY: new GLOW.Float(0),
+					scale: new GLOW.Float(0.5),
+					effect: new GLOW.Float(0)
+				},
+				indices: GLOW.Geometry.Plane.indices(),
+				vertexShader: document.getElementById( 'vs' ).textContent,
+				fragmentShader: document.getElementById( 'fs' ).textContent
+			}
+
+			renderer = new GLOW.Shader( renderShader );
+			function render() {
+				context.clear();
+				context.cache.clear();
+				renderer.draw();
+				renderer.time.add(0.1);
+			}
+			setInterval( render, 1000 / 30 );
+
+
+			var descriptionHTML = [
+				'<h1>Moving 2D Slice of 3D <a href="http://webstaff.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf">Simplex Noise<a/></h1>',
+				"<h1>5 Sine Waves, rotated and multiplied</h1>",
+				'<h1>fractal Brownian motion (<a href="https://code.google.com/p/fractalterraingeneration/wiki/Fractional_Brownian_Motion">fBm</a>) Noise</h1> <p> 7 Octaves </p>',
+				"<h1>Sine Wave phase modulated by fBm Noise</h1>",
+				"<h1>Sine Wave phase modulated by Simplex Noise</h1>",
+				"<h1>Worley noise </h1> <p>distance to closest feature in lattice with random perturbations </p> ",
+				"<h1>Sine Wave phase modulated by Worley Noise</h1>",
+				'<h1><a href="http://en.wikipedia.org/wiki/Worley_noise">Worley noise</a>( second closest feature - closest feature ) </h1> <p> Black lines created when equidistant to two lattice points </p>',
+				"<h1>Fractal Worley noise ( second closest feature - closest feature )</h1> <p> 4 levels - aka 'Windows 95 Powerpoint background'</p>",
+				"<h1>Worley modulated by fBm Noise</h1> <p>fBm Octave mutipler modulated by sine wave </p>",
+				"<h1>Thresholded Worley Noise</h1>",
+				"<h1>Nothing to see here</h1>",
+			]
+
+			$("*").mousemove(function(event) {
+				renderer.mouseX.set(event.pageX / window.innerWidth);
+				renderer.mouseY.set(1.0 - event.pageY / window.innerHeight);
+			});
+		    window.addEventListener("deviceorientation", function(event) {
+				renderer.mouseX.set((event.beta+180) / 360);
+				renderer.mouseY.set((event.gamma + 90) / 180) ;
+		          // process , event.beta and event.gamma
+		      }, true);
+
+			$("#container").mousedown(function(event) {
+			    switch (event.which) {
+			        case 1:
+			        	console.log($(this))
+			            renderer.effect.add(1);
+			            break;
+			        case 3:
+			            renderer.effect.add(n_fx-1);
+			            break;
+			    }
+				renderer.effect.modulo(n_fx);
+				$("#overlay")[0].innerHTML =  descriptionHTML[renderer.effect.value[0]] ;
+			});
+		});
+
+		</script>
+	</head>
+
+	<body oncontextmenu="return false;">
+		<div id="container" > </div>
+		<div id="overlay">
+			<h1> Procedural Textures</h1> 
+			<p>Procedural textures have always been super fascinating to me as they have theoretically infinite resolution and can be written in a few lines of code. These examples are written with a GLSL fragment shader, where the color of each pixel is computed independent of its neighbors. Using these basic building blocks one can create fantastically complex scenes by composing or modulating different types of noise or geometric patterns - even parameterized into 3D space to wrap objects. This demo covers some basics. Stay tuned for more. </p>
+
+			<p> <b> CREDITS  <b> - thanks to <a href="https://github.com/ashima/webgl-noise/wiki">Ashima Arts & Stefan Gustavson</a> for the GLSL Simplex and Worley noise implementations. </p>
+
+			<h1>Controls</h1>
+			 <p><b>LEFT CLICK</b> - Next, <b>RIGHT CLICK</b> - Previous, <b>MOUSE POSITION</b> - Modulate Parameters</h2> </p>
+			</p>
+			<p> Be sure to move mouse to top-rght, center, and bottom-left to see full range of parameters</p> 
+			<p> On Mobile, tap to go to change screen and tilt the device to modulate parameters. (Thanks Dustin Hopper)</p> 
+
+			<p> Starting off is a 2D slice of 3D <a href="http://webstaff.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf">Simplex Noise</a>, moving through the third dimension with time. </p>
+
+
+
+		 </div>
+	</body>
+</html>

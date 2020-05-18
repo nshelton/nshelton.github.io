@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>art on SHELTRON</title>
+    <link>https://sheltron.netlify.com/categories/art/</link>
+    <description>Recent content in art on SHELTRON</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2017 00:13:37 -0706</lastBuildDate>
+    
+	<atom:link href="https://sheltron.netlify.com/categories/art/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Laser Cuts</title>
+      <link>https://sheltron.netlify.com/portfolio/laser/</link>
+      <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/laser/</guid>
+      <description>some laser cuts made at the Tech Shop in Austin Many designs from &amp;amp; inspired by George Hart
+{&amp;lt;gallery &amp;ldquo;sculpture/thumbnail&amp;quot;&amp;gt;}</description>
+    </item>
+    
+    <item>
+      <title>Paintings</title>
+      <link>https://sheltron.netlify.com/portfolio/watercolor/</link>
+      <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/watercolor/</guid>
+      <description>&lt;p&gt;Some paintings I did in high school &amp;amp; college&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sketchbook </title>
+      <link>https://sheltron.netlify.com/portfolio/sketchbook0/</link>
+      <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/sketchbook0/</guid>
+      <description>My sketchbook from 2009
+</description>
+    </item>
+    
+    <item>
+      <title>Sketchbook 2</title>
+      <link>https://sheltron.netlify.com/portfolio/sketchbook1/</link>
+      <pubDate>Sun, 01 Jan 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/sketchbook1/</guid>
+      <description>My sketchbook from 2013
+</description>
+    </item>
+    
+  </channel>
+</rss>

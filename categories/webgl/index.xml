@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webgl on SHELTRON</title>
+    <link>https://sheltron.netlify.com/categories/webgl/</link>
+    <description>Recent content in webgl on SHELTRON</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Jun 2017 00:13:37 -0706</lastBuildDate>
+    
+	<atom:link href="https://sheltron.netlify.com/categories/webgl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3D Web Fest</title>
+      <link>https://sheltron.netlify.com/portfolio/3dwebfest/</link>
+      <pubDate>Fri, 30 Jun 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/3dwebfest/</guid>
+      <description>&lt;p&gt;Live performance at 3D web fest&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Conway&#39;s Life</title>
+      <link>https://sheltron.netlify.com/demos/life/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gray-Scott Reaction Diffusion</title>
+      <link>https://sheltron.netlify.com/demos/turing/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/turing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>julia set</title>
+      <link>https://sheltron.netlify.com/demos/julia/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/julia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mandelbox</title>
+      <link>https://sheltron.netlify.com/demos/mandelbox/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/mandelbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mandelbulb</title>
+      <link>https://sheltron.netlify.com/demos/mandelbulb/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/mandelbulb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Navier-Stokes with vorticity confinement</title>
+      <link>https://sheltron.netlify.com/demos/jupe/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/jupe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raymarch Sketch</title>
+      <link>https://sheltron.netlify.com/demos/spherical/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/spherical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reaction-Diffusion Fluid</title>
+      <link>https://sheltron.netlify.com/demos/rdfulid/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/rdfulid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reaction-Diffusion Fluid 2</title>
+      <link>https://sheltron.netlify.com/demos/rdfulid2/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/rdfulid2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sierpinski&#39;s Triangle</title>
+      <link>https://sheltron.netlify.com/demos/sierpinski/</link>
+      <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/demos/sierpinski/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LEVELS</title>
+      <link>https://sheltron.netlify.com/portfolio/levels/</link>
+      <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/levels/</guid>
+      <description>&lt;p&gt;webgl audio-reactive iterative function system&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>this._node</title>
+      <link>https://sheltron.netlify.com/portfolio/this._node/</link>
+      <pubDate>Fri, 20 Nov 2015 20:32:03 -0800</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/this._node/</guid>
+      <description>&lt;p&gt;Interactive Facebook Graph Visualization&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Atlanta </title>
+      <link>https://sheltron.netlify.com/portfolio/atlanta/</link>
+      <pubDate>Sat, 18 Jul 2015 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/atlanta/</guid>
+      <description>&lt;p&gt;geospatial vertex shader&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>tweet</title>
+      <link>https://sheltron.netlify.com/portfolio/tweet/</link>
+      <pubDate>Sat, 18 Jul 2015 00:13:37 -0706</pubDate>
+      
+      <guid>https://sheltron.netlify.com/portfolio/tweet/</guid>
+      <description>&lt;p&gt;visual tweet and population density visualization&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

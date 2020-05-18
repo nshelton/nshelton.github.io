@@ -1,0 +1,554 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Navier-Stokes</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				background:#ffffff;
+				color:#000;
+				padding:0;
+				margin:0;
+				overflow:hidden;
+			}
+
+		</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26353276-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ 
+
+    <script src="./lib/GLOW.js" type="text/javascript" ></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"> </script>
+
+
+		<script id="vs" type="x-shader/x-vertex">
+			attribute 	vec3 	vertices;
+			attribute   vec2	uvs;
+			varying 	vec2	uv;
+
+			void main(void)
+			{
+				uv = uvs;
+				gl_Position = vec4(vertices.x, vertices.y, 1.0, 1.0 );
+			}
+
+		</script>
+
+		<script id="clear" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+
+			void main()
+			{
+			
+				gl_FragColor = vec4(0.0);
+			}
+
+
+		</script>
+
+		<script id="sub_grad" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	source0; 	// velocity
+			uniform sampler2D 	source1;	// pressure
+			uniform vec2		pixelsize;
+
+			void main()
+			{
+				float dx = pixelsize.x;
+				float dy = pixelsize.y;
+				// pressure gradient
+				float U = texture2D(source1, fract(uv + vec2(0., dy))).x;
+				float D = texture2D(source1, fract(uv - vec2(0., dy))).x;
+				float L = texture2D(source1, fract(uv - vec2(dx, 0.))).x;
+				float R = texture2D(source1, fract(uv + vec2(dx, 0.))).x;
+
+
+				vec4 V = texture2D(source0, uv);
+				V.xy -= 0.5 * vec2((R - L), (U - D));
+
+				gl_FragColor = V;
+			}
+
+		</script>
+		<script id="divergence" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	source0;
+			uniform vec2		pixelsize;
+
+			void main()
+			{
+				float dx = pixelsize.x;
+				float dy = pixelsize.y;
+
+				float U = texture2D(source0, fract(uv + vec2(0., dy))).y;
+				float D = texture2D(source0, fract(uv - vec2(0., dy))).y;
+				float L = texture2D(source0, fract(uv + vec2(dx, 0.))).x;
+				float R = texture2D(source0, fract(uv - vec2(dx, 0.))).x;
+
+				float d = - 0.5 * ((U - D) + (L - R));
+				gl_FragColor = vec4(d, d, d, 1.0);
+			}
+
+		</script>
+
+		<script id="advec" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	source0;
+			uniform vec2		pixelsize;
+			uniform vec2 		params;
+			uniform vec2 		mouse;
+			uniform float 		dt;
+
+			void main()
+			{
+				vec2 v =  texture2D(source0, uv).xy * pixelsize ; 
+
+				gl_FragColor =  texture2D(source0, fract(uv-v ));
+			}
+
+		</script>
+		<script id="diffuse" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	source0;
+			uniform vec2		pixelsize;
+			uniform vec2		params;
+			uniform float 		dt;
+
+			void main()
+			{
+				float dx = pixelsize.x;
+				float dy = pixelsize.y;
+
+				vec4 U = texture2D(source0, fract(uv + vec2(0., dy)));
+				vec4 D = texture2D(source0, fract(uv - vec2(0., dy)));
+				vec4 L = texture2D(source0, fract(uv + vec2(dx, 0.)));
+				vec4 R = texture2D(source0, fract(uv - vec2(dx, 0.)));
+				vec4 C = texture2D(source0, uv);
+
+				vec4 lapl = (U + D + L + R - 4. * C) * 0.25;
+
+				C.xy += 0.1 * lapl.xy;
+
+				gl_FragColor = C;
+			}
+		</script>
+
+		<script id="jacobi" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	source0; // divergence
+			uniform sampler2D 	source1; // pressure
+			uniform vec2		pixelsize;
+			uniform vec2		params;
+			uniform float 		dt;
+
+			void main()
+			{
+				float dx = pixelsize.x;
+				float dy = pixelsize.y;
+
+				vec4 U = texture2D(source1, fract(uv + vec2(0., dy)));
+				vec4 D = texture2D(source1, fract(uv - vec2(0., dy)));
+				vec4 L = texture2D(source1, fract(uv + vec2(dx, 0.)));
+				vec4 R = texture2D(source1, fract(uv - vec2(dx, 0.)));
+
+				vec4 div = texture2D(source0, uv);
+
+				vec4 lapl = (U + D + L + R + div) * 0.25;
+
+				gl_FragColor = lapl;
+			}
+		</script>
+
+		<script id="force" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	source0;
+			uniform vec2		pixelsize;
+
+			uniform vec2 		mouse;
+			uniform vec2 		dmouse;
+			uniform float 		dt;
+
+			#define TWO_PI 3.141519 * 2.
+			#define PI 3.141519
+
+			void main()
+			{
+				vec4 result =  texture2D(source0, uv); 
+				if(mouse.x > 0. && length(mouse/pixelsize - uv/pixelsize) < 10. ) {
+
+					vec2 dir = 10. * (mouse - 0.5);
+					// vec2 dir = vec2(0., 0.1);
+					result.z += 1.;
+					result.xy += dmouse*3000.;
+					// result.y -= dir.y;
+				}
+
+				gl_FragColor = result;
+			}
+
+
+
+		</script>
+
+		<script id="vort" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+			uniform sampler2D 	source0; // velocity in
+			uniform vec2		pixelsize;
+
+			uniform vec2 		mouse;
+			uniform float 		dt;
+
+			void main()
+			{
+
+				float dx = pixelsize.x;
+				float dy = pixelsize.y;
+
+				float U = texture2D(source0, fract(uv + vec2(0., dy))).x;
+				float D = texture2D(source0, fract(uv - vec2(0., dy))).x;
+				float L = texture2D(source0, fract(uv + vec2(dx, 0.))).y;
+				float R = texture2D(source0, fract(uv - vec2(dx, 0.))).y;
+
+				float curl = 0.5 * ((R - L) - (U - D));
+
+				gl_FragColor = vec4(abs(curl));
+			}
+		</script>
+
+		<script id="apply-vort" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+			varying vec2  		uv;
+
+			uniform sampler2D 	source0; // vorticity in
+			uniform sampler2D 	source1; // FBO (velocity) in
+
+			uniform vec2		pixelsize;
+
+			uniform vec2 		mouse;
+			uniform float 		dt;
+
+			void main()
+			{
+				float dx = pixelsize.x;
+				float dy = pixelsize.y;
+
+				// get vorts
+				vec4 U = texture2D(source0, fract(uv + vec2(0., dy)));
+				vec4 D = texture2D(source0, fract(uv - vec2(0., dy)));
+				vec4 R = texture2D(source0, fract(uv + vec2(dx, 0.)));
+				vec4 L = texture2D(source0, fract(uv - vec2(dx, 0.)));		
+				vec4 C = texture2D(source0, uv);		
+
+				vec2 force_dir = vec2((R.x - L.x), (U.x - D.x));
+
+				// float dxscale = 0.1;
+  				// force_dir *=  dxscale * C.x * vec2(1.,-1.);
+
+				vec4 fluid = texture2D(source1, uv); // to the velocity
+
+				fluid.xy +=  force_dir;
+
+				gl_FragColor = fluid;
+			}
+		</script>
+
+		<script id="fs-render" type="x-shader/x-fragment">
+			#ifdef GL_ES
+				precision highp float;
+			#endif
+
+
+			vec3 colorScheme(float p) {
+				vec3 c0 = vec3(87., 51., 27.) / 255.;
+				vec3 c1 = vec3(248., 220., 169.) / 255.;
+				vec3 c3 = vec3(198., 193., 250.) / 255.;
+				vec3 c2 = vec3(150., 50., 8.) / 255.;
+
+				vec3 result;
+
+				if( p < 0.1) {
+					result = mix(vec3(0.5),c0, p * 10.);
+				} else if ( p < 0.25) {
+					result = mix(c0,c1, (p - 0.1) * (1. / .15));
+
+				} else if ( p < 0.75) {
+					result = mix(c1,c2, (p - 0.25) * 2. );
+
+				} else {
+					result = mix(c2,c3, (p - 0.75)*3. );
+
+				}
+				return result;
+			}
+
+			varying vec2  		uv;
+			uniform sampler2D 	source0;
+			uniform sampler2D 	source1;
+			uniform sampler2D 	source2;
+
+			void main()
+			{
+				vec4 val = vec4(0.);
+			
+				vec3 p = texture2D(source0, uv).xyz /4.;
+				p.z = abs(mod(p.z, 1.) * 2. - 1.);
+
+
+
+				val = vec4(colorScheme(p.z), 1. );
+
+				gl_FragColor =  val;
+			}
+		</script>
+
+		<script>
+		function gup( name, url ) {
+		  if (!url) url = location.href
+		  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		  var regexS = "[\\?&]"+name+"=([^&#]*)";
+		  var regex = new RegExp( regexS );
+		  var results = regex.exec( url );
+		  return results == null ? null : results[1];
+		}
+
+
+		function setupClickUI(shader) {
+			// drawing
+			var drag = false;
+			var pos = new GLOW.Vector2(0,0);
+			var last_pos = new GLOW.Vector2(0,0);
+
+			$("canvas").mousedown(function(event) {
+				drag = true;
+				shader.mouse.set(
+					event.pageX / window.innerWidth,
+					1.0 - event.pageY /window.innerHeight);
+			});
+
+			$("canvas").mouseup(function(event) {drag = false});
+
+			$("canvas").mousemove(function(event) {
+				if(drag) {
+					shader.mouse.set(
+						 event.pageX / window.innerWidth,
+						 1.0 - event.pageY /window.innerHeight);
+					last_pos.copy(pos);
+					pos.copy(shader.mouse);
+					shader.dmouse.sub(pos, last_pos);
+				}
+			});
+
+			$("canvas").mouseup(function(event) {
+				shader.mouse.set(-1,-1);
+			});
+		}
+
+		var FLUID = function(){};
+
+		FLUID.prototype = {
+			loadExtension : function(extension_name) {
+				if( !this.context.enableExtension(extension_name)) {
+				  alert( "No support for " + extension_name + "!" );
+				  return;
+				}
+			},
+			initialConditions : function(w, h, rad) {
+				var noise = []
+				this.zerobuffer = []
+				for( var i = 0; i < w * h * 4; i ++) {
+					noise.push(0);
+					this.zerobuffer.push(0);
+				}
+
+				return noise;
+			},
+			init: function(scale) {
+			  	var buildShader = function (frag_id, textures, uniforms) {
+
+					var base_uniforms = {
+						vertices: GLOW.Geometry.Plane.vertices(),
+						uvs: GLOW.Geometry.Plane.uvs()
+					};
+					for( var i = 0; i < textures.length; i ++) {
+						base_uniforms["source"+i] = textures[i];
+					}
+
+					$.extend(base_uniforms, uniforms);
+					console.log(base_uniforms)
+					return new GLOW.Shader({
+						data : base_uniforms,
+						indices: GLOW.Geometry.Plane.indices(),
+						vertexShader: document.getElementById('vs').textContent,
+						fragmentShader: document.getElementById(frag_id).textContent
+					});
+				};
+
+				var buildFBO = function(w, h, data) {
+					return new GLOW.FBO( { 
+						width: w, height: h,
+					    depth: false,
+					    data: new Float32Array( data ),
+					    type: GL.FLOAT,
+						// minFilter: GL.NEAREST,
+						// magFilter: GL.NEAREST
+					});
+				};
+
+				this.context = new GLOW.Context();
+				this.container = document.getElementById( 'container' );
+
+				this.loadExtension("OES_texture_float" );
+				this.loadExtension("OES_texture_float_linear");
+
+				this.container.appendChild(this.context.domElement );
+				var w = Math.round(this.container.clientWidth / scale);
+				var h = Math.round(this.container.clientHeight / scale);
+				
+				var noise = this.initialConditions(w,h,100.);
+
+				var uniforms = {
+					pixelsize: new GLOW.Vector2(1 / w , 1/ h ),
+					params: new GLOW.Vector2(4, 0.25),
+					mouse: new GLOW.Vector2(-1, -1),
+					dmouse: new GLOW.Vector2(0, 0),
+					dt: new GLOW.Float(1.)
+				}
+
+				// swap buffers of fluid
+				this.FBO_A 	= buildFBO(w, h, noise);
+				this.FBO_B 	= buildFBO(w, h, noise);
+
+				// another buffer to hold pressure / divergence 
+				this.FBO_div 		= buildFBO(w, h, noise);
+				this.FBO_pressA 	= buildFBO(w, h, noise);
+				this.FBO_pressB 	= buildFBO(w, h, noise);
+
+				this.renderer 	    = buildShader('fs-render', 
+					[this.FBO_A, this.FBO_div, this.FBO_pressB], uniforms);
+
+				this.diffuse_b_to_a = buildShader('diffuse', [this.FBO_B], uniforms);
+				this.diffuse_a_to_b = buildShader('diffuse', [this.FBO_A], uniforms);
+
+				this.advection 		= buildShader('advec', [this.FBO_B], uniforms);
+				this.applyForce 	= buildShader('force', [this.FBO_A], uniforms);
+
+				this.jacobi_a_to_b	= buildShader('jacobi', [this.FBO_div, this.FBO_pressA], uniforms);
+				this.jacobi_b_to_a 	= buildShader('jacobi', [this.FBO_div, this.FBO_pressB], uniforms);
+
+				this.projectField 	= buildShader('sub_grad', [this.FBO_A, this.FBO_pressA], uniforms);
+
+				this.calcDivergence = buildShader('divergence', [this.FBO_A], uniforms);
+
+				this.calc_vort		= buildShader('vort', [this.FBO_B], uniforms);
+				this.apply_vort     = buildShader('apply-vort', [this.FBO_div, this.FBO_B], uniforms);
+
+				this.clearFBO		= buildShader('clear', [], uniforms);
+
+				setupClickUI(this.applyForce);
+			},
+			shaderPass: function(shader, tgt) {
+				this.context.cache.clear();
+				tgt.bind();
+				shader.draw();
+				tgt.unbind();
+			},
+			render : function() {
+
+				// A -> B UI input
+				this.shaderPass(this.applyForce, this.FBO_B);
+
+				// B -> A advection
+ 				this.shaderPass(this.advection, this.FBO_A);
+				for ( var i = 0; i <2; i ++ ) {
+					this.shaderPass(this.diffuse_a_to_b, this.FBO_B);
+					this.shaderPass(this.diffuse_b_to_a, this.FBO_A);
+				}
+				// A -> div
+ 				this.shaderPass(this.calcDivergence, this.FBO_div);
+				
+				// use the same relaxation to solve for pressure
+				// div + press -> press
+
+ 				// this.shaderPass(this.clearFBO, this.FBO_pressA);
+
+
+				for ( var i = 0; i < 40; i ++ ) {
+					this.shaderPass(this.jacobi_a_to_b, this.FBO_pressB);
+					this.shaderPass(this.jacobi_b_to_a, this.FBO_pressA);
+				}
+
+				// project field onto zero divergence 
+				this.shaderPass(this.projectField, this.FBO_B);
+
+				//calc vorticity & confine (back to FBO_A)
+				this.shaderPass(this.calc_vort, this.FBO_div);
+				this.shaderPass(this.apply_vort, this.FBO_A);
+
+
+				// A-> Screen
+				this.renderer.draw();
+
+			}
+		};
+
+		var sim;
+		$(document).ready(function() {
+			sim = new FLUID();
+
+			sim.init(3);
+			setupClickUI(sim.applyForce);
+
+			function animate() {
+				sim.render();
+				requestAnimationFrame(animate);
+			}
+			
+			animate();
+
+		});
+
+
+		
+
+		</script>
+	</head>
+	<body id="container">
+
+
+	</body>
+</html>
