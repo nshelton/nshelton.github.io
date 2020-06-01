@@ -13,10 +13,10 @@
     
     <item>
       <title>Rap Word Cloud</title>
-      <link>https://nshelton.github.io/portfolio/wordcloud/</link>
+      <link>https://nshelton.github.io/home/wordcloud/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/wordcloud/</guid>
+      <guid>https://nshelton.github.io/home/wordcloud/</guid>
       <description>An Optimisaiton Journey. Client : Rap Research Lab
 Rendering 5000 TextMeshPro meshes in 1ms for an interactive VR word cloudI started with a naive 5000 TextMeshPro gameobjects, which could take 30ms CPU and GPU, and made a new system that took 1ms CPU and GPU and still looked dope.
 FunctionalityInteractive 3D visualization of words used in a corpus of rap lyrics (See Part 1)
@@ -25,10 +25,10 @@ Interface Features Left Thumb button transitions from Globe View to Word Cloud 
     
     <item>
       <title>Lynx Laboratories</title>
-      <link>https://nshelton.github.io/portfolio/lynx/</link>
+      <link>https://nshelton.github.io/home/lynx/</link>
       <pubDate>Sat, 01 Feb 2014 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/lynx/</guid>
+      <guid>https://nshelton.github.io/home/lynx/</guid>
       <description>First realtime mobile 3D scanner
 This product was a fully mobile device (box) that could do real-time 3D scanning totally on the device. No cloud or offline processing.
 Back at UT I joined a research group called the UT Perception lab. There we worked on realtime 3D reconstruction techniques using GPU processing. I helped implement Kinect Fusion in CUDA, a CUDA raytracer for scanning volume visualizaiton and other 3D reconstruction techniques using heightmaps on manifolds.</description>

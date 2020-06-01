@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Rap Word Cloud</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="https://nshelton.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://nshelton.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://nshelton.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://nshelton.github.io/css/owl.theme.css">
+
+
+  <link href="https://nshelton.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=DM+Mono&family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://nshelton.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26353276-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class=" col-sm-4 col-md-2 sidebar-offcanvas d-xs-block">
+    <br>
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading">
+      <a href="https://nshelton.github.io">
+        SHELTRON
+      </a> 
+    </h1>
+    <br>
+    <p class="social">
+  
+  
+  
+  <a href="https://twitter.com/Sheltron3030" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://www.instagram.com/nshelton" title="" class="external instagram">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  <a href="mailto:nshelton@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/ngshelton/" data-animate-hover="pulse" class="external">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+  <a href="https://github.com/nshelton" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+</p>
+
+    <br>
+
+    <ul class="sidebar-links">
+      
+        <a href="https://nshelton.github.io/about/">
+            <li>about/ </li>
+        </a> 
+      
+        <a href="https://nshelton.github.io/resources/">
+            <li>resources/ </li>
+        </a> 
+      
+        <a href="https://nshelton.github.io/home/">
+            <li>home/ </li>
+        </a> 
+      
+        <a href="https://nshelton.github.io/demos/">
+            <li>demos/ </li>
+        </a> 
+      
+    </ul>
+    <br>
+      
+
+    <ul class="sidebar-menu">
+      
+        
+        <a  href="/categories/unity">
+          <li class="">unity 20 </li>
+        </a>
+      
+        
+        <a  href="/categories/webgl">
+          <li class="">webgl 16 </li>
+        </a>
+      
+        
+        <a  href="/categories/vj">
+          <li class="">vj 12 </li>
+        </a>
+      
+        
+        <a  href="/categories/vr">
+          <li class="">vr 12 </li>
+        </a>
+      
+        
+        <a  href="/categories/demo">
+          <li class="">demo 10 </li>
+        </a>
+      
+        
+        <a  href="/categories/wave">
+          <li class="">wave 9 </li>
+        </a>
+      
+        
+        <a  href="/categories/fractals">
+          <li class="">fractals 7 </li>
+        </a>
+      
+        
+        <a  href="/categories/dataviz">
+          <li class="">dataviz 6 </li>
+        </a>
+      
+        
+        <a  href="/categories/art">
+          <li class="">art 4 </li>
+        </a>
+      
+        
+        <a  href="/categories/3dscanning">
+          <li class="">3dscanning 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/installation">
+          <li class="">installation 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/ml">
+          <li class="">ml 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/python">
+          <li class="">python 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/ar">
+          <li class="">ar 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/generative">
+          <li class="">generative 1 </li>
+        </a>
+      
+    </ul>
+
+
+  </div>
+</div>
+ 
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="row">
+
+<br><br><br>
+    <div class="col-lg-12">
+      <div class="content-column-content">
+         <pageTitle>Rap Word Cloud</pageTitle>
+         <h3>Jan 2020</h3>
+         <p>An Optimisaiton Journey. Client : <a href="https://rapresearchlab.com/">Rap Research Lab</a></p>
+<img src="https://lh4.googleusercontent.com/S6agD_LTrvX5_9dgCptzMPRUJDHWNSo1y9NAkvphhTDa8cWEdJvelwTFeYE7eFTD9yEyxMu-bmV3P7PUlTEECkZ4-b1uMmAyh0wvjRgjV-lu6bmaf4a5Stmi75YnDT3zlHiEOek" alt="">
+<h3><a id="Rendering_5000_TextMeshPro_meshes_in_1ms_for_an_interactive_VR_word_cloud_7"></a>Rendering 5000 TextMeshPro meshes in 1ms for an interactive VR word cloud</h3>
+<p>I started with a naive 5000 TextMeshPro gameobjects, which could take 30ms CPU and GPU, and made a new system that took 1ms CPU and GPU and still looked dope.</p>
+<h1>Functionality</h1>
+<p>Interactive 3D visualization of words used in a corpus of rap lyrics (See Part 1)</p>
+<h3>Interface Features</h3>
+<ul>
+<li>Left Thumb button transitions from Globe View to Word Cloud view</li>
+<li>Right hand controller has a “laser” which intersects with words to select them</li>
+<li>Clicking word with laser transports user to the word</li>
+<li>Words can also be selected with Right Hand controller Interaction point</li>
+<li>Selecting word with Right hand shows usage over time of the word and 10 similar words Timeline View</li>
+<li>Pressing both grips allows user to scale and rotate the word cloud.</li>
+<li><strong>Runs in VR at 90fps on mid-tier hardware</strong></li>
+</ul>
+<h3><a id="Visualization_Features_21"></a>Visualization Features</h3>
+<ol>
+- Words are color coded by part of speech
+- Words are scaled by frequency of use
+- Words are scaled by distance from user
+- Words transition into points when they are far away
+</ol>
+<h1><a id="Implementation_27"></a>Implementation</h1>
+<h2><a id="Initial_Approach_29"></a>Initial Approach</h2>
+<p><img src="https://lh3.googleusercontent.com/c-wVAWx1NIr6hxbdiEc9fr6SgP8wbQ5Ri_P7L81B0wwmYBJKztACkQvUXSgv-T2el0l6GjwTX6N6KaBz3pWAvo1TwioROd1cwjC087M6Xm1AeC6Ars2EfZtbS4eDMYdJSVGqFwE" alt=""><br>
+<em>builtin Unity TextMesh plus a backing quad</em><img src="https://lh6.googleusercontent.com/lmI1V-AYQXSFsvltFVbfl5-FxDamRU2RdAKNk1MUdgPp3GWTG3c1SBw9Sq8ti8kbWQvR9YNK-TZQfLxkcxxf84-GXyMz8AosfnrDhbNX_CC8QZteOMVWLCvTdBXsCA7xEMLd-kw" alt=""><br>
+<em>5k TextMeshPro components in VR. Added some depth fog for depth perception purposes.</em></p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/d0p6xZ9SveE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>Since premature optimization is the root of all evil, I just did the simplest thing I could think of at first. Instantiate 5000 gameobjects with TextMeshPro on them and it actually worked at 60fps.  Add in my two-hand grip trackball I have used from my fractal visualizer to explore and zoom the cloud. The client complained of a “weird shimmery effect when moving” which usually means Oculus time warp. The rendering would hit 30 when looking at every element of the cloud at once which is rare. But, when I started making it interactive it was tough to:</p>
+<ul>
+<li>Manually get the text to face camera (GameObject.transform.LookAt(camera) 5k times)</li>
+<li>Rescale TMP transforms (TextMeshPro does some kind of recalculation on the rescale of a TMP component)</li>
+<li>Move Unity colliders (Causes Unity physics update)</li>
+</ul>
+<p>Let’s check out the profiler…</p>
+<p>Unity Profiler is tough to read sometimes, so I like to profile the scene with all my non-essential GameObjects disabled to see what we’re working with as a baseline.</p>
+<img src="https://lh6.googleusercontent.com/yiM2Xw0f40PLxetNofqUqfdKKM1LnILZMB0bzYO6kWeHUiMnJojsvYKJedx8zUSCOO70uIqZtNbcaXQnPmSTCIYaoRhlx4iuW5vg7q91Barh8107CX2JgPBnxYg_TUp5-vDYols" alt="">
+<p>Lot of vsync with the CPU, which is good (CPU and GPU taking &lt; 16ms which is my refresh rate) and then 10ms of <strong>Other</strong> on the GPU (damn!) which could be Unity Editor overhead, like rendering the profiler or something. Good to know.</p>
+<p>Here’s a profile of the first initial version:<br>
+<img src="https://lh4.googleusercontent.com/g_-u6GFJbWCFpSDmubg8USFcnjdc7EGNnQSfVeOPrt2Tt3rY9j-6q536QXBwKkNvSnRej9iSAlSzJsqT1WGeLpZuU6xVGQOSacQ_LCmn2lPl89IjxdKZNG8qETztW6juSoKReOs" alt=""></p>
+<ul>
+<li>13ms for draw calls alone</li>
+<li>3ms for the script update to make everything look at the camera</li>
+<li>5ms for animation (not sure what that’s about)</li>
+<li>9ms on GPU for rendering (not bad, but i have a 2080Ti)</li>
+</ul>
+<p>Let’s see why rescaling is so slow:</p>
+<img src="https://lh3.googleusercontent.com/kE5GDxU-ghkmsyqvv8KoOVezfxiBdcawmxmj0Xg52QwxpwEGoEjxn3qIEjBblaOJ_s-93q-Efk1MLmVr1Wbe_yogeLn4lxivBsdnLeQZGi38ZpW_g6BmkSO1C5fwaZnRGg2WKDw" alt="">
+<p>Clear bump during frames where the Word Cloud is changing scale:</p>
+<ul>
+<li>Rendering / draw calls unchanged</li>
+<li>17ms scripts (TextMeshPro)</li>
+<li>7ms physics</li>
+</ul>
+<p>Oh ya, by the way there are 10k batches and 100k triangles! That’s no good, looks like my TextMeshPros aren’t batching.</p>
+<h2><a id="First_Optimisation_71"></a>First Optimisation</h2>
+<p>At this point, I moved the project to “Single Pass” stereo for VR, since that should give me at least a 50% speedup, but the way it handles shaders had caused unexpected issues before. And there is still a bug in Unity’s postprocessing stack “Bloom” effect that doesn’t do a double wide buffer for the bloom downsample pass, which required me to just jump in and multiply the bloom buffer width by 2. I reported <a href="https://github.com/Unity-Technologies/PostProcessing/issues/497">this bug</a> about two years ago <code>¯_(ツ)_/¯</code></p>
+<p>Next idea was to disable TextMeshPro renderers if they are beyond a certain distance from the camera. This will cut down on the rendering, and whatever scaling calculations that TextMeshPro is doing on scale change. Also manually disable TMP objects that are outside the camera frustrum. Definitely helps the GPU, but enabling/disabling gameobjects at runtime has a cost. I bet using ECS would have made this approach viable but I haven’t dug into that system quite yet and was on a deadline.</p>
+<img src="https://lh6.googleusercontent.com/MHNLhu5WoAl6wkq8KgACz3RuDRNxz6WjWOttwg9j0L6aZNK3qCjlfqEk_KT1mcmUxALUMD0-zfp2yF4KbXmiKShY66vqOiDnCvL_FZ-A1WBXHPRgEckAYAgeEb4julpzBDYCmAU" alt="">
+<p>Far away text is now rendered as a point (There’s a quad mesh on each point in addition to TMP). Every frame the distance to camera is calculated for every point, which controls if it is rendered (or disabled if out of view) Also here, you can see the words colored by part of speech.</p>
+<img src="https://lh6.googleusercontent.com/0yItKs-itN77WN06d1ld_5-iqNDgtP_9l9Xm8lV1sYBh7azzZ0U73Yccz90upYT6GD3l2cp7Gq7kJK5VAkLrPDDcO-ObuwuHEUYMrn4URJcdjld9iUhma7dBoXrnz_JmmSICjZY" alt="">
+<p>(SteamVR profile) Calculating all this stuff was really terrible for the CPU, even though the GPU was now happy (rendering less stuff, mostly points which batch!). I tried to batch Text Mesh Pro, but they explicitly disallow that in the shader <code>{DisableBatching = True }</code> and instance every material (not ideal). This also clogs up the CPU making 10k draw calls per frame.</p>
+<p>So, we need to somehow:</p>
+<ul>
+<li>Not scale Text Mesh Pro (don’t want to change their source)</li>
+<li>Not move colliders</li>
+<li>Get the Text to batch, and use a single material</li>
+<li>Get the text to billboard in the shader</li>
+</ul>
+<h2><a id="Colliders_91"></a>Colliders</h2>
+<p><img src="https://lh6.googleusercontent.com/iRStIxHN-WPqeklthLZ0tZ06zanvomLQYxN_gIv7TKktnhUPL9uCLLxmUA5dgiGzvrZ3Thpn1rX5Tq3dxogg4tw6Dd-jk2aT71MujMNRtd7B4UoPRC0tV8LGrFMNJGjjaEk-mEo" alt=""><br>
+<em>Every word has a collider so that I can detect grab and laser-pointer select in VR.</em></p>
+<p>This one is pretty easy. Create the colliders, put them in another space and never move them! Then, manually raycast/spherecast every frame to calculate intersections. But, transform the controller position into the other space, and then do the raycast/spherecast in the other space. First off though, create a <code>Dictionary&lt;Collider, WordPoint&gt;</code> to map each of my proxy colliders to the words that they represent quickly.</p>
+<p>More precisely, the hand (controller) is in the word cloud, compute its local position in the word cloud, and use that as the local position in the collider cloud.</p>
+<pre><code>var handInCloudSpace = WordCloudTransform.InverseTransformPoint(RightCursorTransform.position);
+var handDirInCloudSpace = WordCloudTransform.InverseTransformDirection(RightCursorTransform.forward);
+var handInColliderSpace = ColliderTransform.transform.TransformPoint(handInCloudSpace);
+var handDirInColliderSpace = ColliderTransform.transform.TransformDirection(handDirInCloudSpace);
+int numHits = Physics.RaycastNonAlloc(new Ray(handInColliderSpace, handDirInColliderSpace), raycastRightHand, 10f);
+</code></pre>
+<p>Now I realize I need to bite the bullet and create a custom shader for the word cloud text if I wanted to get all my goals accomplished.</p>
+<h3><a id="Custom_Shaders_Rant_108"></a>Custom Shaders Rant</h3>
+<p>When I first started Unity dev, I wanted to make a custom shader for everything because it made me feel badass and I could do anything I wanted. But then I realized:</p>
+<ul>
+<li>custom shaders make it much harder for your coworkers to collaborate</li>
+<li>nothing batches if everything’s got a custom shader</li>
+<li>they are liable to break with updates to Unity or changes in your rendering pipeline</li>
+</ul>
+<p>So now I usually think, if you can do it in Unity with the Standard shader, do that. But desperate times call for desperate measures…</p>
+<h2><a id="Custom_Shader_118"></a>Custom Shader</h2>
+<p>First thing was to just render a TextMeshPro mesh with my new shader and see what it looked like. But where do I get the mesh? TMP created the meshes and UVs them dynamically based on its texture atlas for the font you’ve selected, so there’s no actual mesh asset. No problem, I just rip the mesh out at runtime:</p>
+<pre><code>MyMeshfilter.mesh = SomeOtherTextMeshPro.meshFilter.mesh
+</code></pre>
+<p><img src="https://lh5.googleusercontent.com/bao79S1ab8nVg5aOiDh9kiKYSLlBVb_ymiqN2r5oVzT4HWozU4eC5RMq1sq_92LWrp08478uX_WQHCg30p6rLaDBreWaYDREE87t090ym-CJFqOx6mScJYanuBSU6IrsjH1GYYo" alt=""><br>
+<em>TextMeshPro mesh rendered with a default custom unlit shader.</em></p>
+<p>So… why is it blocks? Our material doesn’t have a texture yet. Search “Atlas” in the project to find the same texture atlas the original mesh was using… and it kinda works.</p>
+<p><img src="https://lh6.googleusercontent.com/JFv65IoTAVemko1OyL-ZK3g5AiSBGQbVFZTXpG7tZuhB3lTa80MRIJlu_Ejxll5RsDi_KDJEr_GGFilhzJLMKtryjzdERrhMDRQoCec_abR93G1ddrxPN5ZPN6VxnCJymobdVhw" alt=""><br>
+Why does it look like weird (it’s a distance field…)? Maybe I should have stuck with the text mesh pro shader after all? Yeah… let’s just copy paste <code>TextMeshPro/Mobile/Distance Field</code> into here… perfect. Now I can get into what I actually wanted to do, billboard the text. Some googling gives me this little gem: (shoutout to Github user Spongert) and <a href="https://en.wikibooks.org/wiki/Cg_Programming/Unity/Billboards"><a href="https://en.wikibooks.org/wiki/Cg_Programming/Unity/Billboards">https://en.wikibooks.org/wiki/Cg_Programming/Unity/Billboards</a></a></p>
+<pre><code>float4 vPosition = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_MV, float4(0.0, 0.0, 0.0, 1.0)) + float4(vert.x, vert.y, vert.z, vert.w));
+</code></pre>
+<p>Which instead of transforming the vertex into clipspace, transforms the origin into viewspace. THEN it adds the vertex local position into that, and transforms into clipspace. This has the effect of keeping the mesh oriented to viewspace which is exactly what we want. The only problem is that if dynamic batching is enabled, you can’t assume that your vertices are <em>actually</em> in the local position of the object being rendered, because Unity will bake the gameobject transform into there. So we have to disable batching. Well damn, that’s not what I wanted.</p>
+<h2><a id="Batching_136"></a>Batching</h2>
+<p>If Unity’s not going to batch this and still keep the vertex in local space, then maybe it can be done manually. Take two text meshes at the origin and merge them. Then upload the position into the UV3 per-vertex data (TMP uses UV1 and UV2 for some reason). I also care about scale, so I’ll go ahead and pack that into the w component of UV3.</p>
+<p>Then in the shader, the Model Matrix can be reconstructed per word, and the <code>input.vertex</code> vertices are still centered at the origin!</p>
+<pre><code>float3 uvPos = input.texcoord2.xyz;
+float s = input.texcoord2.w
+float4x4 Obj2World = float4x4(
+    s, 0, 0, uvPos.x,
+    0, s, 0, uvPos.y,
+    0, 0, s, uvPos.z,
+    0, 0, 0, 1);
+</code></pre>
+<p>Rotation doesn’t matter because it is staying oriented toward view space (billboarding). So this is a simple affine transform with only scale and translation. The inverse has an easy closed-form solution.</p>
+<pre><code>float4x4 World2Obj = float4x4(
+    1 / s, 0, 0, -uvPos.x / s,
+    0, 1 / s, 0, -uvPos.y / s,
+    0, 0, 1 / s, -uvPos.z / s,
+    0, 0, 0, 1);
+</code></pre>
+<p>So the vertex shader becomes (including the billboarding trick from above):</p>
+<pre><code>float4x4 custom_MV = mul(UNITY_MATRIX_V, Obj2World);
+float4 vPosition = mul(UNITY_MATRIX_P, mul(custom_MV, float4(0, 0, 0, 1)) + vert * float4(scale, scale, 1, 1));
+</code></pre>
+<p>What this does:</p>
+<ol>
+- Create custom model matrix based on the UV data uploaded per vertex
+- Transform 0,0,0 in the model space into view space
+- Add the vertex position offset (times the scale)
+- Project into clipspace
+</ol>
+<p>The other thing I need to do is add color per word, so I just upload that to the pervertex color channel.</p>
+<p>I do this for all 5000 words, and they merge into one mesh with 100,000 vertices. (Use integer index format to exceed the 64k vert limitation) so it’s one draw call now!</p>
+<p>At this point, I am using no TextMeshPro scripts, not moving or scaling any colliders, and billboarding all the words in the shader. But I can’t move the word cloud, because we only have local position available. So, take the trackball transform and upload the <code>WorldToObject</code> and <code>ObjectToWorld</code> matrices as a uniform shader parameter <code>_WordCloudMatrix</code> and <code>_WordCloudMatrixInverse</code> to the material.</p>
+<p>So the vertex shader is now:</p>
+<pre><code>float4x4 customObj2World = mul(_WordCloudMatrix, Obj2World);
+float4x4 custom_MV = mul(UNITY_MATRIX_V, customObj2World);
+float4 vPosition = mul(UNITY_MATRIX_P, mul(custom_MV, float4(0, 0, 0, 1)) + vert * float4(scale, scale, 1, 1));
+</code></pre>
+<h2><a id="Profile_183"></a>Profile</h2>
+<p>Now, I get exactly the same functionality with:</p>
+<ul>
+<li>One mesh</li>
+<li>One material</li>
+<li>One draw call</li>
+<li>One dynamic transform</li>
+<li>No dynamic colliders</li>
+</ul>
+<p>Feeling good about this! Let’s check the profile.</p>
+<img src="https://lh5.googleusercontent.com/x4kItQP1jj__JZCd9Swzb5tJAI2HWAhg1wW9_QsaI5QShkbTIxxJBBKIEYznPX-QRg23aqN47Tq9Ptb4I3TDB51Aw2d0m7Wvzl3E3D0VKM7FfVmwtZqsP5kH0LGZkB7vbcGQdxM" alt="">
+<p><em>Here’s my profiling test scene, using the new font from the client and the builtin postproc stack for the rest of their app. It’s got a good amount of text in view, and rendering pretty much the whole cloud.</em></p>
+<p>It doesn’t show up on the profile. I enable and disable the mesh, even rotate it and scale it around.</p>
+<img src="https://lh5.googleusercontent.com/sAEvDSpxg40cWeWTlLelQEV51GqWIsvfRwR45IZE9bwz4B0C2_cNpWk3qy9EGoRqbDg48rqmMkdHrU69En_qTFmWzL618jnXoodYq48ZCRNr_4JXO1E6pLQTPjmtRun4-SNCOuE" alt="">
+<p>Left side of profile is my “empty scene”, with the same random 10ms “other”. Then you can see the spike on rendering (bottom) when I enable the word cloud. No difference. Maybe I should Look at it in a build.</p>
+<img src="https://lh4.googleusercontent.com/TMBL2YWA4WLJZGKBH0tGvTmiLMW5wRRI0sIJ1YSJkexIshI4j6lS9K3Ay5hHGaxsVqgjvbXdKK5RKFQavb4Rmn7SvCPOf16tnVACRH-rbc6hhKdnwjCn1t5unZvW2prwfEsC-b0" alt="">
+<p>Ok so CPU is taking 1ms, that’s a good sign. But for some reason, i lost my GPU data in the build. Will have to look at why that happens later. Let’s check out the SteamVR profiler again.</p>
+<img src="https://lh5.googleusercontent.com/U3kvAIzofROOY-9GOeAN5kSQQArmDnUMHQxPwzIch_Ky36ogAc_fXHI_zEG1GawCkN7D-UNRAISJkOaVNU7XuTKNO4V5jLn6Tu8HUygi2Eq7a08HDwbWh4txPDvOrHK2syPh4E8" alt="">
+<p>Hot damn! I have my 5K text/points rendering, totally interactively at a constant 1ms cpu and GPU. (originally was 30ms CPU and 16-20ms GPU). Time for a beer.</p>
+<h3><a id="Point_Rendering_Transition_213"></a>Point Rendering Transition</h3>
+<p>I skipped the part where I render points when the word gets far enough away.</p>
+<p>Basically there is a second mesh exactly like the first merged text mesh, except each word is a quad. Still upload the color and local position/scale into the pervertex data. The shader is really similar.</p>
+<p>Then add some scaling logic in the shader… since we have the per-word scale and create the model matrix on the fly per word, this can be dynamic. So use the builtin Unity shader uniform <code>_WorldSpaceCameraPos</code> and then compute the word position in world space (that’s why I needed to compute the inverse matrix above)</p>
+<pre><code>float objSpaceDistance = length(mul(customWorld2Object, float4(_WorldSpaceCameraPos, 1)).xyz);
+float scale = length(customObj2World._m00_m01_m02) * v.texcoord2.w;
+scale = lerp(0, scale, smoothstep(_FadeOutNear, _FadeOutFar, objSpaceDistance));
+</code></pre>
+<p>So there’s some more shader parameters, <code>_FadeOutNear</code> and <code>_FadeOutFar</code>, which control the fadeout-ness. Just invert the logic in the point shader vs the text mesh shader, so that the points fade in as the words fade out.</p>
+<p>In theory, this could be all in the same original mesh with just a flag pervertex saying if it is part of the quad or the text. Or, make all the text character quads for each letter morph smoothly into a single point… but who has time for that.</p>
+<h3><a id="Selection_230"></a>Selection</h3>
+<p>Well, I still want to be able to select words, which is what I was doing earlier with the dumb version, but I was swapping materials to show if something was selected. That doesn’t work anymore because this is all one mesh. Luckily, I have a <strong>unique Identifier</strong> per word, which is its position in the cloud. So If I have detected a selection (using the collider setup and dictionary lookup above), then the position of the selected word is uploaded as another material property uniform.</p>
+<pre><code>bool selected = (length(_SelectedWordPos - uvPos.xyz) &lt; 0.01);
+</code></pre>
+<p>Then something like:</p>
+<pre><code>scale *= lerp(1,2,selected);
+color *= lerp(1,2,selected);
+outlineWidth = lerp(0,1,selected);
+</code></pre>
+<p>Or whatever else you feel like doing. And bam! Super interactive. No CPU logic!</p>
+<h2><a id="BONUS_SECTION_Timelines_249"></a>BONUS SECTION: Timelines</h2>
+<p>I also did some analysis of the word usage in the corpus over time.<br>
+If you click a word, it will generate this view of the frequency of each word each year.</p>
+<p><img src="https://lh3.googleusercontent.com/i_Nrilpsf2GGK_2dlGYU9zXjJkNBWTHXzxhGX551wFB93YrQhN7tdp0tCAIr8KI9Vxldhi6HAm9AcxEuecBwz52Kf0I16yfCPBXz8px_jpFvnuFXQfgKirYd5bWG-g3znOkfsXU" alt=""><strong><img src="https://lh5.googleusercontent.com/hT6l81eO1rJ1KPJUUJ5FMHI6H68E27hWWfdFQ96cw5e284-_XpOiMhNgo-VO8vq5w_C0exNa-pDd-7W1Y-7latpefoNEAh_8_FktpA_NpljmEKG5U1VauBsKgpx_7CVkohpRbtU" alt=""></strong></p>
+<h1 id="interesting-word-cloud-areas">interesting word cloud areas</h1>
+
+
+    
+    <a href="https://nshelton.github.io/img/rrl/activities.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/activities.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/adjective.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/adjective.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/body.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/body.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/cars.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/cars.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/food.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/food.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/guns.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/guns.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/money.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/money.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/names.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/names.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/names2.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/names2.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/names3.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/names3.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/names4.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/names4.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/numbers.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/numbers.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/places.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/places.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/pronouns.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/pronouns.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/verbs.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/verbs.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/weeddrank.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/weeddrank.jpg" class="img-fluid"/></a>
+
+    
+    <a href="https://nshelton.github.io/img/rrl/wholecloud.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/rrl/wholecloud.jpg" class="img-fluid"/></a>
+
+
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <h1>Related:</h1>
+    
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/rezz/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/rezz/cover.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/rezz/">REZZ</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/tpain/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/tpain/cover.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/tpain/">T-Pain</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/imogenheap/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/imogenheap/title.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/imogenheap/">Imogen Heap</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/seewithouteyes/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/seewithouteyes/title.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/seewithouteyes/">See Without Eyes</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/rpo/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/rpo/arcades.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/rpo/">Ready Player One</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/rta/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/form2/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/rta/">Ṛta</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/aktual/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/aktual/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/aktual/">AKTUAL</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/grimecraft/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/grimecraft/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/grimecraft/">GRIMECRAFT viz</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/nfold/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/nfold/poster2.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/nfold/">N-FOLD</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/form/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/form/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/form/">FORM 0.0 beta</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/artandvr/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/artandvr/z2.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/artandvr/">artandvr</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/fractalpathtracing/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/fractalpathtracing/1.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/fractalpathtracing/">Fractal Path Tracer</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/growth/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/growth/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/growth/">Growth Algorithms</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/lindsey/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/ls/8.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/lindsey/">Lindsey Stirling</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/kizuna/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/kizuna/kizuna_unity.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/kizuna/">The Light - Kizuna AI / W&amp;W</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/fractalflames/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/fractalflames/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/fractalflames/">FractalFlames</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/magfest/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/magfest/title.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/magfest/">Magfest VJ</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/op-z/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/op-z/4.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/op-z/">OP-Z</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/flylo/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/flylo/flylo.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/flylo/">3D Flying Lotus Visuals</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/lynx/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/lynx/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/lynx/">Lynx Laboratories</a></h4>
+            </div>
+        </div>
+    </div>
+   
+
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://nshelton.github.io/js/jquery.min.js"></script>
+<script src="https://nshelton.github.io/js/bootstrap.min.js"></script>
+<script src="https://nshelton.github.io/js/jquery.cookie.js"> </script>
+<script src="https://nshelton.github.io/js/ekko-lightbox.js"></script>
+<script src="https://nshelton.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://nshelton.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://nshelton.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://nshelton.github.io/js/owl.carousel.min.js"></script>
+<script src="https://nshelton.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>

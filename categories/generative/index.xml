@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>generative on SHELTRON</title>
+    <link>https://nshelton.github.io/categories/generative/</link>
+    <description>Recent content in generative on SHELTRON</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Sep 2019 00:13:37 -0706</lastBuildDate>
+    
+	<atom:link href="https://nshelton.github.io/categories/generative/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Growth Algorithms</title>
+      <link>https://nshelton.github.io/home/growth/</link>
+      <pubDate>Wed, 18 Sep 2019 00:13:37 -0706</pubDate>
+      
+      <guid>https://nshelton.github.io/home/growth/</guid>
+      <description>Along with fractals, I also got really into growth algorithms, especially making them run in realtime. It seems like a perfect intersection of design and art with computer science and math.
+Here are various realtime versions of some interesting growth algorithms I have seen over the years.
+ Mesh based Mesh Splitting / Spring and attractive forces  Diffusion-Limited Aggregation   Voxel based Gray-Scott Anisotropic Dendritic Solidification  Mesh Based These involve splitting a manifold (1d or 2d surface) and then moving the nodes around in a higher dimensional space to minimise overlap</description>
+    </item>
+    
+  </channel>
+</rss>

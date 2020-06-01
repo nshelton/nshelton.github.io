@@ -6,17 +6,26 @@
     <description>Recent content in webgl on SHELTRON</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jun 2017 00:13:37 -0706</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nshelton.github.io/categories/webgl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ERA visualizer</title>
+      <link>https://nshelton.github.io/home/grimecraftera/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nshelton.github.io/home/grimecraftera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>3D Web Fest</title>
-      <link>https://nshelton.github.io/portfolio/3dwebfest/</link>
+      <link>https://nshelton.github.io/home/3dwebfest/</link>
       <pubDate>Fri, 30 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/3dwebfest/</guid>
+      <guid>https://nshelton.github.io/home/3dwebfest/</guid>
       <description>&lt;p&gt;Live performance at 3D web fest&lt;/p&gt;</description>
     </item>
     
@@ -112,37 +121,37 @@
     
     <item>
       <title>LEVELS</title>
-      <link>https://nshelton.github.io/portfolio/levels/</link>
+      <link>https://nshelton.github.io/home/levels/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/levels/</guid>
+      <guid>https://nshelton.github.io/home/levels/</guid>
       <description>&lt;p&gt;webgl audio-reactive iterative function system&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>this._node</title>
-      <link>https://nshelton.github.io/portfolio/this._node/</link>
+      <link>https://nshelton.github.io/home/this._node/</link>
       <pubDate>Fri, 20 Nov 2015 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/this._node/</guid>
+      <guid>https://nshelton.github.io/home/this._node/</guid>
       <description>&lt;p&gt;Interactive Facebook Graph Visualization&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Atlanta </title>
-      <link>https://nshelton.github.io/portfolio/atlanta/</link>
+      <link>https://nshelton.github.io/home/atlanta/</link>
       <pubDate>Sat, 18 Jul 2015 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/atlanta/</guid>
+      <guid>https://nshelton.github.io/home/atlanta/</guid>
       <description>&lt;p&gt;geospatial vertex shader&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>tweet</title>
-      <link>https://nshelton.github.io/portfolio/tweet/</link>
+      <link>https://nshelton.github.io/home/tweet/</link>
       <pubDate>Sat, 18 Jul 2015 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/tweet/</guid>
+      <guid>https://nshelton.github.io/home/tweet/</guid>
       <description>&lt;p&gt;visual tweet and population density visualization&lt;/p&gt;</description>
     </item>
     

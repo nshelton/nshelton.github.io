@@ -13,10 +13,10 @@
     
     <item>
       <title>Fractal Path Tracer</title>
-      <link>https://nshelton.github.io/portfolio/fractalpathtracing/</link>
+      <link>https://nshelton.github.io/home/fractalpathtracing/</link>
       <pubDate>Thu, 20 Feb 2020 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/fractalpathtracing/</guid>
+      <guid>https://nshelton.github.io/home/fractalpathtracing/</guid>
       <description>I decided to take my fractal rendering to the NEXT LEVEL by implementing a simple compute shader path tracer in unity.
 Code Mostly Lifted from Three Eyed Games tutorial
 Source Code on github
@@ -26,10 +26,10 @@ Renders </description>
     
     <item>
       <title>Rap Word Cloud</title>
-      <link>https://nshelton.github.io/portfolio/wordcloud/</link>
+      <link>https://nshelton.github.io/home/wordcloud/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/wordcloud/</guid>
+      <guid>https://nshelton.github.io/home/wordcloud/</guid>
       <description>An Optimisaiton Journey. Client : Rap Research Lab
 Rendering 5000 TextMeshPro meshes in 1ms for an interactive VR word cloudI started with a naive 5000 TextMeshPro gameobjects, which could take 30ms CPU and GPU, and made a new system that took 1ms CPU and GPU and still looked dope.
 FunctionalityInteractive 3D visualization of words used in a corpus of rap lyrics (See Part 1)
@@ -37,11 +37,22 @@ Interface Features Left Thumb button transitions from Globe View to Word Cloud 
     </item>
     
     <item>
+      <title>Growth Algorithms</title>
+      <link>https://nshelton.github.io/home/growth/</link>
+      <pubDate>Wed, 18 Sep 2019 00:13:37 -0706</pubDate>
+      
+      <guid>https://nshelton.github.io/home/growth/</guid>
+      <description>Along with fractals, I also got really into growth algorithms, especially making them run in realtime. It seems like a perfect intersection of design and art with computer science and math.
+Here are various realtime versions of some interesting growth algorithms I have seen over the years.
+ Mesh based Mesh Splitting / Spring and attractive forces  Diffusion-Limited Aggregation   Voxel based Gray-Scott Anisotropic Dendritic Solidification  Mesh Based These involve splitting a manifold (1d or 2d surface) and then moving the nodes around in a higher dimensional space to minimise overlap</description>
+    </item>
+    
+    <item>
       <title>Lindsey Stirling</title>
-      <link>https://nshelton.github.io/portfolio/lindsey/</link>
+      <link>https://nshelton.github.io/home/lindsey/</link>
       <pubDate>Mon, 26 Aug 2019 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/lindsey/</guid>
+      <guid>https://nshelton.github.io/home/lindsey/</guid>
       <description> Testing the suit! It didn&amp;rsquo;t work very well with the arms
 IK constraints to make hands match violin (because all the mocap is live we can&amp;rsquo;t touch it up!)
 Team  sheltron : technical director, mocap daniel sierra - unity technical artist aaron lemke - unity artist show director dare matheson - VFX, characters, environments mike krentz - art direction  </description>
@@ -49,28 +60,28 @@ Team  sheltron : technical director, mocap daniel sierra - unity technical artis
     
     <item>
       <title>REZZ</title>
-      <link>https://nshelton.github.io/portfolio/rezz/</link>
+      <link>https://nshelton.github.io/home/rezz/</link>
       <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/rezz/</guid>
+      <guid>https://nshelton.github.io/home/rezz/</guid>
       <description>&lt;p&gt;Beyond the Senses EP release&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>T-Pain</title>
-      <link>https://nshelton.github.io/portfolio/tpain/</link>
+      <link>https://nshelton.github.io/home/tpain/</link>
       <pubDate>Sat, 01 Jun 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/tpain/</guid>
+      <guid>https://nshelton.github.io/home/tpain/</guid>
       <description>&lt;p&gt;T-Pain&amp;rsquo;s School of Business feature at The Wave&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Light - Kizuna AI / W&amp;W</title>
-      <link>https://nshelton.github.io/portfolio/kizuna/</link>
+      <link>https://nshelton.github.io/home/kizuna/</link>
       <pubDate>Sun, 10 Mar 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/kizuna/</guid>
+      <guid>https://nshelton.github.io/home/kizuna/</guid>
       <description>At the Wave VR we made a Music video for Internationally renown producers DJs W&amp;amp;W for their musical collaboration with japanese vtuber Kizuna Ai.
  We had to make this in like a week or two, so we Here&amp;rsquo;s some Unity Workflow Documentation:
 Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly kitbash assets and copious Unity postprocessing Kitbash Neo Tokyo Animation Data The Kizuna mesh and mesh came straight from Activ8 in MikuMikuDance format</description>
@@ -78,64 +89,64 @@ Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly k
     
     <item>
       <title>FractalFlames</title>
-      <link>https://nshelton.github.io/portfolio/fractalflames/</link>
+      <link>https://nshelton.github.io/home/fractalflames/</link>
       <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/fractalflames/</guid>
+      <guid>https://nshelton.github.io/home/fractalflames/</guid>
       <description>&lt;p&gt;Fractal Flames&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Magfest VJ</title>
-      <link>https://nshelton.github.io/portfolio/magfest/</link>
+      <link>https://nshelton.github.io/home/magfest/</link>
       <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/magfest/</guid>
+      <guid>https://nshelton.github.io/home/magfest/</guid>
       <description>&lt;p&gt;Super MagFest 2019 DJ battle&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>OP-Z</title>
-      <link>https://nshelton.github.io/portfolio/op-z/</link>
+      <link>https://nshelton.github.io/home/op-z/</link>
       <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/op-z/</guid>
+      <guid>https://nshelton.github.io/home/op-z/</guid>
       <description>&lt;p&gt;Unity Visuals pack for OP-Z multimedia synthesizer&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Imogen Heap</title>
-      <link>https://nshelton.github.io/portfolio/imogenheap/</link>
+      <link>https://nshelton.github.io/home/imogenheap/</link>
       <pubDate>Thu, 23 Aug 2018 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/imogenheap/</guid>
+      <guid>https://nshelton.github.io/home/imogenheap/</guid>
       <description>&lt;p&gt;VR Volumetric Music Video Experience for Imogen Heap&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>See Without Eyes</title>
-      <link>https://nshelton.github.io/portfolio/seewithouteyes/</link>
+      <link>https://nshelton.github.io/home/seewithouteyes/</link>
       <pubDate>Thu, 21 Jun 2018 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/seewithouteyes/</guid>
+      <guid>https://nshelton.github.io/home/seewithouteyes/</guid>
       <description>&lt;p&gt;Interactive VR Music video Experience&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ready Player One</title>
-      <link>https://nshelton.github.io/portfolio/rpo/</link>
+      <link>https://nshelton.github.io/home/rpo/</link>
       <pubDate>Fri, 09 Mar 2018 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/rpo/</guid>
+      <guid>https://nshelton.github.io/home/rpo/</guid>
       <description>&lt;p&gt;Making of TheWaveVR&amp;rsquo;s Distracted Globe&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ṛta</title>
-      <link>https://nshelton.github.io/portfolio/rta/</link>
+      <link>https://nshelton.github.io/home/rta/</link>
       <pubDate>Sat, 30 Dec 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/rta/</guid>
+      <guid>https://nshelton.github.io/home/rta/</guid>
       <description>Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive
  Ṛta is the principle of natural order which regulates and coordinates the operation of the universe and everything within it. In the hymns of the Vedas, Ṛta is described as that which is ultimately responsible for the proper functioning of the natural, moral and sacrificial orders.
 I am excited to share the next version of the FORM fractal visualizer, using a new compute shader surface calculation and rendering architecture.</description>
@@ -143,55 +154,55 @@ I am excited to share the next version of the FORM fractal visualizer, using a n
     
     <item>
       <title>3D Flying Lotus Visuals</title>
-      <link>https://nshelton.github.io/portfolio/flylo/</link>
+      <link>https://nshelton.github.io/home/flylo/</link>
       <pubDate>Sun, 23 Jul 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/flylo/</guid>
+      <guid>https://nshelton.github.io/home/flylo/</guid>
       <description>&lt;p&gt;3D Visuals content for Flying Lotus and Strangeloop Studios&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>AKTUAL</title>
-      <link>https://nshelton.github.io/portfolio/aktual/</link>
+      <link>https://nshelton.github.io/home/aktual/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/aktual/</guid>
+      <guid>https://nshelton.github.io/home/aktual/</guid>
       <description>&lt;p&gt;ASH KOOSHA show in TheWaveVR&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GRIMECRAFT viz</title>
-      <link>https://nshelton.github.io/portfolio/grimecraft/</link>
+      <link>https://nshelton.github.io/home/grimecraft/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/grimecraft/</guid>
+      <guid>https://nshelton.github.io/home/grimecraft/</guid>
       <description>&lt;p&gt;VR Visuals in TheWaveVR&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>N-FOLD</title>
-      <link>https://nshelton.github.io/portfolio/nfold/</link>
+      <link>https://nshelton.github.io/home/nfold/</link>
       <pubDate>Tue, 27 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/nfold/</guid>
+      <guid>https://nshelton.github.io/home/nfold/</guid>
       <description>&lt;p&gt;Hyper-Dimensional Odyssey&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>FORM 0.0 beta</title>
-      <link>https://nshelton.github.io/portfolio/form/</link>
+      <link>https://nshelton.github.io/home/form/</link>
       <pubDate>Sun, 11 Jun 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/form/</guid>
+      <guid>https://nshelton.github.io/home/form/</guid>
       <description>&lt;p&gt;Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>artandvr</title>
-      <link>https://nshelton.github.io/portfolio/artandvr/</link>
+      <link>https://nshelton.github.io/home/artandvr/</link>
       <pubDate>Sat, 18 Feb 2017 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/artandvr/</guid>
+      <guid>https://nshelton.github.io/home/artandvr/</guid>
       <description>&lt;p&gt;Art and VR at HACK TEMPLE and The New Parish with Gaslamp Killer&lt;/p&gt;</description>
     </item>
     

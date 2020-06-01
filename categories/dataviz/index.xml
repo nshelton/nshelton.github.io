@@ -13,55 +13,55 @@
     
     <item>
       <title>LiDAR Processing</title>
-      <link>https://nshelton.github.io/portfolio/lidar_processing/</link>
+      <link>https://nshelton.github.io/home/lidar_processing/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/lidar_processing/</guid>
+      <guid>https://nshelton.github.io/home/lidar_processing/</guid>
       <description>&lt;p&gt;surface reconstruction from point clouds&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LiDAR Processing pt.2</title>
-      <link>https://nshelton.github.io/portfolio/lidar_processing2/</link>
+      <link>https://nshelton.github.io/home/lidar_processing2/</link>
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/lidar_processing2/</guid>
+      <guid>https://nshelton.github.io/home/lidar_processing2/</guid>
       <description>&lt;p&gt;more experiments in point cloud reconstruction&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>this._node</title>
-      <link>https://nshelton.github.io/portfolio/this._node/</link>
+      <link>https://nshelton.github.io/home/this._node/</link>
       <pubDate>Fri, 20 Nov 2015 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/this._node/</guid>
+      <guid>https://nshelton.github.io/home/this._node/</guid>
       <description>&lt;p&gt;Interactive Facebook Graph Visualization&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Atlanta </title>
-      <link>https://nshelton.github.io/portfolio/atlanta/</link>
+      <link>https://nshelton.github.io/home/atlanta/</link>
       <pubDate>Sat, 18 Jul 2015 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/atlanta/</guid>
+      <guid>https://nshelton.github.io/home/atlanta/</guid>
       <description>&lt;p&gt;geospatial vertex shader&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>tweet</title>
-      <link>https://nshelton.github.io/portfolio/tweet/</link>
+      <link>https://nshelton.github.io/home/tweet/</link>
       <pubDate>Sat, 18 Jul 2015 00:13:37 -0706</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/tweet/</guid>
+      <guid>https://nshelton.github.io/home/tweet/</guid>
       <description>&lt;p&gt;visual tweet and population density visualization&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>OpenSWR</title>
-      <link>https://nshelton.github.io/portfolio/openswr/</link>
+      <link>https://nshelton.github.io/home/openswr/</link>
       <pubDate>Sat, 01 Feb 2014 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/portfolio/openswr/</guid>
+      <guid>https://nshelton.github.io/home/openswr/</guid>
       <description>Low-level OpenGL driver development
 video: isosurface extraction and realtime rendering of a shit ton of triangles on a xeon phi cluster (no GPUs!)
 In 2015 I contracted for Intel&amp;rsquo;s visualization department on an OpenGL driver optimised for many-core intel supercomputer clusters. With that many CPUs, you can treat the network as a GPU, with each core doing some work in a Tile-Based Deferred Rendering (TBDR) pipeline. This was built on the Mesa3D graphics library and greatly improved frame rates on certain systems compared to the built in software renderer in Mesa3D (llvmpipe).</description>
