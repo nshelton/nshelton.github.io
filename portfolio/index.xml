@@ -20,7 +20,7 @@
       <description>I decided to take my fractal rendering to the NEXT LEVEL by implementing a simple compute shader path tracer in unity.
 Code Mostly Lifted from Three Eyed Games tutorial
 Source Code on github
-Temporal Reprojection But then I decided to reproject frames from the past into the current buffer to improve convergence, and make it pretty much realtime
+Temporal Reprojection But then I decided to reproject frames from the past into the current buffer to improve convergence, and make it pretty much realtime. Will add some more about this later
 Renders </description>
     </item>
     
@@ -225,7 +225,7 @@ I am excited to share the next version of the FORM fractal visualizer, using a n
       
       <guid>https://nshelton.github.io/portfolio/laser/</guid>
       <description>some laser cuts made at the Tech Shop in Austin Many designs from &amp;amp; inspired by George Hart
-{&amp;lt;gallery &amp;ldquo;sculpture/thumbnail&amp;quot;&amp;gt;}</description>
+</description>
     </item>
     
     <item>
