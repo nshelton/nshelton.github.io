@@ -6,11 +6,7 @@
     <description>Recent content in fractals on SHELTRON</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Feb 2020 00:13:37 -0706</lastBuildDate>
-    
-	<atom:link href="https://nshelton.github.io/categories/fractals/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 20 Feb 2020 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/fractals/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fractal Path Tracer</title>
       <link>https://nshelton.github.io/home/fractalpathtracing/</link>
@@ -22,6 +18,15 @@ Code Mostly Lifted from Three Eyed Games tutorial
 Source Code on github
 Temporal Reprojection But then I decided to reproject frames from the past into the current buffer to improve convergence, and make it pretty much realtime. Will add some more about this later
 Renders </description>
+    </item>
+    
+    <item>
+      <title>FractalFlames</title>
+      <link>https://nshelton.github.io/home/fractalflames/</link>
+      <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
+      
+      <guid>https://nshelton.github.io/home/fractalflames/</guid>
+      <description>&lt;p&gt;Fractal Flames&lt;/p&gt;</description>
     </item>
     
     <item>

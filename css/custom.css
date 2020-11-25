@@ -98,7 +98,7 @@ em {
   @media (min-width: 768px) {
     .image2  
     {
-    width:50%;
+    width:45%;
     display:inline-block;
     }
      .image3
@@ -110,7 +110,7 @@ em {
   
   .half-width-embed
   {
-    width:50%;
+    width:45%;
     display:inline-block;
   }
   
@@ -123,7 +123,7 @@ em {
   @media (min-width: 768px) {
     .galleryThumb
     {
-      width:50%;
+      width:100%
     }
   }
 
