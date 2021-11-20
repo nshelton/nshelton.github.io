@@ -1,218 +1,370 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://nshelton.github.io/categories/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url><url>
+    <lastmod>2020-08-07T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/home/</loc>
+    <lastmod>2020-08-07T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/</loc>
+    <lastmod>2020-08-07T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/home/weeknd/</loc>
+    <lastmod>2020-08-07T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/categories/unity/</loc>
+    <lastmod>2020-08-07T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/categories/vj/</loc>
+    <lastmod>2020-08-07T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/categories/vr/</loc>
+    <lastmod>2020-08-07T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/categories/wave/</loc>
+    <lastmod>2020-08-07T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/home/johnlegend/</loc>
+    <lastmod>2020-06-25T00:13:37-07:06</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/grimecraftera/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/home/</loc>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/categories/generative/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/</loc>
-    <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/webgl/</loc>
     <lastmod>2020-04-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/fractalpathtracing/</loc>
     <lastmod>2020-02-20T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/fractals/</loc>
     <lastmod>2020-02-20T00:13:37-07:06</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/categories/unity/</loc>
-    <lastmod>2020-02-20T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>https://nshelton.github.io/categories/dataviz/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/ml/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/wordcloud/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/categories/vr/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/categories/generative/</loc>
-    <lastmod>2019-09-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/growth/</loc>
     <lastmod>2019-09-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/lindsey/</loc>
     <lastmod>2019-08-26T20:32:03-08:00</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/categories/wave/</loc>
-    <lastmod>2019-08-26T20:32:03-08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/rezz/</loc>
     <lastmod>2019-06-23T00:13:37-07:06</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/categories/vj/</loc>
-    <lastmod>2019-06-23T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/tpain/</loc>
     <lastmod>2019-06-01T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/kizuna/</loc>
     <lastmod>2019-03-10T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/fractalflames/</loc>
     <lastmod>2019-01-04T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/magfest/</loc>
     <lastmod>2019-01-04T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/op-z/</loc>
     <lastmod>2019-01-04T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/imogenheap/</loc>
     <lastmod>2018-08-23T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/seewithouteyes/</loc>
     <lastmod>2018-06-21T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/rpo/</loc>
     <lastmod>2018-03-09T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/rta/</loc>
     <lastmod>2017-12-30T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/flylo/</loc>
     <lastmod>2017-07-23T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/aktual/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/grimecraft/</loc>
     <lastmod>2017-07-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/3dwebfest/</loc>
     <lastmod>2017-06-30T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/nfold/</loc>
     <lastmod>2017-06-27T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/form/</loc>
     <lastmod>2017-06-11T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/tunneltek/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/artandvr/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/life/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/demo/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/turing/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/installation/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/julia/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/mandelbox/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/mandelbulb/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/jupe/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/spherical/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/rdfulid/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/rdfulid2/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/demos/sierpinski/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/art/</loc>
     <lastmod>2017-01-01T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/laser/</loc>
     <lastmod>2017-01-01T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/watercolor/</loc>
     <lastmod>2017-01-01T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/sketchbook0/</loc>
     <lastmod>2017-01-01T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/sketchbook1/</loc>
     <lastmod>2017-01-01T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/ar/</loc>
     <lastmod>2016-12-21T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/bridge/</loc>
     <lastmod>2016-12-21T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/resources/</loc>
     <lastmod>2016-11-06T07:30:25+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/about/</loc>
     <lastmod>2016-11-05T21:05:33+05:30</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/colors/</loc>
     <lastmod>2016-10-30T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/levels/</loc>
     <lastmod>2016-10-30T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/ios_mandelbox/</loc>
     <lastmod>2016-08-10T20:32:03-08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/3dscanning/</loc>
     <lastmod>2016-03-11T20:32:03-08:00</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/categories/dataviz/</loc>
-    <lastmod>2016-03-11T20:32:03-08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/lidar_processing/</loc>
     <lastmod>2016-03-11T20:32:03-08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/lidar_processing2/</loc>
     <lastmod>2016-03-11T20:32:03-08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/categories/python/</loc>
     <lastmod>2016-03-11T20:32:03-08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/this._node/</loc>
     <lastmod>2015-11-20T20:32:03-08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/capyac/</loc>
     <lastmod>2015-10-13T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/atlanta/</loc>
     <lastmod>2015-07-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/tweet/</loc>
     <lastmod>2015-07-18T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/synesthesia/</loc>
     <lastmod>2015-05-16T00:13:37-07:06</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/lynx/</loc>
     <lastmod>2014-02-01T20:32:03-08:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://nshelton.github.io/home/openswr/</loc>
     <lastmod>2014-02-01T20:32:03-08:00</lastmod>
   </url>
+  
 </urlset>

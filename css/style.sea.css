@@ -86,7 +86,7 @@ section.background-secondary {
 @media (min-width: 768px) {
   .galleryThumb
   {
-    width:50%;
+    width:100%;
   }
 }
 
