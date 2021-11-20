@@ -223,7 +223,7 @@ if (!doNotTrack) {
 <img src="/img/lidar2/seam2.jpg" alt="seam2"></p>
 <p>Then started doing a k - nearest neighbors search between neighboring meshes, and try to tesselate those. But because these has been decimated the vertices were irregular leading to inconsistent merging.</p>
 <p>I started using pyMesh Boolean operator like so</p>
-<p>merged = pymesh.boolean(f1, f2, operation=&quot;union&rdquo;)</p>
+<p>merged = pymesh.boolean(f1, f2, operation=&ldquo;union&rdquo;)</p>
 <p>which usually merged tiles with minimal artifacts! As long as there was enough overlap in the tiles.</p>
 <p><img src="/img/lidar2/merge1.jpg" alt="seam1">
 <img src="/img/lidar2/merge2.jpg" alt="seam1"></p>
@@ -233,7 +233,7 @@ if (!doNotTrack) {
 <h2 id="better-ao">Better AO</h2>
 <p><img src="/img/lidar2/ao.jpg" alt="ao">
 [Congress Ave in Downtown Austin, Texas]</p>
-<p>Why reinvent the wheel! I have reconstructions to do! Actually I found a pretty sweet AO generator. The tile artifacts totally destoryed the mesh topology so the UV wrapping didn&rsquo;t work the best, and took forever. But pretty useful tool if you have a decent mesh ! Check out <a href="http://github.prideout.net/">prideout</a>&lsquo;s  <a href="https://github.com/prideout/aobaker">aobaker</a></p>
+<p>Why reinvent the wheel! I have reconstructions to do! Actually I found a pretty sweet AO generator. The tile artifacts totally destoryed the mesh topology so the UV wrapping didn&rsquo;t work the best, and took forever. But pretty useful tool if you have a decent mesh ! Check out <a href="http://github.prideout.net/">prideout</a>&rsquo;s  <a href="https://github.com/prideout/aobaker">aobaker</a></p>
 <p><img src="/img/lidar2/thumb.jpg" alt="seam1"></p>
 <h2 id="diferent-subjects">Diferent subjects</h2>
 <ul>

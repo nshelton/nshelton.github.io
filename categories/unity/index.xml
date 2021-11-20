@@ -6,11 +6,7 @@
     <description>Recent content in unity on SHELTRON</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Feb 2020 00:13:37 -0706</lastBuildDate>
-    
-	<atom:link href="https://nshelton.github.io/categories/unity/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 20 Feb 2020 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fractal Path Tracer</title>
       <link>https://nshelton.github.io/home/fractalpathtracing/</link>
@@ -53,7 +49,7 @@ Here are various realtime versions of some interesting growth algorithms I have 
       <pubDate>Mon, 26 Aug 2019 20:32:03 -0800</pubDate>
       
       <guid>https://nshelton.github.io/home/lindsey/</guid>
-      <description> Testing the suit! It didn&amp;rsquo;t work very well with the arms
+      <description>   Testing the suit! It didn&amp;rsquo;t work very well with the arms
 IK constraints to make hands match violin (because all the mocap is live we can&amp;rsquo;t touch it up!)
 Team  sheltron : technical director, mocap daniel sierra - unity technical artist aaron lemke - unity artist show director dare matheson - VFX, characters, environments mike krentz - art direction  </description>
     </item>
@@ -83,7 +79,7 @@ Team  sheltron : technical director, mocap daniel sierra - unity technical artis
       
       <guid>https://nshelton.github.io/home/kizuna/</guid>
       <description>At the Wave VR we made a Music video for Internationally renown producers DJs W&amp;amp;W for their musical collaboration with japanese vtuber Kizuna Ai.
- We had to make this in like a week or two, so we Here&amp;rsquo;s some Unity Workflow Documentation:
+  We had to make this in like a week or two, so we Here&amp;rsquo;s some Unity Workflow Documentation:
 Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly kitbash assets and copious Unity postprocessing Kitbash Neo Tokyo Animation Data The Kizuna mesh and mesh came straight from Activ8 in MikuMikuDance format</description>
     </item>
     
@@ -148,7 +144,7 @@ Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly k
       
       <guid>https://nshelton.github.io/home/rta/</guid>
       <description>Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive
- Ṛta is the principle of natural order which regulates and coordinates the operation of the universe and everything within it. In the hymns of the Vedas, Ṛta is described as that which is ultimately responsible for the proper functioning of the natural, moral and sacrificial orders.
+  Ṛta is the principle of natural order which regulates and coordinates the operation of the universe and everything within it. In the hymns of the Vedas, Ṛta is described as that which is ultimately responsible for the proper functioning of the natural, moral and sacrificial orders.
 I am excited to share the next version of the FORM fractal visualizer, using a new compute shader surface calculation and rendering architecture.</description>
     </item>
     

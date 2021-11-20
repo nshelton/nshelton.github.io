@@ -268,7 +268,7 @@ if (!doNotTrack) {
 
 
 Around Congress ave in Austin, TX</p>
-<h2 id="lidar-processing-experiments-">LiDAR Processing Experiments</h2>
+<h2 id="lidar-processing-experiments">LiDAR Processing Experiments</h2>
 <p>Early 2016 I bought a LiDAR scan of all of Travis county! This seemed super cool, but visualizing it was hard since the only option is really just to color code based on elevation, because there&rsquo;s no information about surfaces. You could do some whack normal calculations based on neighboring points, but check out how erratic this sampling pattern is.</p>
 <p>Why are the points so close together? Was there an error in the processing? Why is there a little hole over there? Nobody knows. I need a technique that can handle this non-uniform sampling pattern.</p>
 <p><img src="/img/lidar/points.jpg" alt="lidar">
@@ -277,7 +277,7 @@ Is this the best we can do???</p>
 <h2 id="3d-delaunay-triangulation">3D Delaunay triangulation</h2>
 <p>This is the most obvious thing to do, but the results weren&rsquo;t that great. And the elevation changes were so much bigger than the ground plane changes that I had to project all the points on the ground, do the triangulation in 2d, and then extend the point back up into the z dimension. So the results were super noisy because of this technique:</p>
 <p><img src="/img/lidar/triangulation.jpg" alt="lidar"></p>
-<h2 id="volumetric-grid-sampling-">Volumetric Grid sampling</h2>
+<h2 id="volumetric-grid-sampling">Volumetric Grid sampling</h2>
 <p>Volumetric reconstruction techniques are very common because of the parallel nature of the processing and the simple algorithms. The downside is that you are storing data for the whole grid, which goes up cubically in the resolution of the reconstruction, limiting the size. Still, I don&rsquo;t really care because this is an offline algorithm and I can process the data in tiles. Probably the most famous technique for this is Kinect Fusion.</p>
 <p><img src="/img/lidar/volume.jpg" alt="lidar">
 <img src="/img/lidar/marchingCubes.jpg" alt="lidar">
@@ -285,21 +285,21 @@ Is this the best we can do???</p>
 <img src="/img/lidar/smooth.jpg" alt="lidar"></p>
 <p>So I make 500x500x500 voxel cube array, and then partition the LiDAR points into chunks that are more or less 500x500 points. The goal is to sample the point cloud at as close to the same frequency as the LiDAR scan as possible so we don&rsquo;t lose any information, but still have enough to extract a surface from the volume. In the images above, the grid resolution was too small, so you can get volume cells that are empty, even on a surface!</p>
 <p>I didn&rsquo;t make a visualizer for the volume directly, since I knew I wanted to make a mesh anyways. I could do some cool parallel GPU ray marching but Marching Cubes is really fast so I just found some code to do that. At first the results weren&rsquo;t great but that brings us to</p>
-<h2 id="3d-volume-filtering-">3D Volume Filtering</h2>
+<h2 id="3d-volume-filtering">3D Volume Filtering</h2>
 <p><img src="/img/lidar/blur.jpg" alt="lidar"></p>
 <p>I was getting a lot of noise in the data, with some gaps in between points or spurious readings around in the air. So I wanted to run a low-pass filter on the volume. This is equivalent to blurring an image in 2D, but instead I&rsquo;m blurring the &ldquo;density&rdquo; values in the volume in 3D. I started with a box filter but that made everything look really blocky. Ideally I want to do a gaussian. And, since the Gaussian Blur is separable, so I can run 3 1-dimensional blurs, with precomputed gaussian weights. I used a 5 tap blur.</p>
 <p>I also changed the point integration so that, for a given Lidar point, instead of just increasing the density of the cell it falls in to, it will increase the density of every cell beneath that cell. This assumes that every point is a</p>
-<h2 id="decimation-">Decimation</h2>
+<h2 id="decimation">Decimation</h2>
 <p><img src="/img/lidar/dec.jpg" alt="lidar"></p>
 <p>So now I have this super high quality mesh but I&rsquo;ve processed one city block and I have 60 million triangles or something stupid. See above, the marching cube output has a point one the corner of every volume cell. So I need to simplify the mesh with quadric edge-collapse decimation. This is named after the super brutal military discipline used in the Roman Army. The mesh processing is pretty brutal too. Except, I must be doing something wrong in Meshlab, or Meshlab kind of sucks. Don&rsquo;t get me wrong, I love Meshlab. But half of the tools don&rsquo;t work out of the box. I ended up using OpenMesh to do the decimation, using a Cinder app, and using their command line sample. I suspect this can be slightly improved by tweaking but I got great results out of the box.</p>
 <p><img src="/img/lidar/meshlab.jpg" alt="lidar">
 COM ON MESHLAB, YOU CALL THAT DECIMATION? MORE LIKE MASHED POTATOES</p>
-<h2 id="rendering-">Rendering</h2>
+<h2 id="rendering">Rendering</h2>
 <p>So we have a reasonably sized mesh, where we can load the whole thing into GPU memory and get a realtime frame rate. I&rsquo;ve always loved the visual from a good Ambient Occlusion effect, because it gives you a tremendous amount of spatial perception that you don&rsquo;t get with simple surface normal shading. Especially with cityscapes, this is really useful to make out small details. Similar to the way shadows work, our brains have been trained to process these subtle lighting cues to infer 3D structure. Just look at the difference! (using Blender)</p>
 <p><img src="/img/lidar/blender.jpg" alt="lidar"> 
 <img src="/img/lidar/ao.jpg" alt="lidar"></p>
 <p>In the future, I want to make a custom ambient occlusion implementation to make some really nice renders. Something like this genius technique described by Evan Wallace here. But first, I have to figure out how to parameterize the surface to build a texture map - and make sure the the sides of buildings have enough space in the map to get a shadow gradient up the side.</p>
-<h1 id="future-work-">Future Work</h1>
+<h1 id="future-work">Future Work</h1>
 <ul>
 <li>
 <p>There&rsquo;s still some obvious ugly grid lines as an artifact from my tile generation. I should clean the surface generation up and get the tiles to have the same vertices on edges so I can merge them.</p>
