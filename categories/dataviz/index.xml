@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dataviz on SHELTRON</title>
+    <title>dataviz on sheltron</title>
     <link>https://nshelton.github.io/categories/dataviz/</link>
-    <description>Recent content in dataviz on SHELTRON</description>
+    <description>Recent content in dataviz on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nshelton.github.io/categories/dataviz/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Rap Word Cloud</title>
-      <link>https://nshelton.github.io/home/wordcloud/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nshelton.github.io/home/wordcloud/</guid>
-      <description>An Optimisaiton Journey. Client : Rap Research Lab
-Rendering 5000 TextMeshPro meshes in 1ms for an interactive VR word cloudI started with a naive 5000 TextMeshPro gameobjects, which could take 30ms CPU and GPU, and made a new system that took 1ms CPU and GPU and still looked dope.
-FunctionalityInteractive 3D visualization of words used in a corpus of rap lyrics (See Part 1)
-Interface Features Left Thumb button transitions from Globe View to Word Cloud view Right hand controller has a “laser” which intersects with words to select them Clicking word with laser transports user to the word Words can also be selected with Right Hand controller Interaction point Selecting word with Right hand shows usage over time of the word and 10 similar words Timeline View Pressing both grips allows user to scale and rotate the word cloud.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 11 Mar 2016 20:32:03 -0800</lastBuildDate><atom:link href="https://nshelton.github.io/categories/dataviz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LiDAR Processing</title>
       <link>https://nshelton.github.io/home/lidar_processing/</link>
@@ -39,10 +27,10 @@ Interface Features Left Thumb button transitions from Globe View to Word Cloud 
     
     <item>
       <title>this._node</title>
-      <link>https://nshelton.github.io/home/this._node/</link>
+      <link>https://nshelton.github.io/home/thisnode/</link>
       <pubDate>Fri, 20 Nov 2015 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/home/this._node/</guid>
+      <guid>https://nshelton.github.io/home/thisnode/</guid>
       <description>&lt;p&gt;Interactive Facebook Graph Visualization&lt;/p&gt;</description>
     </item>
     

@@ -61,7 +61,7 @@ section.background-secondary {
 @media (min-width: 768px) {
   .image2  
   {
-  width:50%;
+  width:49%;
   display:inline-block;
   }
    .image3
@@ -86,7 +86,7 @@ section.background-secondary {
 @media (min-width: 768px) {
   .galleryThumb
   {
-    width:100%;
+    width:50%;
   }
 }
 
@@ -878,11 +878,11 @@ a:active {
 .box-masonry h4 a:hover {
   text-decoration: none;
 }
-
 .box-masonry .box-masonry-text p {
   font-size: 14px;
   color: #999999;
 }
+
 .box-masonry .box-masonry-hover-text-header {
   position: absolute;
   left: 0;

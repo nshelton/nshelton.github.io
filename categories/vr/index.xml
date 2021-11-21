@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vr on SHELTRON</title>
+    <title>vr on sheltron</title>
     <link>https://nshelton.github.io/categories/vr/</link>
-    <description>Recent content in vr on SHELTRON</description>
+    <description>Recent content in vr on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2020 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/vr/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Weeknd Experience</title>
-      <link>https://nshelton.github.io/home/weeknd/</link>
-      <pubDate>Fri, 07 Aug 2020 00:13:37 -0706</pubDate>
-      
-      <guid>https://nshelton.github.io/home/weeknd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>John Legend</title>
-      <link>https://nshelton.github.io/home/johnlegend/</link>
-      <pubDate>Thu, 25 Jun 2020 00:13:37 -0706</pubDate>
-      
-      <guid>https://nshelton.github.io/home/johnlegend/</guid>
-      <description>&lt;p&gt;John Legend live charity show&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nshelton.github.io/categories/vr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rap Word Cloud</title>
       <link>https://nshelton.github.io/home/wordcloud/</link>
@@ -89,7 +71,7 @@ Interface Features Left Thumb button transitions from Globe View to Word Cloud 
       
       <guid>https://nshelton.github.io/home/rta/</guid>
       <description>Free VR Fractal Visualizer &amp;amp; Manipulation Software for Vive
- Ṛta is the principle of natural order which regulates and coordinates the operation of the universe and everything within it. In the hymns of the Vedas, Ṛta is described as that which is ultimately responsible for the proper functioning of the natural, moral and sacrificial orders.
+  Ṛta is the principle of natural order which regulates and coordinates the operation of the universe and everything within it. In the hymns of the Vedas, Ṛta is described as that which is ultimately responsible for the proper functioning of the natural, moral and sacrificial orders.
 I am excited to share the next version of the FORM fractal visualizer, using a new compute shader surface calculation and rendering architecture.</description>
     </item>
     

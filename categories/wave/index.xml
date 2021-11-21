@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wave on SHELTRON</title>
+    <title>wave on sheltron</title>
     <link>https://nshelton.github.io/categories/wave/</link>
-    <description>Recent content in wave on SHELTRON</description>
+    <description>Recent content in wave on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2020 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/wave/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Weeknd Experience</title>
-      <link>https://nshelton.github.io/home/weeknd/</link>
-      <pubDate>Fri, 07 Aug 2020 00:13:37 -0706</pubDate>
-      
-      <guid>https://nshelton.github.io/home/weeknd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>John Legend</title>
-      <link>https://nshelton.github.io/home/johnlegend/</link>
-      <pubDate>Thu, 25 Jun 2020 00:13:37 -0706</pubDate>
-      
-      <guid>https://nshelton.github.io/home/johnlegend/</guid>
-      <description>&lt;p&gt;John Legend live charity show&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Mon, 26 Aug 2019 20:32:03 -0800</lastBuildDate><atom:link href="https://nshelton.github.io/categories/wave/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lindsey Stirling</title>
       <link>https://nshelton.github.io/home/lindsey/</link>
       <pubDate>Mon, 26 Aug 2019 20:32:03 -0800</pubDate>
       
       <guid>https://nshelton.github.io/home/lindsey/</guid>
-      <description> Testing the suit! It didn&amp;rsquo;t work very well with the arms
+      <description>   Testing the suit! It didn&amp;rsquo;t work very well with the arms
 IK constraints to make hands match violin (because all the mocap is live we can&amp;rsquo;t touch it up!)
 Team  sheltron : technical director, mocap daniel sierra - unity technical artist aaron lemke - unity artist show director dare matheson - VFX, characters, environments mike krentz - art direction  </description>
     </item>
@@ -61,7 +43,7 @@ Team  sheltron : technical director, mocap daniel sierra - unity technical artis
       
       <guid>https://nshelton.github.io/home/kizuna/</guid>
       <description>At the Wave VR we made a Music video for Internationally renown producers DJs W&amp;amp;W for their musical collaboration with japanese vtuber Kizuna Ai.
- We had to make this in like a week or two, so we Here&amp;rsquo;s some Unity Workflow Documentation:
+  We had to make this in like a week or two, so we Here&amp;rsquo;s some Unity Workflow Documentation:
 Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly kitbash assets and copious Unity postprocessing Kitbash Neo Tokyo Animation Data The Kizuna mesh and mesh came straight from Activ8 in MikuMikuDance format</description>
     </item>
     

@@ -3,7 +3,7 @@ body {
 }
 .sidebar-heading a{
     color : white;
-    font-size:1.5em;
+    font-size:1em;
 }
 
 .sidebar-heading img{
@@ -13,7 +13,6 @@ body {
 }
 
 .social {
-    text-align:justify;
     height:40px;
 }
 
@@ -27,7 +26,7 @@ body {
 * {
     /* font-family: 'DM Mono', monospace; */
     /* font-family: 'Roboto', sans-seri*/
-    font-family: 'Anonymous Pro', sans-serif; 
+    font-family: 'Noto Sans Mono', sans-serif; 
     /* font-family: 'Balsamiq Sans', cursive; */
     /* font-family: 'Major Mono Display', monospace; */
 }
@@ -35,7 +34,7 @@ body {
 
 .social > a {
     display:inline-block;
-    margin: 0px 10px;
+    margin: 0px 3px;
     color:white
 } 
 
@@ -44,7 +43,7 @@ body {
 }
 #sidebar{
     text-align: right;
-    font-size:1.5em
+    font-size:1em
 }
 
 @media (max-width: 768px) {
@@ -89,7 +88,9 @@ em {
     color:#aaa;
 }
 
-
+img {
+    margin-top: 1em;
+}
 
 .image2  .image3 {
     margin: 0 auto;
@@ -98,7 +99,7 @@ em {
   @media (min-width: 768px) {
     .image2  
     {
-    width:45%;
+    width:49%;
     display:inline-block;
     }
      .image3
@@ -110,7 +111,7 @@ em {
   
   .half-width-embed
   {
-    width:45%;
+    width:50%;
     display:inline-block;
   }
   
@@ -123,7 +124,7 @@ em {
   @media (min-width: 768px) {
     .galleryThumb
     {
-      width:100%
+      width:50%;
     }
   }
 

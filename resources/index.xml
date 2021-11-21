@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>resources on SHELTRON</title>
+    <title>resources on sheltron</title>
     <link>https://nshelton.github.io/resources/</link>
-    <description>Recent content in resources on SHELTRON</description>
+    <description>Recent content in resources on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Nov 2016 07:30:25 +0000</lastBuildDate><atom:link href="https://nshelton.github.io/resources/index.xml" rel="self" type="application/rss+xml" />

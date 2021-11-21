@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>webgl on SHELTRON</title>
+    <title>webgl on sheltron</title>
     <link>https://nshelton.github.io/categories/webgl/</link>
-    <description>Recent content in webgl on SHELTRON</description>
+    <description>Recent content in webgl on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nshelton.github.io/categories/webgl/index.xml" rel="self" type="application/rss+xml" />
@@ -126,10 +126,10 @@
     
     <item>
       <title>this._node</title>
-      <link>https://nshelton.github.io/home/this._node/</link>
+      <link>https://nshelton.github.io/home/thisnode/</link>
       <pubDate>Fri, 20 Nov 2015 20:32:03 -0800</pubDate>
       
-      <guid>https://nshelton.github.io/home/this._node/</guid>
+      <guid>https://nshelton.github.io/home/thisnode/</guid>
       <description>&lt;p&gt;Interactive Facebook Graph Visualization&lt;/p&gt;</description>
     </item>
     

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on SHELTRON</title>
+    <title>Categories on sheltron</title>
     <link>https://nshelton.github.io/categories/</link>
-    <description>Recent content in Categories on SHELTRON</description>
+    <description>Recent content in Categories on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2020 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Aug 2021 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>unity</title>
       <link>https://nshelton.github.io/categories/unity/</link>
-      <pubDate>Fri, 07 Aug 2020 00:13:37 -0706</pubDate>
+      <pubDate>Mon, 16 Aug 2021 00:13:37 -0706</pubDate>
       
       <guid>https://nshelton.github.io/categories/unity/</guid>
       <description></description>
@@ -19,36 +19,9 @@
     <item>
       <title>vj</title>
       <link>https://nshelton.github.io/categories/vj/</link>
-      <pubDate>Fri, 07 Aug 2020 00:13:37 -0706</pubDate>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nshelton.github.io/categories/vj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vr</title>
-      <link>https://nshelton.github.io/categories/vr/</link>
-      <pubDate>Fri, 07 Aug 2020 00:13:37 -0706</pubDate>
-      
-      <guid>https://nshelton.github.io/categories/vr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>wave</title>
-      <link>https://nshelton.github.io/categories/wave/</link>
-      <pubDate>Fri, 07 Aug 2020 00:13:37 -0706</pubDate>
-      
-      <guid>https://nshelton.github.io/categories/wave/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>generative</title>
-      <link>https://nshelton.github.io/categories/generative/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nshelton.github.io/categories/generative/</guid>
       <description></description>
     </item>
     
@@ -71,20 +44,38 @@
     </item>
     
     <item>
-      <title>dataviz</title>
-      <link>https://nshelton.github.io/categories/dataviz/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nshelton.github.io/categories/dataviz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ml</title>
       <link>https://nshelton.github.io/categories/ml/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nshelton.github.io/categories/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vr</title>
+      <link>https://nshelton.github.io/categories/vr/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nshelton.github.io/categories/vr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>generative</title>
+      <link>https://nshelton.github.io/categories/generative/</link>
+      <pubDate>Wed, 18 Sep 2019 00:13:37 -0706</pubDate>
+      
+      <guid>https://nshelton.github.io/categories/generative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wave</title>
+      <link>https://nshelton.github.io/categories/wave/</link>
+      <pubDate>Mon, 26 Aug 2019 20:32:03 -0800</pubDate>
+      
+      <guid>https://nshelton.github.io/categories/wave/</guid>
       <description></description>
     </item>
     
@@ -130,6 +121,15 @@
       <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
       
       <guid>https://nshelton.github.io/categories/3dscanning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dataviz</title>
+      <link>https://nshelton.github.io/categories/dataviz/</link>
+      <pubDate>Fri, 11 Mar 2016 20:32:03 -0800</pubDate>
+      
+      <guid>https://nshelton.github.io/categories/dataviz/</guid>
       <description></description>
     </item>
     
