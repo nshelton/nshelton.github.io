@@ -6,7 +6,26 @@
     <description>Recent content on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Aug 2021 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neonz AR</title>
+      <link>https://nshelton.github.io/home/neonz/</link>
+      <pubDate>Sun, 20 Feb 2022 00:13:37 -0706</pubDate>
+      
+      <guid>https://nshelton.github.io/home/neonz/</guid>
+      <description>AR NFT Viewer In 2021, Sutu launched one of the first generative NFT series on the tezos blockshain, a 10,000 profile pic series called Neonz. I think this is one of the few great examples that demonstrates how to use web3 tech across platforms, while also being really cool art in its own right.
+This was deveoped by the folks at Eyejack, I got on board to help them with some AR rendering effects for iOS and Android.</description>
+    </item>
+    
+    <item>
+      <title>CSMA302 Advanced Programming</title>
+      <link>https://nshelton.github.io/home/csma302/</link>
+      <pubDate>Mon, 30 Aug 2021 00:13:37 -0706</pubDate>
+      
+      <guid>https://nshelton.github.io/home/csma302/</guid>
+      <description>My First Course In Fall 2021 I taught a class at Woodbury University in Burbank on some Advanced Programming techniques in Unity. This was in the Architecture School, aimed at non-computer Science majors who had already taken two semesters of Unity / gameplay programming. This was the first class I taught like this, and I learned a lot&amp;hellip; I made all the curriculum from scratch, and I&amp;rsquo;m pretty proud of it so with their permission I&amp;rsquo;ve made it freely available here.</description>
+    </item>
+    
     <item>
       <title>Life After BOB</title>
       <link>https://nshelton.github.io/home/lifeafterbob/</link>
@@ -24,7 +43,7 @@ Neural engineer Dr. Wong has installed an experimental AI named BOB (“Bag of B
       
       <guid>https://nshelton.github.io/home/topochico/</guid>
       <description>Realtime Kinect visualizer experiments
-Hooked up a Kinect Azure to Unity&amp;rsquo;s VFX Graph to explore some live realtime visuals for Lyell Roder (Alt Fi) and Troy Everett - a Live improv ambient set
+Hooked up a Kinect Azure to Unity&amp;rsquo;s VFX Graph to explore some live realtime visuals for Lyell Roeder (Alt Fi) and Troy Everett - a Live improv ambient set
 video   stills time delay Troy is always looping sounds and riffs from his viola. So I wanted to make a visual analog of that where we see multiple copies of the musicians over time, delayed by exactly a beat or something like that.</description>
     </item>
     

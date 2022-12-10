@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CSMA302 Advanced Programming</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="https://nshelton.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://nshelton.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://nshelton.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://nshelton.github.io/css/owl.theme.css">
+
+
+  <link href="https://nshelton.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
+
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://nshelton.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-26353276-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class=" col-sm-4 col-md-2 sidebar-offcanvas d-xs-block">
+    <br>
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading">
+      <a href="https://nshelton.github.io">
+        sheltron
+      </a> 
+    </h1>
+    <br>
+    <p class="social">
+  
+  
+  
+  <a href="https://twitter.com/Sheltron3030" data-animate-hover="pulse" class="external twitter">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://www.instagram.com/nshelton" title="" class="external instagram">
+    <i class="fa fa-instagram"></i>
+  </a>
+  
+  
+  <a href="mailto:nshelton@gmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  <a href="https://www.linkedin.com/in/ngshelton/" data-animate-hover="pulse" class="external">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  
+  <a href="https://github.com/nshelton" data-animate-hover="pulse" class="external">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+</p>
+
+    <br>
+
+    <ul class="sidebar-links">
+      
+        <a href="https://nshelton.github.io/about/">
+            <li>about/ </li>
+        </a> 
+      
+        <a href="https://nshelton.github.io/resources/">
+            <li>resources/ </li>
+        </a> 
+      
+        <a href="https://nshelton.github.io/home/">
+            <li>home/ </li>
+        </a> 
+      
+        <a href="https://nshelton.github.io/demos/">
+            <li>demos/ </li>
+        </a> 
+      
+    </ul>
+    <br>
+      
+
+    <ul class="sidebar-menu">
+      
+        
+        <a  href="/categories/unity">
+          <li class="">unity 26 </li>
+        </a>
+      
+        
+        <a  href="/categories/webgl">
+          <li class="">webgl 16 </li>
+        </a>
+      
+        
+        <a  href="/categories/vj">
+          <li class="">vj 15 </li>
+        </a>
+      
+        
+        <a  href="/categories/vr">
+          <li class="">vr 12 </li>
+        </a>
+      
+        
+        <a  href="/categories/demo">
+          <li class="">demo 10 </li>
+        </a>
+      
+        
+        <a  href="/categories/wave">
+          <li class="">wave 9 </li>
+        </a>
+      
+        
+        <a  href="/categories/fractals">
+          <li class="">fractals 7 </li>
+        </a>
+      
+        
+        <a  href="/categories/dataviz">
+          <li class="">dataviz 6 </li>
+        </a>
+      
+        
+        <a  href="/categories/art">
+          <li class="">art 5 </li>
+        </a>
+      
+        
+        <a  href="/categories/3dscanning">
+          <li class="">3dscanning 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/generative">
+          <li class="">generative 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/ar">
+          <li class="">ar 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/installation">
+          <li class="">installation 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/ml">
+          <li class="">ml 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/python">
+          <li class="">python 2 </li>
+        </a>
+      
+        
+        <a  href="/categories/teaching">
+          <li class="">teaching 1 </li>
+        </a>
+      
+    </ul>
+
+
+  </div>
+</div>
+ 
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="row">
+
+<br><br><br>
+    <div class="col-lg-12">
+      <div class="content-column-content">
+         <pageTitle>CSMA302 Advanced Programming</pageTitle>
+         <p>Aug 2021</p>
+         <h1 id="my-first-course">My First Course</h1>
+<p>In <em>Fall 2021</em> I taught a class at <em>Woodbury University</em> in Burbank on some Advanced Programming techniques in Unity.  This was in the Architecture School, aimed at non-computer Science majors who had already taken two semesters of Unity / gameplay programming. This was the first class I taught like this, and I learned a lot&hellip; I made all the curriculum from scratch, and I&rsquo;m pretty proud of it so with their permission I&rsquo;ve made it freely available here.</p>
+<p>These techniques are a lot of fun, and I&rsquo;ve supplied all the finished code projects for anyone to play around with.</p>
+<h1 id="slides-on-google-slides">Slides (on google slides)</h1>
+<p>The slides don&rsquo;t have a lot of text because I would mostly explain in lectures what was going on. The images illustrate some specific concepts.</p>
+<ul>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1-3aWjwU7Ek_3bH06olmccLCfG5gN8KIiaup00AfK6ug/edit?usp=share_link">Color Theory</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1N1NdNyP28x7t4erhc68Dj-y_JD7heyUYOd1_Hi6A410/edit?usp=share_link">2D Textures</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1VOmXsZ9T398SmfhcfsYMTiRKzqshIWdzfWDXPLLpKBU/edit?usp=sharing">Material Techniques</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1uGwdNEgHJgi_72tenv69V8zND_wDZ0sCcW5MZLaDP14/edit?usp=share_link">Materials II</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1FKAcWEFhDJydu8fd48cpSGO-XllM7OtNo7AZm0Lwl_g/edit?usp=share_link">Digital Image / Signal Processing</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1M6txmKLBpotZTVdCg2BGl3sxIncxmkoJSWi442rtyuA/edit?usp=sharing">GPU Architecture</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1N4ETyGI2ZxHLpmD3064XKS79NK3eVmSJhNUmdW_2qIw/edit?usp=sharing">Compute Shaders</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1GqNiODTYBpAVN-Q1D_K2rUN92xk1Ldp7UCNgkLtPqc0/edit?usp=share_link">Rendering Optimisation</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1qON8U5jtIB8RI_zoyFEh3EgRDqWDOnWPLSBdp1__nbM/edit?usp=sharing">Simulation Techniques</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1xJB5mM8XYn44ucQRyh1mzvH4k4dz85qVFZ5OYxjK-JM/edit?usp=share_link">Fluid Simulation</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1BSUccUw_GJl6ywMH7f1rtPsfQDvDu9qIy8WD2JyEtVY/edit?usp=share_link">Particle Systems</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1mDTO_jPphvxq1rHBz3GIVkItUHaDnF3vY5IXBcogUlw/edit?usp=share_link">Multiagent Systems</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1yOmPLNU9Vzuopbr8EwYVu3whfn576TeNsOpy_GSFS9Y/edit?usp=share_link">Raymarching</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1MzA2xzmyiTXk9piL0Jmlhh8YzoG5R6lmAoJbITt0yk4/edit?usp=share_link">Raymarching II</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1rSkLqq7CVieGs2DlMLh0jC8Wryd4sFsCT1oa_yOK53k/edit?usp=share_link">Raytacing</a></p>
+</li>
+</ul>
+<h1 id="assignments-on-github">Assignments (on github)</h1>
+<ul>
+<li>
+<p>01 <a href="https://github.com/nshelton/csma_302_1">Basic Video Effect Shaders</a></p>
+</li>
+<li>
+<p>02 / 03 <a href="https://github.com/nshelton/csma_302_2">Materials / Advanced Materials</a></p>
+</li>
+<li>
+<p>04 <a href="https://github.com/nshelton/csma_302_3">Compute Shader Cellular Automata</a></p>
+</li>
+<li>
+<p>05 <a href="https://github.com/nshelton/csma_302_4">Raymarching Procedural Architecture</a></p>
+</li>
+<li>
+<p>06 <a href="https://github.com/nshelton/csma_302_5">Compute Shader Particle System</a></p>
+</li>
+<li>
+<p>07 <a href="https://github.com/nshelton/csma_302_6">Fluid Simulation</a></p>
+</li>
+<li>
+<p>08 <a href="https://github.com/nshelton/csma_302_7">Raytracer</a></p>
+</li>
+</ul>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/n6foB9gR7E0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+        
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h1>Related:</h1>
+    
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/neonz/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/neonz/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/neonz/">Neonz AR</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/growth/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/growth/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/growth/">Growth Algorithms</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/lifeafterbob/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/labob/9.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/lifeafterbob/">Life After BOB</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/topochico/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/topochico/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/topochico/">TopoChico</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/weeknd/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/weeknd/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/weeknd/">The Weeknd</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/johnlegend/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/johnlegend/1.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/johnlegend/">John Legend</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/fractalpathtracing/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/fractalpathtracing/1.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/fractalpathtracing/">Fractal Path Tracer</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/wordcloud/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/rrl/verbs.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/wordcloud/">Rap Word Cloud</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/lindsey/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/ls/8.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/lindsey/">Lindsey Stirling</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/rezz/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/rezz/cover.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/rezz/">REZZ</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/tpain/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/tpain/cover.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/tpain/">T-Pain</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/kizuna/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/kizuna/kizuna_unity.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/kizuna/">The Light - Kizuna AI / W&amp;W</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/op-z/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/op-z/4.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/op-z/">OP-Z</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/fractalflames/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/fractalflames/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/fractalflames/">FractalFlames</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/magfest/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/magfest/title.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/magfest/">Magfest VJ</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/imogenheap/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/imogenheap/title.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/imogenheap/">Imogen Heap</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/seewithouteyes/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/seewithouteyes/title.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/seewithouteyes/">See Without Eyes</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/rpo/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/rpo/arcades.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/rpo/">Ready Player One</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/rta/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/form2/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/rta/">Ṛta</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/flylo/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/flylo/flylo.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/flylo/">3D Flying Lotus Visuals</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/aktual/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/aktual/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/aktual/">AKTUAL</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/grimecraft/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/grimecraft/thumb.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/grimecraft/">GRIMECRAFT viz</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/nfold/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/nfold/poster2.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/nfold/">N-FOLD</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/form/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/form/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/form/">FORM 0.0 beta</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/artandvr/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/artandvr/z2.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/artandvr/">artandvr</a></h4>
+            </div>
+        </div>
+    </div>
+   
+
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://nshelton.github.io/js/jquery.min.js"></script>
+<script src="https://nshelton.github.io/js/bootstrap.min.js"></script>
+<script src="https://nshelton.github.io/js/jquery.cookie.js"> </script>
+<script src="https://nshelton.github.io/js/ekko-lightbox.js"></script>
+<script src="https://nshelton.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://nshelton.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://nshelton.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://nshelton.github.io/js/owl.carousel.min.js"></script>
+<script src="https://nshelton.github.io/js/front.js"></script>
+
+
+
+</body>
+</html>

@@ -6,7 +6,17 @@
     <description>Recent content in art on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/art/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/art/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neonz AR</title>
+      <link>https://nshelton.github.io/home/neonz/</link>
+      <pubDate>Sun, 20 Feb 2022 00:13:37 -0706</pubDate>
+      
+      <guid>https://nshelton.github.io/home/neonz/</guid>
+      <description>AR NFT Viewer In 2021, Sutu launched one of the first generative NFT series on the tezos blockshain, a 10,000 profile pic series called Neonz. I think this is one of the few great examples that demonstrates how to use web3 tech across platforms, while also being really cool art in its own right.
+This was deveoped by the folks at Eyejack, I got on board to help them with some AR rendering effects for iOS and Android.</description>
+    </item>
+    
     <item>
       <title>Laser Cuts</title>
       <link>https://nshelton.github.io/home/laser/</link>

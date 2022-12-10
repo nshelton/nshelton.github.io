@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nshelton.github.io/categories/ar/</loc>
+    <lastmod>2022-02-20T00:13:37-07:06</lastmod>
+  </url><url>
+    <loc>https://nshelton.github.io/categories/art/</loc>
+    <lastmod>2022-02-20T00:13:37-07:06</lastmod>
+  </url><url>
     <loc>https://nshelton.github.io/categories/</loc>
-    <lastmod>2021-08-16T00:13:37-07:06</lastmod>
+    <lastmod>2022-02-20T00:13:37-07:06</lastmod>
+  </url><url>
+    <loc>https://nshelton.github.io/categories/generative/</loc>
+    <lastmod>2022-02-20T00:13:37-07:06</lastmod>
   </url><url>
     <loc>https://nshelton.github.io/home/</loc>
-    <lastmod>2021-08-16T00:13:37-07:06</lastmod>
+    <lastmod>2022-02-20T00:13:37-07:06</lastmod>
   </url><url>
-    <loc>https://nshelton.github.io/home/lifeafterbob/</loc>
-    <lastmod>2021-08-16T00:13:37-07:06</lastmod>
+    <loc>https://nshelton.github.io/home/neonz/</loc>
+    <lastmod>2022-02-20T00:13:37-07:06</lastmod>
   </url><url>
     <loc>https://nshelton.github.io/</loc>
-    <lastmod>2021-08-16T00:13:37-07:06</lastmod>
+    <lastmod>2022-02-20T00:13:37-07:06</lastmod>
   </url><url>
     <loc>https://nshelton.github.io/categories/unity/</loc>
+    <lastmod>2022-02-20T00:13:37-07:06</lastmod>
+  </url><url>
+    <loc>https://nshelton.github.io/home/csma302/</loc>
+    <lastmod>2021-08-30T00:13:37-07:06</lastmod>
+  </url><url>
+    <loc>https://nshelton.github.io/categories/teaching/</loc>
+    <lastmod>2021-08-30T00:13:37-07:06</lastmod>
+  </url><url>
+    <loc>https://nshelton.github.io/home/lifeafterbob/</loc>
     <lastmod>2021-08-16T00:13:37-07:06</lastmod>
   </url><url>
     <loc>https://nshelton.github.io/home/topochico/</loc>
@@ -49,9 +67,6 @@
   </url><url>
     <loc>https://nshelton.github.io/categories/vr/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/categories/generative/</loc>
-    <lastmod>2019-09-18T00:13:37-07:06</lastmod>
   </url><url>
     <loc>https://nshelton.github.io/home/growth/</loc>
     <lastmod>2019-09-18T00:13:37-07:06</lastmod>
@@ -155,9 +170,6 @@
     <loc>https://nshelton.github.io/demos/sierpinski/</loc>
     <lastmod>2017-02-18T00:13:37-07:06</lastmod>
   </url><url>
-    <loc>https://nshelton.github.io/categories/art/</loc>
-    <lastmod>2017-01-01T00:13:37-07:06</lastmod>
-  </url><url>
     <loc>https://nshelton.github.io/home/laser/</loc>
     <lastmod>2017-01-01T00:13:37-07:06</lastmod>
   </url><url>
@@ -169,9 +181,6 @@
   </url><url>
     <loc>https://nshelton.github.io/home/sketchbook1/</loc>
     <lastmod>2017-01-01T00:13:37-07:06</lastmod>
-  </url><url>
-    <loc>https://nshelton.github.io/categories/ar/</loc>
-    <lastmod>2016-12-21T00:13:37-07:06</lastmod>
   </url><url>
     <loc>https://nshelton.github.io/home/bridge/</loc>
     <lastmod>2016-12-21T00:13:37-07:06</lastmod>
