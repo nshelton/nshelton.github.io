@@ -246,15 +246,21 @@ if (!doNotTrack) {
          <p>Mar 2026</p>
          <p>Gaussian Splatting rendering optimization for mobile AR hardware.</p>
 <h2 id="overview">Overview</h2>
-<p>In 2026 i had a brief stint at Snap Inc in <em>Santa Monica</em> working on their graphics team. I was mostly working on streamlining their shader pipeline for constrained mobile architectures, like <em>Spectacles</em>.</p>
+<p>In 2026 i had a brief stint at Snap Inc in <em>Santa Monica</em> working on their graphics team. I was mostly working on the shader pipeline, and got familiar with the <em>Lens Studio</em> project, codebase and how they handle various graphics systems. I did not realize they they had essentially built their own game engine ! Each &ldquo;lens&rdquo; which most people would call &ldquo;filters&rdquo; (though they discourtage this word) is a self-contained scene with assets and javascript that gets evaluated and rendered on whatever device is running it.</p>
 <p>Unfortunately about 6 weeks ater starting they did some company-wide restructuring and then let me go!</p>
 <h2 id="lens-studio">Lens Studio</h2>
 <a href="/img/snap/lensStudio.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
   <img src="/img/snap/lensStudio.png" class="img-responsive" />
 </a>
 
+<p><a href="https://ar.snap.com/lens-studio-dl">Lens Studio Download</a></p>
 <h2 id="gaussian-splatting-on-mobile">Gaussian Splatting on Mobile</h2>
-<p>Worked on optimizing 3D Gaussian Splatting renderers for the constrained GPU and thermal budgets of mobile AR hardware. This involved Vulkan and OpenGL shader compilation pipelines tuned for mobile architectures.</p>
+<a href="/img/snap/specs.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/snap/specs.png" class="img-responsive" />
+</a>
+
+<p><a href="https://www.spectacles.com/">these glasses have a GPU!</a></p>
+<p>Worked on optimizing 3D Gaussian Splatting renderers for the constrained GPU and thermal budgets of mobile AR hardware. This involved Vulkan and OpenGL shader compilation pipelines tuned for mobile architectures, like <em>Spectacles</em>.</p>
 <h2 id="tools">Tools</h2>
 <p>Vulkan, OpenGL, C++, Android, Gaussian Splatting</p>
         
