@@ -36,16 +36,16 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-26353276-1', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </head>
 <body>
@@ -56,7 +56,7 @@ if (!doNotTrack) {
     <br>
   <div class="sidebar-content">
     <h1 class="sidebar-heading">
-      <a href="https://nshelton.github.io">
+      <a href="https://nshelton.github.io/">
         sheltron
       </a> 
     </h1>
@@ -114,6 +114,10 @@ if (!doNotTrack) {
             <li>demos/ </li>
         </a> 
       
+        <a href="https://nshelton.github.io/live/">
+            <li>live/ </li>
+        </a> 
+      
     </ul>
     <br>
       
@@ -122,7 +126,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/unity">
-          <li class="">unity 26 </li>
+          <li class="">unity 27 </li>
         </a>
       
         
@@ -152,7 +156,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/fractals">
-          <li class="">fractals 7 </li>
+          <li class="">fractals 8 </li>
         </a>
       
         
@@ -166,8 +170,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/reconstruction">
+          <li class="">reconstruction 4 </li>
+        </a>
+      
+        
         <a  href="/categories/3dscanning">
           <li class="">3dscanning 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/cv">
+          <li class="">cv 3 </li>
         </a>
       
         
@@ -176,18 +190,23 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/installation">
+          <li class="">installation 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/ml">
+          <li class="">ml 3 </li>
+        </a>
+      
+        
         <a  href="/categories/ar">
           <li class="">ar 2 </li>
         </a>
       
         
-        <a  href="/categories/installation">
-          <li class="">installation 2 </li>
-        </a>
-      
-        
-        <a  href="/categories/ml">
-          <li class="">ml 2 </li>
+        <a  href="/categories/mobile">
+          <li class="">mobile 2 </li>
         </a>
       
         
@@ -196,8 +215,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/medical">
+          <li class="">medical 1 </li>
+        </a>
+      
+        
         <a  href="/categories/teaching">
           <li class="">teaching 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/vfx">
+          <li class="">vfx 1 </li>
         </a>
       
     </ul>
@@ -226,49 +255,136 @@ if (!doNotTrack) {
 
 <h1 id="look-development">look development</h1>
 <p>My main role was working with Ian and the art team on different toon-style shaders in unity, but just adding so many controls and tools and <em>spicy</em> bits so that they could really control the lighting and look. The rendering style was partially inspired by the game <a href="https://en.wikipedia.org/wiki/Inside_(video_game)">Inside</a> :
-<img  src="/img/labob/inside.jpg" class="img-responsive " /></p>
+<a href="/img/labob/inside.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/inside.jpg" class="img-responsive" />
+</a>
+</p>
 <p>I started making a basic toon shader that quantized the standard dot(normal, light), and then adding some texture in, messing with some custom shadow filters, and color overrides for pretty much every stage of the lighting pipeline.</p>
-<img  src="/img/labob/toon.jpg" class="img-responsive " />
+<a href="/img/labob/toon.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/toon.jpg" class="img-responsive" />
+</a>
+
 <p>i like the kind of watercolor effect / artifact the shadows are doing here</p>
 <h2 id="concept-art">Concept art</h2>
-<img  src="/img/labob/style_convo_02.jpg" class="img-responsive " />
+<a href="/img/labob/style_convo_02.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/style_convo_02.jpg" class="img-responsive" />
+</a>
+
 <h2 id="unity-mesh--lightmap">Unity Mesh + Lightmap</h2>
-<p><img  src="/img/labob/apartment.jpg" class="img-responsive image2" />
-<img  src="/img/labob/lightmap.jpg" class="img-responsive image2" /></p>
+<p><a href="/img/labob/apartment.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
+  <img src="/img/labob/apartment.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/lightmap.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
+  <img src="/img/labob/lightmap.jpg" class="img-responsive" />
+</a>
+</p>
 <h2 id="standard-shader">Standard Shader</h2>
-<img  src="/img/labob/interiorNormal.jpg" class="img-responsive " />
+<a href="/img/labob/interiorNormal.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/interiorNormal.jpg" class="img-responsive" />
+</a>
+
 <h2 id="with-toon-shader-and-post">With Toon shader and post</h2>
-<p><img  src="/img/labob/image.jpg" class="img-responsive " />
-<img  src="/img/labob/style.jpg" class="img-responsive " />
-<img  src="/img/labob/image2.jpg" class="img-responsive " /></p>
+<p><a href="/img/labob/image.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/image.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/style.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/style.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/image2.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/image2.jpg" class="img-responsive" />
+</a>
+</p>
 <h2 id="light-shafts-post-effect">Light Shafts Post Effect</h2>
 <p>I started making some raymarching for volumetric lighting effects. (You can see it a bit in the above shot) This was implemented as a <em>unity post effect</em> in the postprocessing stack. Essentially you do a raymatch through the gbuffer and lookup the shadow map at each step. This can be optimized (like in <em>inside</em>) with jittery subsampling and some temporal denoising, but I have a 2080 and didnt have to optimise anything lol.</p>
-<p><img  src="/img/labob/lightshaft0.jpg" class="img-responsive " />
-<img  src="/img/labob/lightshaft1.jpg" class="img-responsive " />
-<img  src="/img/labob/lightshaft3.jpg" class="img-responsive " /></p>
+<p><a href="/img/labob/lightshaft0.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/lightshaft0.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/lightshaft1.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/lightshaft1.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/lightshaft3.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/lightshaft3.jpg" class="img-responsive" />
+</a>
+</p>
 <h2 id="holy-order-independent-transparency-batman">holy order independent transparency batman</h2>
-<p><img  src="/img/labob/distort0.jpg" class="img-responsive " />
-<img  src="/img/labob/distort1.jpg" class="img-responsive " />
+<p><a href="/img/labob/distort0.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/distort0.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/distort1.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/distort1.jpg" class="img-responsive" />
+</a>
+
 standard grabpass glass blur effect</p>
 <h2 id="trippy-look-dev-">trippy look dev ?</h2>
 <p>we worked a lot on interesting looks for the &ldquo;Wavyverse&rdquo; - mostly using <em>vertex distortion</em> and <em>projection matrix tricks</em>
-<img  src="/img/labob/wavyverse1.jpg" class="img-responsive " />
-<img  src="/img/labob/wavyverse2.jpg" class="img-responsive " />
-<img  src="/img/labob/wavyverse3.jpg" class="img-responsive " />
+<a href="/img/labob/wavyverse1.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/wavyverse1.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/wavyverse2.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/wavyverse2.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/wavyverse3.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/wavyverse3.jpg" class="img-responsive" />
+</a>
+
 just some simplex noise displacement, but with different planes! like a trippy depth of field&hellip;</p>
 <h1 id="some-cool-shots">some cool shots</h1>
-<p><img  src="/img/labob/0.jpg" class="img-responsive " />
-<img  src="/img/labob/1.jpg" class="img-responsive " />
-<img  src="/img/labob/2.jpg" class="img-responsive " />
-<img  src="/img/labob/3.jpg" class="img-responsive " />
-<img  src="/img/labob/4.jpg" class="img-responsive " />
-<img  src="/img/labob/5.jpg" class="img-responsive " />
-<img  src="/img/labob/6.jpg" class="img-responsive " />
-<img  src="/img/labob/7.jpg" class="img-responsive " />
-<img  src="/img/labob/8.jpg" class="img-responsive " />
-<img  src="/img/labob/10.jpg" class="img-responsive " />
-<img  src="/img/labob/11.jpg" class="img-responsive " />
-<img  src="/img/labob/12.jpg" class="img-responsive " /></p>
+<p><a href="/img/labob/0.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/0.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/1.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/1.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/2.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/2.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/3.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/3.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/4.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/4.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/5.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/5.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/6.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/6.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/7.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/7.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/8.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/8.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/10.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/10.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/11.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/11.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/labob/12.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/labob/12.jpg" class="img-responsive" />
+</a>
+</p>
 <h1 id="exhibitions">exhibitions</h1>
 <p><a href="https://theshed.org/program/142-ian-cheng-life-after-bob">The Shed NYC</a> ~ Sept 10 - Dec 19 2021</p>
 <p><a href="https://www.worldartfoundations.com/luma-westbau-ian-cheng-life-after-bob/?v=7516fd43adaa_">Luma Zurich</a> ~ Sept 17 - Oct 30 2021</p>
@@ -318,6 +434,19 @@ just some simplex noise displacement, but with different planes! like a trippy d
               </a>
             <div class="box-masonry-text">
               <h4><a href="https://nshelton.github.io/home/topochico/">TopoChico</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/nexusstudios/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/nexus/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/nexusstudios/">Nexus Studios</a></h4>
             </div>
         </div>
     </div>
@@ -443,6 +572,19 @@ just some simplex noise displacement, but with different planes! like a trippy d
         <div class="box-masonry">
           
 
+              <a href="https://nshelton.github.io/home/fractalflames/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/fractalflames/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/fractalflames/">FractalFlames</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
               <a href="https://nshelton.github.io/home/magfest/" title="" class="box-masonry-image with-hover-overlay">
               <img src="https://nshelton.github.io/img/magfest/title.jpg" alt="" class="img-responsive">
               </a>
@@ -461,19 +603,6 @@ just some simplex noise displacement, but with different planes! like a trippy d
               </a>
             <div class="box-masonry-text">
               <h4><a href="https://nshelton.github.io/home/op-z/">OP-Z</a></h4>
-            </div>
-        </div>
-    </div>
-  
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-        <div class="box-masonry">
-          
-
-              <a href="https://nshelton.github.io/home/fractalflames/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/fractalflames/thumbnail.jpg" alt="" class="img-responsive">
-              </a>
-            <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/fractalflames/">FractalFlames</a></h4>
             </div>
         </div>
     </div>

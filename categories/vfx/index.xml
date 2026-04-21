@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vfx on sheltron</title>
+    <link>https://nshelton.github.io/categories/vfx/</link>
+    <description>Recent content in Vfx on sheltron</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 -0600</lastBuildDate>
+    <atom:link href="https://nshelton.github.io/categories/vfx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nexus Studios</title>
+      <link>https://nshelton.github.io/home/nexusstudios/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 -0600</pubDate>
+      <guid>https://nshelton.github.io/home/nexusstudios/</guid>
+      <description>&lt;p&gt;Houdini-to-Unity volumetric asset pipeline and VFX Graph integration.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

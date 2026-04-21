@@ -36,16 +36,16 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-26353276-1', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </head>
 <body>
@@ -56,7 +56,7 @@ if (!doNotTrack) {
     <br>
   <div class="sidebar-content">
     <h1 class="sidebar-heading">
-      <a href="https://nshelton.github.io">
+      <a href="https://nshelton.github.io/">
         sheltron
       </a> 
     </h1>
@@ -114,6 +114,10 @@ if (!doNotTrack) {
             <li>demos/ </li>
         </a> 
       
+        <a href="https://nshelton.github.io/live/">
+            <li>live/ </li>
+        </a> 
+      
     </ul>
     <br>
       
@@ -122,7 +126,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/unity">
-          <li class="">unity 26 </li>
+          <li class="">unity 27 </li>
         </a>
       
         
@@ -152,7 +156,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/fractals">
-          <li class="">fractals 7 </li>
+          <li class="">fractals 8 </li>
         </a>
       
         
@@ -166,8 +170,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/reconstruction">
+          <li class="">reconstruction 4 </li>
+        </a>
+      
+        
         <a  href="/categories/3dscanning">
           <li class="">3dscanning 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/cv">
+          <li class="">cv 3 </li>
         </a>
       
         
@@ -176,18 +190,23 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/installation">
+          <li class="">installation 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/ml">
+          <li class="">ml 3 </li>
+        </a>
+      
+        
         <a  href="/categories/ar">
           <li class="">ar 2 </li>
         </a>
       
         
-        <a  href="/categories/installation">
-          <li class="">installation 2 </li>
-        </a>
-      
-        
-        <a  href="/categories/ml">
-          <li class="">ml 2 </li>
+        <a  href="/categories/mobile">
+          <li class="">mobile 2 </li>
         </a>
       
         
@@ -196,8 +215,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/medical">
+          <li class="">medical 1 </li>
+        </a>
+      
+        
         <a  href="/categories/teaching">
           <li class="">teaching 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/vfx">
+          <li class="">vfx 1 </li>
         </a>
       
     </ul>
@@ -215,7 +244,7 @@ if (!doNotTrack) {
       <div class="content-column-content">
          <pageTitle>Growth Algorithms</pageTitle>
          <p>Sep 2019</p>
-         <p>Along with fractals, I also got really into growth algorithms, especially making them run in realtime. 
+         <p>Along with fractals, I also got really into growth algorithms, especially making them run in realtime.
 It seems like a perfect intersection of design and art with computer science and math.</p>
 <p>Here are various realtime versions of some interesting growth algorithms I have seen over the years.</p>
 <ul>
@@ -241,13 +270,25 @@ It seems like a perfect intersection of design and art with computer science and
 <h1 id="mesh-based">Mesh Based</h1>
 <p>These involve splitting a manifold (1d or 2d surface) and then moving the nodes around in a higher dimensional space to minimise overlap</p>
 <p>The simplest version is a line, which can be split and curved to remove intersections:</p>
-<img  src="/img/growth/inconvergent.jpg" class="img-responsive image3" />
+<a href="/img/growth/inconvergent.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+   <img src="/img/growth/inconvergent.jpg" class="img-responsive" />
+ </a>
+
 <p>from <a href="https://inconvergent.net/generative/differential-line/">Anders Hoff (inconvergent)</a></p>
 <p>You can also split a mesh, it is just more complicated:</p>
-<p><img  src="/img/growth/split.jpg" class="img-responsive image2" />
+<p><a href="/img/growth/split.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
+   <img src="/img/growth/split.jpg" class="img-responsive" />
+ </a>
+
 From <a href="https://www.georgehart.com/Growth/GrowthForms.pdf">Growth Forms, George Hart 2009</a></p>
-<p><img  src="/img/growth/thumb.jpg" class="img-responsive image3" />
-<img  src="/img/growth/shiny.jpg" class="img-responsive image3" /></p>
+<p><a href="/img/growth/thumb.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/growth/thumb.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/growth/shiny.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/growth/shiny.jpg" class="img-responsive" />
+</a>
+</p>
 <p>Mesh generated in unity, wireframe rendered in Blender</p>
 <p>This was based on <a href="https://github.com/mxsage/growth/blob/master/src/simulation.cpp">mxsage cpp implementation</a> of <a href="http://www.andylomas.com/extra/andylomas_paper_cellular_forms_aisb50.pdf">Andy Lomas</a>.</p>
 <p>I implemented it in a unity compute shader, but graph data structures are pretty tricky to implement on GPU. My version could only get about this big before something started bugging out and I never fixed it. oh well, this isn&rsquo;t really the most elegant method anyways.</p>
@@ -256,10 +297,16 @@ From <a href="https://www.georgehart.com/Growth/GrowthForms.pdf">Growth Forms, G
 <video class="image3" controls autoplay loop>
 <source src="/img/growth/dla2.mp4" type="video/mp4" >
 </video>
-<p>There was no advection here, just random particle movement. 
+<p>There was no advection here, just random particle movement.
 This uses unity sopheres and colliders, which got quite slow as unity only supoorts around 10,000 colliders maximum.</p>
-<p><img  src="/img/growth/grow4.png" class="img-responsive image3" />
-<img  src="/img/growth/grow5.png" class="img-responsive image3" /></p>
+<p><a href="/img/growth/grow4.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/growth/grow4.png" class="img-responsive" />
+</a>
+
+<a href="/img/growth/grow5.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/growth/grow5.png" class="img-responsive" />
+</a>
+</p>
 <p>These particles were advected using divergence-free curl noise</p>
 <video width="500" height="350" controls autoplay loop>
 <source src="/img/growth/dla.mp4" type="video/mp4" >
@@ -268,26 +315,35 @@ This uses unity sopheres and colliders, which got quite slow as unity only supoo
 <source src="/img/growth/dla3.mp4" type="video/mp4" >
 </video>
 <p>This is DLA running in a voxel grid in realtime in Unity, making it a hybrid of the next approach.</p>
-<p>There are particles moving through a volume and depositing when they hit a cell with a threshold. 
+<p>There are particles moving through a volume and depositing when they hit a cell with a threshold.
 The volume is being diffused a bit over time, so it looks like it&rsquo;s melting and smoothing a bit.
 An isosurface is rendered with marching cubes and colored based on the laplacian (curvature) of the scalar field.</p>
 <h1 id="voxel-based">Voxel Based</h1>
 <p>I like thhis a lot more because the equations are very simple and GPUs are fast at doing 3D texture updates with compute shaders.</p>
-<p>This technique computes scalar fields and updates them with some differential equations. 
+<p>This technique computes scalar fields and updates them with some differential equations.
 the most well known is probably turing patterns, using <a href="https://mrob.com/pub/comp/xmorphia/">gray scott </a> equations. These generalize to 3D</p>
 <video width="250"  controls autoplay loop>
 <source src="/img/growth/gray.mp4" type="video/mp4" >
 </video>
- <img  src="/img/growth/gray%20scott.jpg" class="img-responsive " />
+ <a href="/img/growth/gray%20scott.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+   <img src="/img/growth/gray%20scott.jpg" class="img-responsive" />
+ </a>
+
 <p><a href="https://nshelton.github.io/webgl-shader-demos/rd-fluid-vort.html">live demo</a></p>
 <p>Dendritic solidification, Laplacian growth</p>
 <p>I was intrigued by <a href="https://n-e-r-v-o-u-s.com/projects/albums/laplacian-growth/">Nervous System</a> and wondered how to implement this in real time using compute shaders.</p>
-<img  src="/img/growth/formula1.jpg" class="img-responsive image3" />
+<a href="/img/growth/formula1.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+   <img src="/img/growth/formula1.jpg" class="img-responsive" />
+ </a>
+
 <p>They just showed these equations briefly at the beginning of a video once</p>
-<img  src="/img/growth/formula2.jpg" class="img-responsive image3" />
+<a href="/img/growth/formula2.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+   <img src="/img/growth/formula2.jpg" class="img-responsive" />
+ </a>
+
 <p>Eventually I found this paper  <a href="https://projecteuclid.org/download/pdf_1/euclid.em/1062621004">Ryo Kobayashi 1994</a> with a similar equation. notably the m is now dependeat on the temperateure and gradient of the phase field, creating anisotropic growth.</p>
 <p>The simulation works by storing the temperature and phase of each cell of the grid.
-The temperature spreads out (dT), according to the phase change of neighboring cells. Heat is absorbed at the solid/liquid boundary to 
+The temperature spreads out (dT), according to the phase change of neighboring cells. Heat is absorbed at the solid/liquid boundary to
 The phase changes (dp) similar to a traveling wave along the interface
 In this case liquid would be phase=0, solid phase=1</p>
 <video width="500" height="350" controls autoplay loop>
@@ -297,7 +353,10 @@ In this case liquid would be phase=0, solid phase=1</p>
 <source src="/img/growth/mushroom.mp4" type="video/mp4" >
 </video>
 <p>These look like classic dendritic solidificaiton (above)</p>
-<img  src="/img/growth/copper.jpg" class="img-responsive image3" />
+<a href="/img/growth/copper.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+   <img src="/img/growth/copper.jpg" class="img-responsive" />
+ </a>
+
 <p>Pure copper crystal <a href="https://en.wikipedia.org/wiki/Dendrite_(metal)#/media/File:Copper,_dendritic_crystal.tif">wikipedia</a></p>
 <video width="500" height="350" controls autoplay loop>
 <source src="/img/growth/wrinkles.mp4" type="video/mp4" >
@@ -376,6 +435,19 @@ In this case liquid would be phase=0, solid phase=1</p>
               </a>
             <div class="box-masonry-text">
               <h4><a href="https://nshelton.github.io/home/topochico/">TopoChico</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/nexusstudios/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/nexus/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/nexusstudios/">Nexus Studios</a></h4>
             </div>
         </div>
     </div>
@@ -488,11 +560,11 @@ In this case liquid would be phase=0, solid phase=1</p>
         <div class="box-masonry">
           
 
-              <a href="https://nshelton.github.io/home/op-z/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/op-z/4.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/home/fractalflames/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/fractalflames/thumbnail.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/op-z/">OP-Z</a></h4>
+              <h4><a href="https://nshelton.github.io/home/fractalflames/">FractalFlames</a></h4>
             </div>
         </div>
     </div>
@@ -514,11 +586,11 @@ In this case liquid would be phase=0, solid phase=1</p>
         <div class="box-masonry">
           
 
-              <a href="https://nshelton.github.io/home/fractalflames/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/fractalflames/thumbnail.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/home/op-z/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/op-z/4.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/fractalflames/">FractalFlames</a></h4>
+              <h4><a href="https://nshelton.github.io/home/op-z/">OP-Z</a></h4>
             </div>
         </div>
     </div>

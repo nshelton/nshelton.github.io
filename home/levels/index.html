@@ -36,16 +36,16 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-26353276-1', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </head>
 <body>
@@ -56,7 +56,7 @@ if (!doNotTrack) {
     <br>
   <div class="sidebar-content">
     <h1 class="sidebar-heading">
-      <a href="https://nshelton.github.io">
+      <a href="https://nshelton.github.io/">
         sheltron
       </a> 
     </h1>
@@ -114,6 +114,10 @@ if (!doNotTrack) {
             <li>demos/ </li>
         </a> 
       
+        <a href="https://nshelton.github.io/live/">
+            <li>live/ </li>
+        </a> 
+      
     </ul>
     <br>
       
@@ -122,7 +126,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/unity">
-          <li class="">unity 26 </li>
+          <li class="">unity 27 </li>
         </a>
       
         
@@ -152,7 +156,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/fractals">
-          <li class="">fractals 7 </li>
+          <li class="">fractals 8 </li>
         </a>
       
         
@@ -166,8 +170,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/reconstruction">
+          <li class="">reconstruction 4 </li>
+        </a>
+      
+        
         <a  href="/categories/3dscanning">
           <li class="">3dscanning 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/cv">
+          <li class="">cv 3 </li>
         </a>
       
         
@@ -176,18 +190,23 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/installation">
+          <li class="">installation 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/ml">
+          <li class="">ml 3 </li>
+        </a>
+      
+        
         <a  href="/categories/ar">
           <li class="">ar 2 </li>
         </a>
       
         
-        <a  href="/categories/installation">
-          <li class="">installation 2 </li>
-        </a>
-      
-        
-        <a  href="/categories/ml">
-          <li class="">ml 2 </li>
+        <a  href="/categories/mobile">
+          <li class="">mobile 2 </li>
         </a>
       
         
@@ -196,8 +215,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/medical">
+          <li class="">medical 1 </li>
+        </a>
+      
+        
         <a  href="/categories/teaching">
           <li class="">teaching 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/vfx">
+          <li class="">vfx 1 </li>
         </a>
       
     </ul>
@@ -267,103 +296,103 @@ if (!doNotTrack) {
 <p><img src="/img/levels/bigger.jpg" alt="header"></p>
 <p>In the interactive version, you can still try out both kinds of scales.</p>
 <p>The whole thing can be simplified in terms of the math / programming by just creating a 4x4 matrix transform which represents the iteration transform. This contains scale, and 3 dimensional rotation and translation. The scale could also be 3 dimentional, but haven&rsquo;t tried that yet. I use homogenous coordinates here to make the scaling and translation and rotation into a 4D matrix multiplication. This can be computed on CPU side so the shader doesn&rsquo;t have to do a ton of redundant sin and cos</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-glsl" data-lang="glsl">
-<span style="color:#66d9ef">uniform</span> mat4 iterationTranform
-...
-
-<span style="color:#66d9ef">float</span> DE(<span style="color:#66d9ef">vec3</span> p)
-{
-  <span style="color:#66d9ef">vec4</span> p_homo <span style="color:#f92672">=</span> <span style="color:#66d9ef">vec3</span>(p, <span style="color:#ae81ff">1.0</span>);
-  <span style="color:#66d9ef">float</span> distance <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>;
-
-  <span style="color:#66d9ef">for</span> ( <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> iterationCount; i <span style="color:#f92672">++</span>)
-  {
-
-    p_homo <span style="color:#f92672">=</span> iterationTransform <span style="color:#f92672">*</span> p_homo;
-    
-    p_homo <span style="color:#f92672">=</span> mirrorFunction(p_homo);
-
-    distance <span style="color:#f92672">=</span> min(primitive(p_homo.xyz), distance);
-
-  }
-  
-  <span style="color:#66d9ef">return</span> distance;
-
-}
-</code></pre></div><h2 id="audio-reactivity--interactivity">Audio Reactivity &amp; Interactivity</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-glsl" data-lang="glsl"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">uniform</span> mat4 iterationTranform
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> DE(<span style="color:#66d9ef">vec3</span> p)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">vec4</span> p_homo <span style="color:#f92672">=</span> <span style="color:#66d9ef">vec3</span>(p, <span style="color:#ae81ff">1.0</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">float</span> distance <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> ( <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> iterationCount; i <span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    p_homo <span style="color:#f92672">=</span> iterationTransform <span style="color:#f92672">*</span> p_homo;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    p_homo <span style="color:#f92672">=</span> mirrorFunction(p_homo);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    distance <span style="color:#f92672">=</span> min(primitive(p_homo.xyz), distance);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> distance;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="audio-reactivity--interactivity">Audio Reactivity &amp; Interactivity</h2>
 <hr>
 <p>Again, using the fantastic <a href="https://github.com/unconed/ThreeAudio.js/">ThreeAudio.js</a> from <a href="http://acko.net/">Acko</a>. Doesn&rsquo;t seem to be under development anymore, but I find the beat detection and FFT analysis much better than the stock WebAudio FFT.</p>
 <p><img src="/img/levels/touchosc.jpg" alt="header"></p>
-<p>For an interactive installtion, I wanted to focus on 3D controls, since this is a 3D system. 
+<p>For an interactive installtion, I wanted to focus on 3D controls, since this is a 3D system.
 I wanted to communicate the idea that the iteration transform is composed of a translation, rotation and mirrors.</p>
 <p>So, the Gyro of the iOS device controls rotation, if ROTATION is selected. And the same with TRANSLATION, which is a bit weird because people aren&rsquo;t used to orientation corresponding to a translation. Maybe a better way would be to integrate the accelorometer to get the movement, but this could be very noisy. Sill needs some development.</p>
 <p>Also wanted to get a way to change the iteration count to show the levels of complexity. So I made this quick UI in TouchOSC. It communicates with a node server serving the page, and Websockets the data into the page in realtime. It&rsquo;s really super fast, I had doubts, but it looks like OSC + node + websockets could actually be a legit way to do low-latency audiovisuals. Will definitely work on this some more.</p>
 <h2 id="exhibitions">Exhibitions</h2>
 <p>I showed this at the Gray Area Creative Coding Immersive Showcase for ffall 2016, where I was a TA</p>
 
-
-    
-    <a href="https://nshelton.github.io/img/levels/0.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/0.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/1.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/1.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/2.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/2.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/4.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/4.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/5.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/5.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/bigger.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/bigger.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/example.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/example.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/ifs.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/ifs.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/l0.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l0.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/l1.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l1.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/l2.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l2.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/l3.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l3.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/l4.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l4.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/l5.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l5.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/l6.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l6.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/level.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/level.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/level1.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/level1.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/level2.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/level2.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/smaller.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/smaller.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/touchosc.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/touchosc.jpg" class="img-fluid"/></a>
-
-    
-    <a href="https://nshelton.github.io/img/levels/unnamed.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/unnamed.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/0.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/0.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/1.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/1.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/2.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/2.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/4.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/4.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/5.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/5.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/bigger.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/bigger.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/example.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/example.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/ifs.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/ifs.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/l0.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l0.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/l1.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l1.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/l2.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l2.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/l3.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l3.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/l4.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l4.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/l5.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l5.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/l6.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/l6.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/level.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/level.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/level1.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/level1.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/level2.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/level2.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/smaller.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/smaller.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/touchosc.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/touchosc.jpg" class="img-fluid"/></a>
+ 
+     
+     <a href="https://nshelton.github.io/img/levels/unnamed.jpg" class="galleryThumb" data-toggle="lightbox"><img src="https://nshelton.github.io/img/levels/unnamed.jpg" class="img-fluid"/></a>
         
       </div>
     </div>
@@ -415,6 +444,19 @@ I wanted to communicate the idea that the iteration transform is composed of a t
         <div class="box-masonry">
           
 
+              <a href="https://nshelton.github.io/home/fractalflames/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/fractalflames/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/fractalflames/">FractalFlames</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
               <a href="https://nshelton.github.io/home/rta/" title="" class="box-masonry-image with-hover-overlay">
               <img src="https://nshelton.github.io/img/form2/thumbnail.jpg" alt="" class="img-responsive">
               </a>
@@ -433,45 +475,6 @@ I wanted to communicate the idea that the iteration transform is composed of a t
               </a>
             <div class="box-masonry-text">
               <h4><a href="https://nshelton.github.io/home/form/">FORM 0.0 beta</a></h4>
-            </div>
-        </div>
-    </div>
-  
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-        <div class="box-masonry">
-          
-
-              <a href="/webgl-shader-demos/sierpinski.html" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/sierpinski.jpg" alt="" class="img-responsive">
-              </a>
-            <div class="box-masonry-text">
-              <h4><a href="/webgl-shader-demos/sierpinski.html">Sierpinski&#39;s Triangle</a></h4>
-            </div>
-        </div>
-    </div>
-  
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-        <div class="box-masonry">
-          
-
-              <a href="/webgl-shader-demos/mandelbrot.html" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/00_oldDemos/julia/thumbnail.jpg" alt="" class="img-responsive">
-              </a>
-            <div class="box-masonry-text">
-              <h4><a href="/webgl-shader-demos/mandelbrot.html">julia set</a></h4>
-            </div>
-        </div>
-    </div>
-  
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-        <div class="box-masonry">
-          
-
-              <a href="https://nshelton.github.io/home/artandvr/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/artandvr/z2.jpg" alt="" class="img-responsive">
-              </a>
-            <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/artandvr/">artandvr</a></h4>
             </div>
         </div>
     </div>
@@ -506,32 +509,6 @@ I wanted to communicate the idea that the iteration transform is composed of a t
         <div class="box-masonry">
           
 
-              <a href="/webgl-shader-demos/fractalthreed.html" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/fractalthreed.jpg" alt="" class="img-responsive">
-              </a>
-            <div class="box-masonry-text">
-              <h4><a href="/webgl-shader-demos/fractalthreed.html">Mandelbulb</a></h4>
-            </div>
-        </div>
-    </div>
-  
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-        <div class="box-masonry">
-          
-
-              <a href="/webgl-shader-demos/spherical.html" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/spherical.jpg" alt="" class="img-responsive">
-              </a>
-            <div class="box-masonry-text">
-              <h4><a href="/webgl-shader-demos/spherical.html">Raymarch Sketch</a></h4>
-            </div>
-        </div>
-    </div>
-  
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-        <div class="box-masonry">
-          
-
               <a href="/webgl-shader-demos/mbox.html" title="" class="box-masonry-image with-hover-overlay">
               <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/mbox.jpg" alt="" class="img-responsive">
               </a>
@@ -545,11 +522,11 @@ I wanted to communicate the idea that the iteration transform is composed of a t
         <div class="box-masonry">
           
 
-              <a href="/webgl-shader-demos/rd-fluid.html" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/rd-fluid.jpg" alt="" class="img-responsive">
+              <a href="/webgl-shader-demos/fractalthreed.html" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/fractalthreed.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="/webgl-shader-demos/rd-fluid.html">Reaction-Diffusion Fluid</a></h4>
+              <h4><a href="/webgl-shader-demos/fractalthreed.html">Mandelbulb</a></h4>
             </div>
         </div>
     </div>
@@ -571,11 +548,76 @@ I wanted to communicate the idea that the iteration transform is composed of a t
         <div class="box-masonry">
           
 
+              <a href="/webgl-shader-demos/spherical.html" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/spherical.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="/webgl-shader-demos/spherical.html">Raymarch Sketch</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="/webgl-shader-demos/rd-fluid.html" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/rd-fluid.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="/webgl-shader-demos/rd-fluid.html">Reaction-Diffusion Fluid</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
               <a href="/webgl-shader-demos/rd-fluid-vort.html" title="" class="box-masonry-image with-hover-overlay">
               <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/rd-fluid-vort.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
               <h4><a href="/webgl-shader-demos/rd-fluid-vort.html">Reaction-Diffusion Fluid 2</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="/webgl-shader-demos/sierpinski.html" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/00_oldDemos/webgl-shader-demos/sierpinski.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="/webgl-shader-demos/sierpinski.html">Sierpinski&#39;s Triangle</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/artandvr/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/artandvr/z2.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/artandvr/">artandvr</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="/webgl-shader-demos/mandelbrot.html" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/00_oldDemos/julia/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="/webgl-shader-demos/mandelbrot.html">julia set</a></h4>
             </div>
         </div>
     </div>
@@ -610,11 +652,11 @@ I wanted to communicate the idea that the iteration transform is composed of a t
         <div class="box-masonry">
           
 
-              <a href="https://nshelton.github.io/home/tweet/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/tweet/thumbnail.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/home/atlanta/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/atlanta/thumb.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/tweet/">tweet</a></h4>
+              <h4><a href="https://nshelton.github.io/home/atlanta/">Atlanta </a></h4>
             </div>
         </div>
     </div>
@@ -623,11 +665,11 @@ I wanted to communicate the idea that the iteration transform is composed of a t
         <div class="box-masonry">
           
 
-              <a href="https://nshelton.github.io/home/atlanta/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/atlanta/thumb.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/home/tweet/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/tweet/thumbnail.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/atlanta/">Atlanta </a></h4>
+              <h4><a href="https://nshelton.github.io/home/tweet/">tweet</a></h4>
             </div>
         </div>
     </div>

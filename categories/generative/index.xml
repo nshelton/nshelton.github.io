@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>generative on sheltron</title>
+    <title>Generative on sheltron</title>
     <link>https://nshelton.github.io/categories/generative/</link>
-    <description>Recent content in generative on sheltron</description>
+    <description>Recent content in Generative on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Feb 2022 00:13:37 -0706</lastBuildDate><atom:link href="https://nshelton.github.io/categories/generative/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 00:13:37 -0600</lastBuildDate>
+    <atom:link href="https://nshelton.github.io/categories/generative/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Neonz AR</title>
       <link>https://nshelton.github.io/home/neonz/</link>
-      <pubDate>Sun, 20 Feb 2022 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sun, 20 Feb 2022 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/neonz/</guid>
-      <description>AR NFT Viewer In 2021, Sutu launched one of the first generative NFT series on the tezos blockshain, a 10,000 profile pic series called Neonz. I think this is one of the few great examples that demonstrates how to use web3 tech across platforms, while also being really cool art in its own right.
-This was deveoped by the folks at Eyejack, I got on board to help them with some AR rendering effects for iOS and Android.</description>
+      <description>AR NFT Viewer In 2021, Sutu launched one of the first generative NFT series on the tezos blockshain, a 10,000 profile pic series called Neonz. This was deveoped by the folks at Eyejack, I got on board to help them with some cool AR rendering effects.&#xA;I worked on a couple of components of the SUTUVERSE&#xA;Face filter - https://www.neonz.xyz/neonz-facez&#xA;NFT ART Viewer - https://www.neonz.xyz/neonz-signz&#xA;AR Lighting The new ARKit stuff has some awesome new features for spatial perception - you can use either a realtime 3D scanned mesh to composite new types of lighting into a scene.</description>
     </item>
-    
     <item>
       <title>CSMA302 Advanced Programming</title>
       <link>https://nshelton.github.io/home/csma302/</link>
-      <pubDate>Mon, 30 Aug 2021 00:13:37 -0706</pubDate>
-      
+      <pubDate>Mon, 30 Aug 2021 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/csma302/</guid>
       <description>My First Course In Fall 2021 I taught a class at Woodbury University in Burbank on some Advanced Programming techniques in Unity. This was in the Architecture School, aimed at non-computer Science majors who had already taken two semesters of Unity / gameplay programming. This was the first class I taught like this, and I learned a lot&amp;hellip; I made all the curriculum from scratch, and I&amp;rsquo;m pretty proud of it so with their permission I&amp;rsquo;ve made it freely available here.</description>
     </item>
-    
     <item>
       <title>Growth Algorithms</title>
       <link>https://nshelton.github.io/home/growth/</link>
-      <pubDate>Wed, 18 Sep 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Wed, 18 Sep 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/growth/</guid>
-      <description>Along with fractals, I also got really into growth algorithms, especially making them run in realtime. It seems like a perfect intersection of design and art with computer science and math.
-Here are various realtime versions of some interesting growth algorithms I have seen over the years.
- Mesh based Mesh Splitting / Spring and attractive forces  Diffusion-Limited Aggregation   Voxel based Gray-Scott Anisotropic Dendritic Solidification  Mesh Based These involve splitting a manifold (1d or 2d surface) and then moving the nodes around in a higher dimensional space to minimise overlap</description>
+      <description>Along with fractals, I also got really into growth algorithms, especially making them run in realtime. It seems like a perfect intersection of design and art with computer science and math.&#xA;Here are various realtime versions of some interesting growth algorithms I have seen over the years.&#xA;Mesh based Mesh Splitting / Spring and attractive forces Diffusion-Limited Aggregation Voxel based Gray-Scott Anisotropic Dendritic Solidification Mesh Based These involve splitting a manifold (1d or 2d surface) and then moving the nodes around in a higher dimensional space to minimise overlap</description>
     </item>
-    
   </channel>
 </rss>

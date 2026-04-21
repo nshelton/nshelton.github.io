@@ -131,3 +131,31 @@ img {
 .grid {
     margin-top:50px;
 }
+
+.section-heading {
+    color: #ddd;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #333;
+}
+
+.item-year {
+    color: #666;
+    font-weight: normal;
+}
+
+.lightbox-image {
+    display: inline-block;
+    cursor: zoom-in;
+}
+.lightbox-image img {
+    transition: opacity 0.2s;
+}
+.lightbox-image:hover img {
+    opacity: 0.85;
+}
+.lightbox-image:not(.image2):not(.image3) img {
+    max-width: 600px;
+    width: 100%;
+}

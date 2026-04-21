@@ -36,16 +36,16 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-26353276-1', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </head>
 <body>
@@ -56,7 +56,7 @@ if (!doNotTrack) {
     <br>
   <div class="sidebar-content">
     <h1 class="sidebar-heading">
-      <a href="https://nshelton.github.io">
+      <a href="https://nshelton.github.io/">
         sheltron
       </a> 
     </h1>
@@ -114,6 +114,10 @@ if (!doNotTrack) {
             <li>demos/ </li>
         </a> 
       
+        <a href="https://nshelton.github.io/live/">
+            <li>live/ </li>
+        </a> 
+      
     </ul>
     <br>
       
@@ -122,7 +126,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/unity">
-          <li class="">unity 26 </li>
+          <li class="">unity 27 </li>
         </a>
       
         
@@ -152,7 +156,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/fractals">
-          <li class="">fractals 7 </li>
+          <li class="">fractals 8 </li>
         </a>
       
         
@@ -166,8 +170,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/reconstruction">
+          <li class="">reconstruction 4 </li>
+        </a>
+      
+        
         <a  href="/categories/3dscanning">
           <li class="">3dscanning 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/cv">
+          <li class="">cv 3 </li>
         </a>
       
         
@@ -176,18 +190,23 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/installation">
+          <li class="">installation 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/ml">
+          <li class="">ml 3 </li>
+        </a>
+      
+        
         <a  href="/categories/ar">
           <li class="">ar 2 </li>
         </a>
       
         
-        <a  href="/categories/installation">
-          <li class="">installation 2 </li>
-        </a>
-      
-        
-        <a  href="/categories/ml">
-          <li class="">ml 2 </li>
+        <a  href="/categories/mobile">
+          <li class="">mobile 2 </li>
         </a>
       
         
@@ -196,8 +215,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/medical">
+          <li class="">medical 1 </li>
+        </a>
+      
+        
         <a  href="/categories/teaching">
           <li class="">teaching 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/vfx">
+          <li class="">vfx 1 </li>
         </a>
       
     </ul>
@@ -216,8 +245,7 @@ if (!doNotTrack) {
          <pageTitle>Neonz AR</pageTitle>
          <p>Feb 2022</p>
          <h1 id="ar-nft-viewer">AR NFT Viewer</h1>
-<p>In 2021, Sutu launched one of the first generative NFT series on the tezos blockshain, a 10,000 profile pic series called <a href="https://www.neonz.xyz/">Neonz</a>. I think this is one of the few great examples that demonstrates how to use web3 tech across platforms, while also being really cool art in its own right.</p>
-<p>This was deveoped by the folks at <a href="https://www.eyejack.io/">Eyejack</a>, I got on board to help them with some AR rendering effects for iOS and Android.</p>
+<p>In 2021, Sutu launched one of the first generative NFT series on the tezos blockshain, a 10,000 profile pic series called <a href="https://www.neonz.xyz/">Neonz</a>. This was deveoped by the folks at <a href="https://www.eyejack.io/">Eyejack</a>, I got on board to help them with some cool AR rendering effects.</p>
 <p>I worked on a couple of components of the SUTUVERSE</p>
 <ul>
 <li>
@@ -227,54 +255,75 @@ if (!doNotTrack) {
 <p>NFT ART Viewer - <a href="https://www.neonz.xyz/neonz-signz">https://www.neonz.xyz/neonz-signz</a></p>
 </li>
 </ul>
-<p><img  src="/img/neonz/sutu.jpg" class="img-responsive image3" />
-<img  src="/img/neonz/Sutuverse.png" class="img-responsive image3" /></p>
+<p><a href="/img/neonz/sutu.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/sutu.jpg" class="img-responsive" />
+</a>
+
+<a href="/img/neonz/Sutuverse.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/Sutuverse.png" class="img-responsive" />
+</a>
+</p>
 <h1 id="ar-lighting">AR Lighting</h1>
-<p>The new ARKit stuff has some awesome features for spatial perception - you can use a realtime 3D scanned mesh to composite new types of lighting into a scene. On Android, you can get an estimated depth map, and compute lighting that way as well:</p>
+<p>The new ARKit stuff has some awesome new features for spatial perception - you can use either a realtime 3D scanned mesh to composite new types of lighting into a scene. On Android, you can get an estimated depth map, and compute lighting that way as well:</p>
 <h2 id="color-and-depth">Color and Depth</h2>
-<p><img  src="/img/neonz/color.png" class="img-responsive image3" />
-<img  src="/img/neonz/depth.png" class="img-responsive image3" /></p>
+<p><a href="/img/neonz/color.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/color.png" class="img-responsive" />
+</a>
+
+<a href="/img/neonz/depth.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/depth.png" class="img-responsive" />
+</a>
+</p>
 <p>The depth is not great quality, I think because it does it at a very low res, and then just interpolates. It somehow is both too smooth and too blocky at the same time, which is impressive. I think this was set to the &ldquo;Fastest&rdquo; quality so I&rsquo;m not expecting anything great. (The Android results are even worse)</p>
 <h2 id="normals">Normals</h2>
-<p><img  src="/img/neonz/normals.png" class="img-responsive image3" />
-<img  src="/img/neonz/smoothNormals.png" class="img-responsive image3" /></p>
+<p><a href="/img/neonz/normals.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/normals.png" class="img-responsive" />
+</a>
+
+<a href="/img/neonz/smoothNormals.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/smoothNormals.png" class="img-responsive" />
+</a>
+</p>
 <p>Using the depth image, you can estimate normals. There&rsquo;s a lot of blocky artifacts because of the way the depth image is computed, so I do some smoothing.</p>
 <h2 id="basic-lights">Basic Lights</h2>
-<p><img  src="/img/neonz/lighting.png" class="img-responsive image3" />
-<img  src="/img/neonz/lighting2.png" class="img-responsive image3" /></p>
+<p><a href="/img/neonz/lighting.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/lighting.png" class="img-responsive" />
+</a>
+
+<a href="/img/neonz/lighting2.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/lighting2.png" class="img-responsive" />
+</a>
+</p>
 <p>Directional Light, Point Light</p>
 <p>You can then do most kind of lighting calculations you would do with any real time rendering, using the estimated surface normal and the world position.</p>
 <h2 id="analytic-lights">Analytic lights</h2>
-<p><img  src="/img/neonz/tubeLighting.png" class="img-responsive image3" />
-<img  src="/img/neonz/composite.png" class="img-responsive image3" /></p>
+<p><a href="/img/neonz/tubeLighting.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/tubeLighting.png" class="img-responsive" />
+</a>
+
+<a href="/img/neonz/composite.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/composite.png" class="img-responsive" />
+</a>
+</p>
 <p>Then you can compute any type of light and just add it on to the scene.</p>
 <p>I have based this example on some unity rendering command buffer samples such as:</p>
 <p><a href="https://docs.unity3d.com/2018.3/Documentation/Manual/GraphicsCommandBuffers.html">https://docs.unity3d.com/2018.3/Documentation/Manual/GraphicsCommandBuffers.html</a></p>
-<img  src="/img/neonz/RenderingCommandBufferCustomLights.jpg" class="img-responsive image3" />
+<a href="/img/neonz/RenderingCommandBufferCustomLights.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
+  <img src="/img/neonz/RenderingCommandBufferCustomLights.jpg" class="img-responsive" />
+</a>
+
 <h2 id="ios-compatibility">iOS compatibility</h2>
-<img  src="/img/neonz/metal.jpg" class="img-responsive image3" />
-<p>R32 textures don&rsquo;t support hardware filtering on Metal???</p>
-<p><a href="https://developer.apple.com/metal/Metal-Feature-Set-Tables.pdf">https://developer.apple.com/metal/Metal-Feature-Set-Tables.pdf</a></p>
-<p>The Depth buffer comes in from <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/manual/index.html">ARFoundation</a> as a single channel, 32 bit float. For some reason, in metal, the GPU does not support TEXTURE FILTERING on R32 textures ? I have no idea why so I just blit this into a R16 texture, which does support filtering. Come to think of it, that may be causeing some of the blocky artifacts above ..</p>
+<p>I ran into a very strange issue where I could not get the buffer uploaded to the</p>
 <h2 id="environment-effects">Environment effects</h2>
-<p>I also created some fun effects for the experience which will add MORE NEON into the world. On Android, this uses the depth buffer, on iOS with Lidar it uses the room scan,a nd on other iOS devices it uses &ldquo;detected planes&rdquo; (not ideal)</p>
-<p><img  src="/img/neonz/environment.jpg" class="img-responsive image3" />
-<img  src="/img/neonz/lightfieldz.jpg" class="img-responsive image3" /></p>
-<p>And wouldn&rsquo;t you know, these are also released as some NFTs that unlock the effect in the app. They also unlock secret pathways in the 3D platformer game.</p>
+<p>I also created some fun effects for the experience which will add MORE NEON into the world -</p>
+<p>And wouldn&rsquo;t you know these are also released as some</p>
 <h1 id="ar-face-filter">AR Face Filter</h1>
-<p>ARKit face tracking vs iOS</p>
-<img  src="/img/neonz/masks.jpg" class="img-responsive image2" />
 <p><a href="https://ted.sutuverse.com/">https://ted.sutuverse.com/</a></p>
-<h1 id="face-tracking">Face Tracking</h1>
-<h2 id="forehead-extrapolation">Forehead Extrapolation</h2>
-<img  src="/img/neonz/facemesh.jpg" class="img-responsive image2" />
-<p>Some of the tattoos extend on the forehead, and neither ARKit or ARCore track a mesh on the forehead. So I had to just extend a procedural spline up and over the forehead. This also meant the head had to be re-UV&rsquo;d to accomodate this.</p>
-<h2 id="human-segmentation">Human Segmentation</h2>
-<p><img  src="/img/neonz/arkitStreamer.jpg" class="img-responsive image3" />
-<img  src="/img/neonz/segmentation.jpg" class="img-responsive image3" /></p>
-<p>I used a library called ARKitStreamer (<a href="https://github.com/asus4/ARKitStreamer">https://github.com/asus4/ARKitStreamer</a>) which streams the AR data live over NDI to the unity editor. This project would have taken so much longer if this weren&rsquo;t availble so huge shout out to Koki Ibukuro (<a href="https://github.com/asus4">https://github.com/asus4</a>) !!! &lt;3 
-It&rsquo;s really a shame that Unity doesn&rsquo;t support this natively, I have no idea why developing AR in unity is so hard&hellip;</p>
-<p>Human segmentation is a mask that ARFoundation suplies, which can mask out the background grid.</p>
+<h1 id="facetracking">FaceTracking</h1>
+<h2 id="exhibitions">Exhibitions</h2>
+<p>Exhibited at <strong>SXSW</strong> and various art galleries (2022).</p>
+<h2 id="tools">Tools</h2>
+<p>Unity, GLSL/HLSL, ARKit, ARCore, WebXR, iOS, Android</p>
 
         
       </div>
@@ -332,6 +381,19 @@ It&rsquo;s really a shame that Unity doesn&rsquo;t support this natively, I have
               </a>
             <div class="box-masonry-text">
               <h4><a href="https://nshelton.github.io/home/topochico/">TopoChico</a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/nexusstudios/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/nexus/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/nexusstudios/">Nexus Studios</a></h4>
             </div>
         </div>
     </div>
@@ -457,11 +519,11 @@ It&rsquo;s really a shame that Unity doesn&rsquo;t support this natively, I have
         <div class="box-masonry">
           
 
-              <a href="https://nshelton.github.io/home/op-z/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/op-z/4.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/home/magfest/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/magfest/title.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/op-z/">OP-Z</a></h4>
+              <h4><a href="https://nshelton.github.io/home/magfest/">Magfest VJ</a></h4>
             </div>
         </div>
     </div>
@@ -470,11 +532,11 @@ It&rsquo;s really a shame that Unity doesn&rsquo;t support this natively, I have
         <div class="box-masonry">
           
 
-              <a href="https://nshelton.github.io/home/magfest/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/magfest/title.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/home/op-z/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/op-z/4.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/magfest/">Magfest VJ</a></h4>
+              <h4><a href="https://nshelton.github.io/home/op-z/">OP-Z</a></h4>
             </div>
         </div>
     </div>
@@ -613,24 +675,11 @@ It&rsquo;s really a shame that Unity doesn&rsquo;t support this natively, I have
         <div class="box-masonry">
           
 
-              <a href="https://nshelton.github.io/home/sketchbook0/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/art/sketches2/thumbnail.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/home/laser/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/sculpture/thumbnail.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/sketchbook0/">Sketchbook </a></h4>
-            </div>
-        </div>
-    </div>
-  
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-        <div class="box-masonry">
-          
-
-              <a href="https://nshelton.github.io/home/sketchbook1/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/art/watercolor/thumbnail.jpg" alt="" class="img-responsive">
-              </a>
-            <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/sketchbook1/">Sketchbook 2</a></h4>
+              <h4><a href="https://nshelton.github.io/home/laser/">Laser Cuts</a></h4>
             </div>
         </div>
     </div>
@@ -652,11 +701,24 @@ It&rsquo;s really a shame that Unity doesn&rsquo;t support this natively, I have
         <div class="box-masonry">
           
 
-              <a href="https://nshelton.github.io/home/laser/" title="" class="box-masonry-image with-hover-overlay">
-              <img src="https://nshelton.github.io/img/sculpture/thumbnail.jpg" alt="" class="img-responsive">
+              <a href="https://nshelton.github.io/home/sketchbook0/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/art/sketches2/thumbnail.jpg" alt="" class="img-responsive">
               </a>
             <div class="box-masonry-text">
-              <h4><a href="https://nshelton.github.io/home/laser/">Laser Cuts</a></h4>
+              <h4><a href="https://nshelton.github.io/home/sketchbook0/">Sketchbook </a></h4>
+            </div>
+        </div>
+    </div>
+  
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/sketchbook1/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/art/watercolor/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/sketchbook1/">Sketchbook 2</a></h4>
             </div>
         </div>
     </div>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reconstruction on sheltron</title>
+    <link>https://nshelton.github.io/categories/reconstruction/</link>
+    <description>Recent content in Reconstruction on sheltron</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 -0600</lastBuildDate>
+    <atom:link href="https://nshelton.github.io/categories/reconstruction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Snap Inc / Spectacles</title>
+      <link>https://nshelton.github.io/home/snap/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 -0600</pubDate>
+      <guid>https://nshelton.github.io/home/snap/</guid>
+      <description>&lt;p&gt;Gaussian Splatting rendering optimization for mobile AR hardware.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Illuminant Surgical</title>
+      <link>https://nshelton.github.io/home/illuminant/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://nshelton.github.io/home/illuminant/</guid>
+      <description>&lt;p&gt;Real-time surgical projection mapping and 3D fiducial tracking for image-guided surgery.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Disney Imagineering R&amp;D</title>
+      <link>https://nshelton.github.io/home/disney/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 -0600</pubDate>
+      <guid>https://nshelton.github.io/home/disney/</guid>
+      <description>&lt;p&gt;Projection mapping, computer vision, 3D reconstruction, and real-time tracking for Walt Disney Imagineering R&amp;amp;D.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Polycam</title>
+      <link>https://nshelton.github.io/home/polycam/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 -0600</pubDate>
+      <guid>https://nshelton.github.io/home/polycam/</guid>
+      <description>&lt;p&gt;Computer vision R&amp;amp;D and iOS shader development for a popular 3D scanning app.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

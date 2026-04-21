@@ -36,16 +36,16 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-26353276-1', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
 }
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </head>
 <body>
@@ -56,7 +56,7 @@ if (!doNotTrack) {
     <br>
   <div class="sidebar-content">
     <h1 class="sidebar-heading">
-      <a href="https://nshelton.github.io">
+      <a href="https://nshelton.github.io/">
         sheltron
       </a> 
     </h1>
@@ -114,6 +114,10 @@ if (!doNotTrack) {
             <li>demos/ </li>
         </a> 
       
+        <a href="https://nshelton.github.io/live/">
+            <li>live/ </li>
+        </a> 
+      
     </ul>
     <br>
       
@@ -122,7 +126,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/unity">
-          <li class="">unity 26 </li>
+          <li class="">unity 27 </li>
         </a>
       
         
@@ -152,7 +156,7 @@ if (!doNotTrack) {
       
         
         <a  href="/categories/fractals">
-          <li class="">fractals 7 </li>
+          <li class="">fractals 8 </li>
         </a>
       
         
@@ -166,8 +170,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/reconstruction">
+          <li class="">reconstruction 4 </li>
+        </a>
+      
+        
         <a  href="/categories/3dscanning">
           <li class="">3dscanning 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/cv">
+          <li class="">cv 3 </li>
         </a>
       
         
@@ -176,18 +190,23 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/installation">
+          <li class="">installation 3 </li>
+        </a>
+      
+        
+        <a  href="/categories/ml">
+          <li class="">ml 3 </li>
+        </a>
+      
+        
         <a  href="/categories/ar">
           <li class="">ar 2 </li>
         </a>
       
         
-        <a  href="/categories/installation">
-          <li class="">installation 2 </li>
-        </a>
-      
-        
-        <a  href="/categories/ml">
-          <li class="">ml 2 </li>
+        <a  href="/categories/mobile">
+          <li class="">mobile 2 </li>
         </a>
       
         
@@ -196,8 +215,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/medical">
+          <li class="">medical 1 </li>
+        </a>
+      
+        
         <a  href="/categories/teaching">
           <li class="">teaching 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/vfx">
+          <li class="">vfx 1 </li>
         </a>
       
     </ul>
@@ -227,9 +256,20 @@ if (!doNotTrack) {
 <li>SBIR Innovation Summit</li>
 <li>Idea To Product Austin Winners</li>
 </ul>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Da2KGKTynOo" frameborder="0" allowfullscreen></iframe>
 <p>We went on to get additional <a href="https://www.sbir.gov/sbirsearch/detail/704651">NSF SBIR phase II funding</a> to continue 3D scanning research.</p>
 <p>I worked on some cool projects during this time including:</p>
+<h2 id="3d-sensor-structured-lightcalibration">3D Sensor (Structured Light) Calibration</h2>
+<p>Accuracy of our 3D scans was was Lynx Labs primary competitive advantage, after the speed and simple interface. To get globally consistent room-scale models we improved upon the standard calibration of the Structure Sensor and implemented a custom stereo vision pipeline. </p>
+<p>Reconstruction using factory calibration :</p>
+<a href="/img/lynx/uncalibrated.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/lynx/uncalibrated.jpg" class="img-responsive" />
+</a>
+
+<p>Reconstruction using custom calibration and stereo vision pipeline :</p>
+<a href="/img/lynx/calibrated.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
+  <img src="/img/lynx/calibrated.jpg" class="img-responsive" />
+</a>
+
 <h2 id="hd-texture-mapping-on-3d-scans">HD Texture mapping on 3D scans</h2>
 <p>To improve visual quality of 3D scans, textures are just as important as the geometry (if not more). The VGA camera built in the Microsoft Kinect is not suitable for texture mapping, so we connected a HD webcam to the sensor. I created and implemented a novel image alignment technique and used state-of-the-art texture blending techniques.</p>
 <p>With standard per-vertex color:</p>
@@ -248,12 +288,6 @@ if (!doNotTrack) {
     on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
 </p>
 </div>
-<h2 id="3d-sensor-structured-lightcalibration">3D Sensor (Structured Light) Calibration</h2>
-<p>Accuracy of our 3D scans was was Lynx Labs primary competitive advantage, after the speed and simple interface. To get globally consistent room-scale models we improved upon the standard calibration of the Structure Sensor and implemented a custom stereo vision pipeline. </p>
-<p>Reconstruction using factory calibration :
-<img src="/assets/img/lynx/uncalibrated.jpg" alt="uncalibrated">
-Reconstruction using custom calibration and stereo vision pipeline :
-<img src="/assets/img/lynx/calibrated.jpg" alt="calibrated"></p>
 
         
       </div>
@@ -263,6 +297,19 @@ Reconstruction using custom calibration and stereo vision pipeline :
     <br>
     <h1>Related:</h1>
     
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+        <div class="box-masonry">
+          
+
+              <a href="https://nshelton.github.io/home/disney/" title="" class="box-masonry-image with-hover-overlay">
+              <img src="https://nshelton.github.io/img/disney/thumbnail.jpg" alt="" class="img-responsive">
+              </a>
+            <div class="box-masonry-text">
+              <h4><a href="https://nshelton.github.io/home/disney/">Disney Imagineering R&amp;D</a></h4>
+            </div>
+        </div>
+    </div>
+  
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
         <div class="box-masonry">
           

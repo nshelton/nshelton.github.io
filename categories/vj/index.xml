@@ -1,159 +1,117 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vj on sheltron</title>
+    <title>Vj on sheltron</title>
     <link>https://nshelton.github.io/categories/vj/</link>
-    <description>Recent content in vj on sheltron</description>
+    <description>Recent content in Vj on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nshelton.github.io/categories/vj/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nshelton.github.io/categories/vj/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TopoChico</title>
       <link>https://nshelton.github.io/home/topochico/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nshelton.github.io/home/topochico/</guid>
-      <description>Realtime Kinect visualizer experiments
-Hooked up a Kinect Azure to Unity&amp;rsquo;s VFX Graph to explore some live realtime visuals for Lyell Roeder (Alt Fi) and Troy Everett - a Live improv ambient set
-video   stills time delay Troy is always looping sounds and riffs from his viola. So I wanted to make a visual analog of that where we see multiple copies of the musicians over time, delayed by exactly a beat or something like that.</description>
+      <description>Realtime Kinect visualizer experiments&#xA;Hooked up a Kinect Azure to Unity&amp;rsquo;s VFX Graph to explore some live realtime visuals for Lyell Roeder (Alt Fi) and Troy Everett - a Live improv ambient set&#xA;video stills time delay Troy is always looping sounds and riffs from his viola. So I wanted to make a visual analog of that where we see multiple copies of the musicians over time, delayed by exactly a beat or something like that.</description>
     </item>
-    
     <item>
       <title>The Weeknd</title>
       <link>https://nshelton.github.io/home/weeknd/</link>
-      <pubDate>Sun, 16 Aug 2020 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sun, 16 Aug 2020 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/weeknd/</guid>
-      <description>Live interactive broadcast on TikTok We went all out to stream a virtual interactive Weeknd concert to TikTok. The Wave tapped into the real time chat API to allow interactive voting moments. Unlike all the other waves though, The Weeknd is too cool to actually wear a mocap suit, so we got an actor to be him, raising some strange quesitons about the future of virtual performance and likeness…
-But we ended up raising $350K for Equal Justice Initiative through merch sales!</description>
+      <description>Live interactive broadcast on TikTok We went all out to stream a virtual interactive Weeknd concert to TikTok. The Wave tapped into the real time chat API to allow interactive voting moments. Unlike all the other waves though, The Weeknd is too cool to actually wear a mocap suit, so we got an actor to be him, raising some strange quesitons about the future of virtual performance and likeness…&#xA;But we ended up raising $350K for Equal Justice Initiative through merch sales!</description>
     </item>
-    
     <item>
       <title>John Legend</title>
       <link>https://nshelton.github.io/home/johnlegend/</link>
-      <pubDate>Tue, 16 Jun 2020 00:13:37 -0706</pubDate>
-      
+      <pubDate>Tue, 16 Jun 2020 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/johnlegend/</guid>
-      <description>John Legend live charity show
-  After a brief coronavirus-induced break at Wave, we rented out a studio to set up a Yamaha electric grand piano and get the man JOHN LEGEND HIMSELF into the xsens suit to do a live performance.
-We raised almost $10k for FREEAMERICA
- behind the scenes BOBBY was our mocap stand in for a lot of tests. And he CUT THE LINE at Whole Foods 1 hour before the set so that he could get John a WHOLE COOKED CHICKEN which we learned is the most important thing so that he can sing good.</description>
+      <description>John Legend live charity show&#xA;After a brief coronavirus-induced break at Wave, we rented out a studio to set up a Yamaha electric grand piano and get the man JOHN LEGEND HIMSELF into the xsens suit to do a live performance.&#xA;We raised almost $10k for FREEAMERICA&#xA;behind the scenes BOBBY was our mocap stand in for a lot of tests. And he CUT THE LINE at Whole Foods 1 hour before the set so that he could get John a WHOLE COOKED CHICKEN which we learned is the most important thing so that he can sing good.</description>
     </item>
-    
     <item>
       <title>REZZ</title>
       <link>https://nshelton.github.io/home/rezz/</link>
-      <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sun, 23 Jun 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/rezz/</guid>
       <description>&lt;p&gt;Beyond the Senses EP release&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>T-Pain</title>
       <link>https://nshelton.github.io/home/tpain/</link>
-      <pubDate>Sat, 01 Jun 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sat, 01 Jun 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/tpain/</guid>
       <description>&lt;p&gt;T-Pain&amp;rsquo;s School of Business feature at The Wave&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>FractalFlames</title>
       <link>https://nshelton.github.io/home/fractalflames/</link>
-      <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Fri, 04 Jan 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/fractalflames/</guid>
       <description>&lt;p&gt;Fractal Flames&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Magfest VJ</title>
       <link>https://nshelton.github.io/home/magfest/</link>
-      <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Fri, 04 Jan 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/magfest/</guid>
       <description>&lt;p&gt;Super MagFest 2019 DJ battle&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>OP-Z</title>
       <link>https://nshelton.github.io/home/op-z/</link>
-      <pubDate>Fri, 04 Jan 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Fri, 04 Jan 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/op-z/</guid>
       <description>&lt;p&gt;Unity Visuals pack for OP-Z multimedia synthesizer&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>3D Flying Lotus Visuals</title>
       <link>https://nshelton.github.io/home/flylo/</link>
-      <pubDate>Sun, 23 Jul 2017 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sun, 23 Jul 2017 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/flylo/</guid>
       <description>&lt;p&gt;3D Visuals content for Flying Lotus and Strangeloop Studios&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>AKTUAL</title>
       <link>https://nshelton.github.io/home/aktual/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://nshelton.github.io/home/aktual/</guid>
       <description>&lt;p&gt;ASH KOOSHA show in TheWaveVR&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>GRIMECRAFT viz</title>
       <link>https://nshelton.github.io/home/grimecraft/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://nshelton.github.io/home/grimecraft/</guid>
       <description>&lt;p&gt;VR Visuals in TheWaveVR&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>3D Web Fest</title>
       <link>https://nshelton.github.io/home/3dwebfest/</link>
-      <pubDate>Fri, 30 Jun 2017 00:13:37 -0706</pubDate>
-      
+      <pubDate>Fri, 30 Jun 2017 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/3dwebfest/</guid>
       <description>&lt;p&gt;Live performance at 3D web fest&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>TunnelTek</title>
       <link>https://nshelton.github.io/home/tunneltek/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://nshelton.github.io/home/tunneltek/</guid>
-      <description>&lt;div class=&#34;embed shadertoy&#34;&gt;
-&lt;iframe width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; src=&#34;https://www.shadertoy.com/embed/4dlBDn?gui=true&amp;t=10&amp;paused=true&amp;muted=false&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;daily shader thing&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;embed shadertoy&#34;&gt;&#xD;&#xA;&lt;iframe width=&#34;640&#34; height=&#34;360&#34; frameborder=&#34;0&#34; src=&#34;https://www.shadertoy.com/embed/4dlBDn?gui=true&amp;t=10&amp;paused=true&amp;muted=false&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&#xA;&lt;p&gt;daily shader thing&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>capyac</title>
       <link>https://nshelton.github.io/home/capyac/</link>
-      <pubDate>Tue, 13 Oct 2015 00:13:37 -0706</pubDate>
-      
+      <pubDate>Tue, 13 Oct 2015 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/capyac/</guid>
       <description>&lt;p&gt;Live performance of Audio-Reactive Shaders&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Synesthesia</title>
       <link>https://nshelton.github.io/home/synesthesia/</link>
-      <pubDate>Sat, 16 May 2015 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sat, 16 May 2015 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/synesthesia/</guid>
-      <description>realtime reactive VJ software
-Gravity Current&amp;rsquo;s Synesthesia In June 2015 I worked with Gravity Current on their new Synesthesia software for live reactive visuals. For this project I created two &amp;ldquo;Scenes&amp;rdquo; that played at a couple of shows in Austin:
-Looper&amp;rsquo;s night @ Strange Brew Featured my reaction diffusion system ported to C++ OpenGL with a render-to-texture feedback loop for simulation. This was a sweet event not only because of all the talented musicians, but we were able to get MIDI data from the loop pedals into Synesthesia and trigger different layers based on which loops were going.</description>
+      <description>realtime reactive VJ software&#xA;Gravity Current&amp;rsquo;s Synesthesia In June 2015 I worked with Gravity Current on their new Synesthesia software for live reactive visuals. For this project I created two &amp;ldquo;Scenes&amp;rdquo; that played at a couple of shows in Austin:&#xA;Looper&amp;rsquo;s night @ Strange Brew Featured my reaction diffusion system ported to C++ OpenGL with a render-to-texture feedback loop for simulation. This was a sweet event not only because of all the talented musicians, but we were able to get MIDI data from the loop pedals into Synesthesia and trigger different layers based on which loops were going.</description>
     </item>
-    
   </channel>
 </rss>

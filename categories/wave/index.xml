@@ -1,96 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wave on sheltron</title>
+    <title>Wave on sheltron</title>
     <link>https://nshelton.github.io/categories/wave/</link>
-    <description>Recent content in wave on sheltron</description>
+    <description>Recent content in Wave on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Aug 2019 20:32:03 -0800</lastBuildDate><atom:link href="https://nshelton.github.io/categories/wave/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Aug 2019 20:32:03 -0800</lastBuildDate>
+    <atom:link href="https://nshelton.github.io/categories/wave/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lindsey Stirling</title>
       <link>https://nshelton.github.io/home/lindsey/</link>
       <pubDate>Mon, 26 Aug 2019 20:32:03 -0800</pubDate>
-      
       <guid>https://nshelton.github.io/home/lindsey/</guid>
-      <description>   Testing the suit! It didn&amp;rsquo;t work very well with the arms
-IK constraints to make hands match violin (because all the mocap is live we can&amp;rsquo;t touch it up!)
-Team  sheltron : technical director, mocap daniel sierra - unity technical artist aaron lemke - unity artist show director dare matheson - VFX, characters, environments mike krentz - art direction  </description>
+      <description> Testing the suit! It didn&amp;rsquo;t work very well with the arms&#xA;IK constraints to make hands match violin (because all the mocap is live we can&amp;rsquo;t touch it up!)&#xA;Team sheltron : technical director, mocap daniel sierra - unity technical artist aaron lemke - unity artist show director dare matheson - VFX, characters, environments mike krentz - art direction </description>
     </item>
-    
     <item>
       <title>REZZ</title>
       <link>https://nshelton.github.io/home/rezz/</link>
-      <pubDate>Sun, 23 Jun 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sun, 23 Jun 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/rezz/</guid>
       <description>&lt;p&gt;Beyond the Senses EP release&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>T-Pain</title>
       <link>https://nshelton.github.io/home/tpain/</link>
-      <pubDate>Sat, 01 Jun 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sat, 01 Jun 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/tpain/</guid>
       <description>&lt;p&gt;T-Pain&amp;rsquo;s School of Business feature at The Wave&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The Light - Kizuna AI / W&amp;W</title>
       <link>https://nshelton.github.io/home/kizuna/</link>
-      <pubDate>Sun, 10 Mar 2019 00:13:37 -0706</pubDate>
-      
+      <pubDate>Sun, 10 Mar 2019 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/kizuna/</guid>
-      <description>At the Wave VR we made a Music video for Internationally renown producers DJs W&amp;amp;W for their musical collaboration with japanese vtuber Kizuna Ai.
-  We had to make this in like a week or two, so we Here&amp;rsquo;s some Unity Workflow Documentation:
-Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly kitbash assets and copious Unity postprocessing Kitbash Neo Tokyo Animation Data The Kizuna mesh and mesh came straight from Activ8 in MikuMikuDance format</description>
+      <description>At the Wave VR we made a Music video for Internationally renown producers DJs W&amp;amp;W for their musical collaboration with japanese vtuber Kizuna Ai.&#xA;We had to make this in like a week or two, so we Here&amp;rsquo;s some Unity Workflow Documentation:&#xA;Art Team Aaron Lemke, Dare Matheson and Daniel Sierra built this out of mostly kitbash assets and copious Unity postprocessing Kitbash Neo Tokyo Animation Data The Kizuna mesh and mesh came straight from Activ8 in MikuMikuDance format</description>
     </item>
-    
     <item>
       <title>Imogen Heap</title>
       <link>https://nshelton.github.io/home/imogenheap/</link>
-      <pubDate>Thu, 23 Aug 2018 00:13:37 -0706</pubDate>
-      
+      <pubDate>Thu, 23 Aug 2018 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/imogenheap/</guid>
       <description>&lt;p&gt;VR Volumetric Music Video Experience for Imogen Heap&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>See Without Eyes</title>
       <link>https://nshelton.github.io/home/seewithouteyes/</link>
-      <pubDate>Thu, 21 Jun 2018 00:13:37 -0706</pubDate>
-      
+      <pubDate>Thu, 21 Jun 2018 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/seewithouteyes/</guid>
       <description>&lt;p&gt;Interactive VR Music video Experience&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ready Player One</title>
       <link>https://nshelton.github.io/home/rpo/</link>
-      <pubDate>Fri, 09 Mar 2018 00:13:37 -0706</pubDate>
-      
+      <pubDate>Fri, 09 Mar 2018 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/rpo/</guid>
       <description>&lt;p&gt;Making of TheWaveVR&amp;rsquo;s Distracted Globe&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>AKTUAL</title>
       <link>https://nshelton.github.io/home/aktual/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://nshelton.github.io/home/aktual/</guid>
       <description>&lt;p&gt;ASH KOOSHA show in TheWaveVR&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>N-FOLD</title>
       <link>https://nshelton.github.io/home/nfold/</link>
-      <pubDate>Tue, 27 Jun 2017 00:13:37 -0706</pubDate>
-      
+      <pubDate>Tue, 27 Jun 2017 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/nfold/</guid>
       <description>&lt;p&gt;Hyper-Dimensional Odyssey&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

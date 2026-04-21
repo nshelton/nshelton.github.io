@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mobile on SHELTRON</title>
+    <title>Mobile on sheltron</title>
     <link>https://nshelton.github.io/categories/mobile/</link>
-    <description>Recent content in mobile on SHELTRON</description>
+    <description>Recent content in Mobile on sheltron</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Dec 2016 00:13:37 -0706</lastBuildDate>
-    
-	<atom:link href="https://nshelton.github.io/categories/mobile/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 -0600</lastBuildDate>
+    <atom:link href="https://nshelton.github.io/categories/mobile/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>occipital bridge</title>
-      <link>https://nshelton.github.io/portfolio/bridge/</link>
-      <pubDate>Wed, 21 Dec 2016 00:13:37 -0706</pubDate>
-      
-      <guid>https://nshelton.github.io/portfolio/bridge/</guid>
-      <description>&lt;p&gt;Mobile mixed reality graphics&lt;/p&gt;</description>
+      <title>Snap Inc / Spectacles</title>
+      <link>https://nshelton.github.io/home/snap/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 -0600</pubDate>
+      <guid>https://nshelton.github.io/home/snap/</guid>
+      <description>&lt;p&gt;Gaussian Splatting rendering optimization for mobile AR hardware.&lt;/p&gt;</description>
     </item>
-    
+    <item>
+      <title>Polycam</title>
+      <link>https://nshelton.github.io/home/polycam/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 -0600</pubDate>
+      <guid>https://nshelton.github.io/home/polycam/</guid>
+      <description>&lt;p&gt;Computer vision R&amp;amp;D and iOS shader development for a popular 3D scanning app.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
