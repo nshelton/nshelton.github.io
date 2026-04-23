@@ -38,17 +38,20 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
   <link href="https://nshelton.github.io/about/index.xml" rel="alternate" type="application/rss+xml" title="sheltron" />
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-72826Y6Q7S');
+        }
+      </script>
 </head>
 <body>
   <div id="all">
@@ -217,8 +220,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/graphics">
+          <li class="">graphics 1 </li>
+        </a>
+      
+        
         <a  href="/categories/medical">
           <li class="">medical 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/plotter">
+          <li class="">plotter 1 </li>
         </a>
       
         

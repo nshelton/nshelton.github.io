@@ -36,17 +36,20 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-72826Y6Q7S');
+        }
+      </script>
 </head>
 <body>
   <div id="all">
@@ -215,8 +218,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/graphics">
+          <li class="">graphics 1 </li>
+        </a>
+      
+        
         <a  href="/categories/medical">
           <li class="">medical 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/plotter">
+          <li class="">plotter 1 </li>
         </a>
       
         
@@ -248,10 +261,10 @@ if (!doNotTrack) {
 <p>Hooked up a <em>Kinect Azure</em> to Unity&rsquo;s <em>VFX Graph</em> to explore some live realtime visuals for Lyell Roeder (<a href="https://www.altfi.fm/">Alt Fi</a>) and <a href="http://www.troyeverett.com/about">Troy Everett</a> - a Live improv ambient set</p>
 <h1 id="video">video</h1>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/BWCW58VmEqU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div class="embed video-player ">
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="https://www.youtube.com/embed/BWCW58VmEqU" allowfullscreen frameborder="0">
+</iframe>
 </div>
-
 <h1 id="stills">stills</h1>
 <p><a href="/img/topochico/0.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
   <img src="/img/topochico/0.jpg" class="img-responsive" />

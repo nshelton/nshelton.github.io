@@ -63,12 +63,19 @@ pageTitle {
 }
 .content-column .grid a{
     color:white;
+    text-decoration: none;
 }
 .content-column a{
     color:orange;
+    text-decoration: underline;
 }
 
 .sidebar-links a{
+    color: orange;
+    text-decoration: none;
+}
+
+strong, b {
     color: orange;
 }
 
@@ -155,7 +162,36 @@ img {
 .lightbox-image:hover img {
     opacity: 0.85;
 }
-.lightbox-image:not(.image2):not(.image3) img {
+.lightbox-image:not(.image2):not(.image3):not(.full) img {
     max-width: 600px;
     width: 100%;
+}
+
+.lightbox-image.full img {
+    width: 100%;
+    max-width: 100%;
+}
+
+code, pre, pre code {
+    background-color: #000;
+    color: #3f3;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+code {
+    padding: 1px 5px;
+    border: 1px solid #222;
+    border-radius: 3px;
+}
+
+pre {
+    padding: 12px 16px;
+    border: 1px solid #222;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+pre code {
+    padding: 0;
+    border: none;
 }

@@ -36,17 +36,20 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-72826Y6Q7S');
+        }
+      </script>
 </head>
 <body>
   <div id="all">
@@ -215,8 +218,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/graphics">
+          <li class="">graphics 1 </li>
+        </a>
+      
+        
         <a  href="/categories/medical">
           <li class="">medical 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/plotter">
+          <li class="">plotter 1 </li>
         </a>
       
         
@@ -296,7 +309,7 @@ if (!doNotTrack) {
 <p><img src="/img/levels/bigger.jpg" alt="header"></p>
 <p>In the interactive version, you can still try out both kinds of scales.</p>
 <p>The whole thing can be simplified in terms of the math / programming by just creating a 4x4 matrix transform which represents the iteration transform. This contains scale, and 3 dimensional rotation and translation. The scale could also be 3 dimentional, but haven&rsquo;t tried that yet. I use homogenous coordinates here to make the scaling and translation and rotation into a 4D matrix multiplication. This can be computed on CPU side so the shader doesn&rsquo;t have to do a ton of redundant sin and cos</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-glsl" data-lang="glsl"><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-glsl" data-lang="glsl"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">uniform</span> mat4 iterationTranform
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>

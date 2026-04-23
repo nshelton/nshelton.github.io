@@ -36,17 +36,20 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-72826Y6Q7S');
+        }
+      </script>
 </head>
 <body>
   <div id="all">
@@ -215,8 +218,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/graphics">
+          <li class="">graphics 1 </li>
+        </a>
+      
+        
         <a  href="/categories/medical">
           <li class="">medical 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/plotter">
+          <li class="">plotter 1 </li>
         </a>
       
         
@@ -273,10 +286,10 @@ if (!doNotTrack) {
 <em>builtin Unity TextMesh plus a backing quad</em><img src="https://lh6.googleusercontent.com/lmI1V-AYQXSFsvltFVbfl5-FxDamRU2RdAKNk1MUdgPp3GWTG3c1SBw9Sq8ti8kbWQvR9YNK-TZQfLxkcxxf84-GXyMz8AosfnrDhbNX_CC8QZteOMVWLCvTdBXsCA7xEMLd-kw" alt=""><br>
 <em>5k TextMeshPro components in VR. Added some depth fog for depth perception purposes.</em></p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/d0p6xZ9SveE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div class="embed video-player ">
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="https://www.youtube.com/embed/d0p6xZ9SveE" allowfullscreen frameborder="0">
+</iframe>
 </div>
-
 <p>Since premature optimization is the root of all evil, I just did the simplest thing I could think of at first. Instantiate 5000 gameobjects with TextMeshPro on them and it actually worked at 60fps.  Add in my two-hand grip trackball I have used from my fractal visualizer to explore and zoom the cloud. The client complained of a “weird shimmery effect when moving” which usually means Oculus time warp. The rendering would hit 30 when looking at every element of the cloud at once which is rare. But, when I started making it interactive it was tough to:</p>
 <ul>
 <li>Manually get the text to face camera (GameObject.transform.LookAt(camera) 5k times)</li>

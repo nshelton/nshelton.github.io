@@ -4,10 +4,24 @@
     <title>Categories on sheltron</title>
     <link>https://nshelton.github.io/categories/</link>
     <description>Recent content in Categories on sheltron</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nshelton.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graphics</title>
+      <link>https://nshelton.github.io/categories/graphics/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nshelton.github.io/categories/graphics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Plotter</title>
+      <link>https://nshelton.github.io/categories/plotter/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nshelton.github.io/categories/plotter/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Mobile</title>
       <link>https://nshelton.github.io/categories/mobile/</link>

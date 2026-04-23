@@ -4,7 +4,7 @@
     <title>Dataviz on sheltron</title>
     <link>https://nshelton.github.io/categories/dataviz/</link>
     <description>Recent content in Dataviz on sheltron</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Mar 2016 20:32:03 -0800</lastBuildDate>
     <atom:link href="https://nshelton.github.io/categories/dataviz/index.xml" rel="self" type="application/rss+xml" />
@@ -48,7 +48,7 @@
       <link>https://nshelton.github.io/home/openswr/</link>
       <pubDate>Sat, 01 Feb 2014 20:32:03 -0800</pubDate>
       <guid>https://nshelton.github.io/home/openswr/</guid>
-      <description>Low-level OpenGL driver development&#xA;video: isosurface extraction and realtime rendering of a shit ton of triangles on a xeon phi cluster (no GPUs!)&#xA;In 2015 I contracted for Intel&amp;rsquo;s visualization department on an OpenGL driver optimised for many-core intel supercomputer clusters. With that many CPUs, you can treat the network as a GPU, with each core doing some work in a Tile-Based Deferred Rendering (TBDR) pipeline. This was built on the Mesa3D graphics library and greatly improved frame rates on certain systems compared to the built in software renderer in Mesa3D (llvmpipe).</description>
+      <description>&lt;p&gt;Low-level OpenGL driver development&lt;/p&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/c_td8epBihg&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;video: isosurface extraction and realtime rendering of a shit ton of triangles on a xeon phi cluster (no GPUs!)&lt;/p&gt;&#xA;&lt;p&gt;In 2015 I contracted for Intel&amp;rsquo;s visualization department on an OpenGL driver optimised for many-core intel supercomputer clusters. With that many CPUs, you can treat the network as a GPU, with each core doing some work in a Tile-Based Deferred Rendering (TBDR) pipeline. This was built on the Mesa3D graphics library and greatly improved frame rates on certain systems compared to the built in software renderer in Mesa3D (llvmpipe). It is now a part of the open source OpenMesa3D graphics library.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

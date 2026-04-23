@@ -4,7 +4,7 @@
     <title>Teaching on sheltron</title>
     <link>https://nshelton.github.io/categories/teaching/</link>
     <description>Recent content in Teaching on sheltron</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Aug 2021 00:13:37 -0600</lastBuildDate>
     <atom:link href="https://nshelton.github.io/categories/teaching/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://nshelton.github.io/home/csma302/</link>
       <pubDate>Mon, 30 Aug 2021 00:13:37 -0600</pubDate>
       <guid>https://nshelton.github.io/home/csma302/</guid>
-      <description>My First Course In Fall 2021 I taught a class at Woodbury University in Burbank on some Advanced Programming techniques in Unity. This was in the Architecture School, aimed at non-computer Science majors who had already taken two semesters of Unity / gameplay programming. This was the first class I taught like this, and I learned a lot&amp;hellip; I made all the curriculum from scratch, and I&amp;rsquo;m pretty proud of it so with their permission I&amp;rsquo;ve made it freely available here.</description>
+      <description>&lt;h1 id=&#34;my-first-course&#34;&gt;My First Course&lt;/h1&gt;&#xA;&lt;p&gt;In &lt;em&gt;Fall 2021&lt;/em&gt; I taught a class at &lt;em&gt;Woodbury University&lt;/em&gt; in Burbank on some Advanced Programming techniques in Unity.  This was in the Architecture School, aimed at non-computer Science majors who had already taken two semesters of Unity / gameplay programming. This was the first class I taught like this, and I learned a lot&amp;hellip; I made all the curriculum from scratch, and I&amp;rsquo;m pretty proud of it so with their permission I&amp;rsquo;ve made it freely available here.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
     <title>3DScanning on sheltron</title>
     <link>https://nshelton.github.io/categories/3dscanning/</link>
     <description>Recent content in 3DScanning on sheltron</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Mar 2016 20:32:03 -0800</lastBuildDate>
     <atom:link href="https://nshelton.github.io/categories/3dscanning/index.xml" rel="self" type="application/rss+xml" />
@@ -27,7 +27,7 @@
       <link>https://nshelton.github.io/home/lynx/</link>
       <pubDate>Sat, 01 Feb 2014 20:32:03 -0800</pubDate>
       <guid>https://nshelton.github.io/home/lynx/</guid>
-      <description>First realtime mobile 3D scanner&#xA;This product was a fully mobile device (box) that could do real-time 3D scanning totally on the device. No cloud or offline processing.&#xA;Back at UT I joined a research group called the UT Perception lab. There we worked on realtime 3D reconstruction techniques using GPU processing. I helped implement Kinect Fusion in CUDA, a CUDA raytracer for scanning volume visualizaiton and other 3D reconstruction techniques using heightmaps on manifolds.</description>
+      <description>&lt;p&gt;First realtime mobile 3D scanner&lt;/p&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/RjE68w3nBHw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;This product was a fully mobile device (box) that could do real-time 3D scanning totally on the device. No cloud or offline processing.&lt;/p&gt;&#xA;&lt;p&gt;Back at UT I joined a research group called the UT Perception lab. There we worked on realtime 3D reconstruction techniques using GPU processing. I helped implement Kinect Fusion in CUDA, a CUDA raytracer for scanning volume visualizaiton and other 3D reconstruction techniques using heightmaps on manifolds.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

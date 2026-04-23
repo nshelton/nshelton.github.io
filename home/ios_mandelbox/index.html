@@ -36,17 +36,20 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-72826Y6Q7S');
+        }
+      </script>
 </head>
 <body>
   <div id="all">
@@ -215,8 +218,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/graphics">
+          <li class="">graphics 1 </li>
+        </a>
+      
+        
         <a  href="/categories/medical">
           <li class="">medical 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/plotter">
+          <li class="">plotter 1 </li>
         </a>
       
         
@@ -249,10 +262,10 @@ if (!doNotTrack) {
 <h2 id="towards-realtime-mobile-raytracing">Towards realtime mobile raytracing</h2>
 <p>This was an experiment, after using <a href="https://developer.apple.com/reference/scenekit">SceneKit</a> for the Bridge Engine at Occipital in iOS, to see what I could do with solely a <a href="https://developer.apple.com/reference/scenekit/scntechnique">SCNTechnique</a>, full-frame shader. I was really inspired by this talk by Tim Lottes about filtering methods for realtime raymarching. What kind of quality could be achieved on an iPhone6 ?</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/WzpLWzGvFK4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div class="embed video-player ">
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="https://www.youtube.com/embed/WzpLWzGvFK4" allowfullscreen frameborder="0">
+</iframe>
 </div>
-
 <h2 id="render-loop">Render Loop</h2>
 <p>I didn&rsquo;t implement all of the crazy stuff he mentions within the SCNTechnique, but a few were easy to do:</p>
 <ul>

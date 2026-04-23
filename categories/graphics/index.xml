@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graphics on sheltron</title>
+    <link>https://nshelton.github.io/categories/graphics/</link>
+    <description>Recent content in Graphics on sheltron</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nshelton.github.io/categories/graphics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minotaur Plotter</title>
+      <link>https://nshelton.github.io/home/minotaur/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://nshelton.github.io/home/minotaur/</guid>
+      <description>&lt;p&gt;A C++17 desktop application for converting images into vector paths and driving pen plotters in real time. Compatible with the &lt;a href=&#34;https://shop.evilmadscientist.com/productsmenu/890&#34;&gt;Axidraw A3&lt;/a&gt; (now Bantam Tools)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

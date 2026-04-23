@@ -36,17 +36,20 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <link rel="shortcut icon" href="https://nshelton.github.io/img/favicon.png">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-72826Y6Q7S', { 'anonymize_ip': false });
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-72826Y6Q7S"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-72826Y6Q7S');
+        }
+      </script>
 </head>
 <body>
   <div id="all">
@@ -215,8 +218,18 @@ if (!doNotTrack) {
         </a>
       
         
+        <a  href="/categories/graphics">
+          <li class="">graphics 1 </li>
+        </a>
+      
+        
         <a  href="/categories/medical">
           <li class="">medical 1 </li>
+        </a>
+      
+        
+        <a  href="/categories/plotter">
+          <li class="">plotter 1 </li>
         </a>
       
         
@@ -249,10 +262,10 @@ if (!doNotTrack) {
 <p>Neural engineer Dr. Wong has installed an experimental AI named BOB (“Bag of Beliefs”) into the nervous system of his 10-year-old daughter Chalice. Designed to guide Chalice through the challenges of growing up in a volatile world, BOB confronts more and more of the conflicts in Chalice’s life on her behalf, while Chalice grows increasingly irrelevant and escapist. As Dr. Wong begins to favor the BOB side of his daughter, and as BOB threatens to do the job of living Chalice’s life better than she can, Chalice jealously wonders: what is left for her classic human self to do?</p>
 <p>read more at <a href="https://lifeafterbob.io/">https://lifeafterbob.io/</a></p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/vCc2djR25hg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+<div class="embed video-player ">
+<iframe class="youtube-player" type="text/html" width="640" height="385" src="https://www.youtube.com/embed/vCc2djR25hg" allowfullscreen frameborder="0">
+</iframe>
 </div>
-
 <h1 id="look-development">look development</h1>
 <p>My main role was working with Ian and the art team on different toon-style shaders in unity, but just adding so many controls and tools and <em>spicy</em> bits so that they could really control the lighting and look. The rendering style was partially inspired by the game <a href="https://en.wikipedia.org/wiki/Inside_(video_game)">Inside</a> :
 <a href="/img/labob/inside.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
