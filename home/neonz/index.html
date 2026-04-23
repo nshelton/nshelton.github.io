@@ -18,8 +18,10 @@
 
 
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
+href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap">
 
 
  
@@ -268,62 +270,128 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <p>NFT ART Viewer - <a href="https://www.neonz.xyz/neonz-signz">https://www.neonz.xyz/neonz-signz</a></p>
 </li>
 </ul>
-<p><a href="/img/neonz/sutu.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/sutu.jpg" class="img-responsive" />
-</a>
+<p>
 
-<a href="/img/neonz/Sutuverse.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/Sutuverse.png" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/sutu.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/sutu.jpg" class="img-responsive" />
+  </a>
+  
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/Sutuverse.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/Sutuverse.png" class="img-responsive" />
+  </a>
+  
+</figure>
 </p>
 <h1 id="ar-lighting">AR Lighting</h1>
 <p>The new ARKit stuff has some awesome new features for spatial perception - you can use either a realtime 3D scanned mesh to composite new types of lighting into a scene. On Android, you can get an estimated depth map, and compute lighting that way as well:</p>
 <h2 id="color-and-depth">Color and Depth</h2>
-<p><a href="/img/neonz/color.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/color.png" class="img-responsive" />
-</a>
+<p>
 
-<a href="/img/neonz/depth.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/depth.png" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/color.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/color.png" class="img-responsive" />
+  </a>
+  
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/depth.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/depth.png" class="img-responsive" />
+  </a>
+  
+</figure>
 </p>
 <p>The depth is not great quality, I think because it does it at a very low res, and then just interpolates. It somehow is both too smooth and too blocky at the same time, which is impressive. I think this was set to the &ldquo;Fastest&rdquo; quality so I&rsquo;m not expecting anything great. (The Android results are even worse)</p>
 <h2 id="normals">Normals</h2>
-<p><a href="/img/neonz/normals.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/normals.png" class="img-responsive" />
-</a>
+<p>
 
-<a href="/img/neonz/smoothNormals.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/smoothNormals.png" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/normals.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/normals.png" class="img-responsive" />
+  </a>
+  
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/smoothNormals.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/smoothNormals.png" class="img-responsive" />
+  </a>
+  
+</figure>
 </p>
 <p>Using the depth image, you can estimate normals. There&rsquo;s a lot of blocky artifacts because of the way the depth image is computed, so I do some smoothing.</p>
 <h2 id="basic-lights">Basic Lights</h2>
-<p><a href="/img/neonz/lighting.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/lighting.png" class="img-responsive" />
-</a>
+<p>
 
-<a href="/img/neonz/lighting2.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/lighting2.png" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/lighting.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/lighting.png" class="img-responsive" />
+  </a>
+  
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/lighting2.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/lighting2.png" class="img-responsive" />
+  </a>
+  
+</figure>
 </p>
 <p>Directional Light, Point Light</p>
 <p>You can then do most kind of lighting calculations you would do with any real time rendering, using the estimated surface normal and the world position.</p>
 <h2 id="analytic-lights">Analytic lights</h2>
-<p><a href="/img/neonz/tubeLighting.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/tubeLighting.png" class="img-responsive" />
-</a>
+<p>
 
-<a href="/img/neonz/composite.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/composite.png" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/tubeLighting.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/tubeLighting.png" class="img-responsive" />
+  </a>
+  
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/composite.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/composite.png" class="img-responsive" />
+  </a>
+  
+</figure>
 </p>
 <p>Then you can compute any type of light and just add it on to the scene.</p>
 <p>I have based this example on some unity rendering command buffer samples such as:</p>
 <p><a href="https://docs.unity3d.com/2018.3/Documentation/Manual/GraphicsCommandBuffers.html">https://docs.unity3d.com/2018.3/Documentation/Manual/GraphicsCommandBuffers.html</a></p>
-<a href="/img/neonz/RenderingCommandBufferCustomLights.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/neonz/RenderingCommandBufferCustomLights.jpg" class="img-responsive" />
-</a>
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/neonz/RenderingCommandBufferCustomLights.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/neonz/RenderingCommandBufferCustomLights.jpg" class="img-responsive" />
+  </a>
+  
+</figure>
 
 <h2 id="ios-compatibility">iOS compatibility</h2>
 <p>I ran into a very strange issue where I could not get the buffer uploaded to the</p>

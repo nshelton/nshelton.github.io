@@ -18,8 +18,10 @@
 
 
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
+href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap">
 
 
  
@@ -258,152 +260,275 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
          <pageTitle>Minotaur Plotter</pageTitle>
          <p>Apr 2026</p>
          <p>A C++17 desktop application for converting images into vector paths and driving pen plotters in real time. Compatible with the <a href="https://shop.evilmadscientist.com/productsmenu/890">Axidraw A3</a> (now Bantam Tools)</p>
+<hr>
 <p><strong>Source</strong> : <a href="https://github.com/nshelton/Minotaur">https://github.com/nshelton/Minotaur</a></p>
-<p>(theoretically cross platform, but haven&rsquo;t build on windows for a bit of time). MasOS is supported.</p>
-<h2 id="overview"><strong>Overview</strong></h2>
+<p>(theoretically cross platform, but haven&rsquo;t build on windows for a bit of time). MacOS is supported.</p>
+<h2 id="overview">Overview</h2>
 <p>Minotaur is a tool I built from scratch for my pen plotting practice.</p>
-<p>I was really frustrated at the inkscape plugin from Axidraw. Inkscape gets slow with really large plots, and the actual plotting gui just freezes the app while it&rsquo;s plotting. I thought, it doens&rsquo;t have to be this way! I want to change the plot parameters and be able to pause, resume and see realtime progress.</p>
-<p>I don&rsquo;t need full inkscape, so it can probably be faster if i just want to see the plot, not really edit every vertex. I started with a web interface using <a href="https://github.com/nshelton/Hephaestus">Web Serial API</a> but eventually ran into a performance wall when using javascript. So i decided to go full C++.</p>
-<p>Minotaur takes raster images (or procedural generators) and converts them into drawable vector paths through configurable filter chains, then drives an AxiDraw pen plotter over USB serial. The whole thing runs at 60fps in an OpenGL/ImGui interface with live preview of every stage of the pipeline.</p>
-<p>The core idea is a nondestructive, node-style processing pipeline, i had a bunch of python scripts to modify paths and generate jsons at one point, but it&rsquo;s much easier to work on it all live ! I love realtime! The main advantage is that the app is always responsive, and you can see realtime plot progress, and change parameters while it&rsquo;s plotting.</p>
-<a href="/img/minotaur/gui.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
-  <img src="/img/minotaur/gui.jpg" class="img-responsive" />
-</a>
+<p>I have been plotting on the  <a href="https://shop.evilmadscientist.com/productsmenu/890">Axidraw A3</a> for about 5 years, now, and i love the hardware but was really frustrated at their <a href="https://github.com/evil-mad/axidraw">Inkscape driver</a>. (Inkscape)[https://inkscape.org/] is great, and I usually love FOSS like <a href="https://www.gimp.org/">GIMP</a>. However, for the plots i was trying to do, Inkscape gets slow with tond of nodes, and the actual plotting gui just freezes the app while it&rsquo;s plotting, and doesn&rsquo;t provide any feedback. I wanted:</p>
+<ul>
+<li>Pause / resume</li>
+<li>No GUI freezing</li>
+<li>Change speed, accel, pen up/pen down in realtime</li>
+<li>see realtime progress</li>
+<li>millions of nodes with no lag</li>
+<li>faster path optimisation</li>
+</ul>
+<p>Other stuff inkscape doesn&rsquo;t do, that would be cool:</p>
+<ul>
+<li>first-class image handling</li>
+<li>basic image processing and cleanup</li>
+<li>faster image to vector tracing, more options</li>
+</ul>
+<p>I don&rsquo;t need full inkscape featureset either, and I know I can definitely render millions of nodes at 60fps. Especially if I don&rsquo;t need to manually edit each one. I started with a web interface using <a href="https://github.com/nshelton/Hephaestus">Web Serial API</a> but eventually ran into a performance wall when using javascript, and didn&rsquo;t feel like doing some complicated rust/c++ -&gt; webassembly thing. So i decided to go full C++ / OpenGL / imGui.</p>
 
-<h1 id="architecture"><strong>Architecture</strong></h1>
+
+
+<figure class="lightbox-image full">
+  <a href="/img/minotaur/pikachu.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="an example filterchain">
+    <img src="/img/minotaur/pikachu.png" class="img-responsive" />
+  </a>
+  <figcaption>an example filterchain</figcaption>
+</figure>
+
+<p>So i designed this around a &ldquo;filter chain&rdquo; - where the plot itself starts out as an image, and has these modular building lbocks that can take different types of data and transform/filter it into something that&rsquo;s plottable.</p>
+<p>The core idea is a nondestructive, node-style processing pipeline, i had a bunch of python scripts to modify paths and generate jsons at one point, but it&rsquo;s much easier to work on it all live! I love realtime!</p>
+
+
+
+<figure class="lightbox-image ">
+  <a href="/img/minotaur/gui.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/minotaur/gui.jpg" class="img-responsive" />
+  </a>
+  
+</figure>
+
+<hr>
+<h1 id="architecture">Architecture</h1>
 <p>Generator -&gt; Configurable Filter Chain -&gt; Plot Spooling -&gt; Serial connection</p>
 <p>Example data flow:</p>
-<a href="/img/minotaur/pikachu.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image full">
-  <img src="/img/minotaur/pikachu.png" class="img-responsive" />
-</a>
-
 <p>The <em>PageModel</em> has &ldquo;entities&rdquo; with a transform and a pathset, or image. The <em>Filter chain</em> is a list of Filters, which output one of these types, and dynamic parameters which can control how it filters the data.</p>
-<h2 id="data-types"><em>Data Types</em></h2>
+<h2 id="data-types">Data Types</h2>
 <ul>
-<li><em>Bitmap</em> — 8-bit grayscale row-major. General image format.</li>
-<li><em>FloatImage</em> — 32-bit float, rendered with a colormap. I currently just use this for distance field experiments.</li>
-<li><em>ColorImage</em> — RGB 8-bit interleaved, used for color picking, general &ldquo;input&rdquo; format</li>
-<li><em>PathSet</em> — Vector polylines in mm coordinates. A list of list of Vec2.</li>
+<li><strong>Bitmap</strong> — 8-bit grayscale row-major. General image format.</li>
+<li><strong>FloatImage</strong> — 32-bit float, rendered with a colormap. I currently just use this for distance field experiments.</li>
+<li><strong>ColorImage</strong> — RGB 8-bit interleaved, used for color picking, general &ldquo;input&rdquo; format</li>
+<li><strong>PathSet</strong> — Vector polylines in mm coordinates. A list of list of Vec2.</li>
 </ul>
 <p>Filters are type-checked at chain construction time. A filter that takes a Bitmap and outputs a PathSet can&rsquo;t be placed after a filter that outputs a FloatImage. The system validates this when you add or reorder filters in the UI.</p>
-<h2 id="generators"><em>Generators</em></h2>
-<p><a href="/img/minotaur/osm.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
-  <img src="/img/minotaur/osm.png" class="img-responsive" />
-</a>
+<h2 id="generators"><strong>Generators</strong></h2>
+<p>
 
-<a href="/img/minotaur/bunny.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
-  <img src="/img/minotaur/bunny.png" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image2">
+  <a href="/img/minotaur/osm.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="openstreetmap path generateor - 4 layers">
+    <img src="/img/minotaur/osm.png" class="img-responsive" />
+  </a>
+  <figcaption>openstreetmap path generateor - 4 layers</figcaption>
+</figure>
+
+
+
+
+<figure class="lightbox-image image2">
+  <a href="/img/minotaur/bunny.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="mesh generator with isolines and wireframe modes">
+    <img src="/img/minotaur/bunny.png" class="img-responsive" />
+  </a>
+  <figcaption>mesh generator with isolines and wireframe modes</figcaption>
+</figure>
 </p>
 <p>Instead of importing an image, you can generate content procedurally. I will definitely add more, eventually maybe even a javascript interpreter or sometihng to do some fully generative plots. But right now this is mainly a plotter program, not really where you&rsquo;re going to do a ton of &ldquo;generative&rdquo; type stuff.</p>
 <ul>
-<li><em>SVG Import</em> — Parses SVG files via nanosvg, flattening cubic Béziers with adaptive chord-error tolerance.</li>
-<li><em>OpenStreetMap</em> — Fetches Mapbox Vector Tiles for any lat/lon region, decodes the the protobuf format, does Mercator projection math, and produces plottable PathSets of streets, buildings, water, parks, and boundaries. The ui is a little clunky but it gets the job done.</li>
-<li><em>3D Mesh Projection</em> — Loads OBJ files and projects them to 2D with hidden-line removal. The hidden-line algorithm uses scanline rasterization with a depth buffer (GPU-accelerated via OpenGL). It also supports isoline slicing along any axis for a contour-map effect.</li>
-<li><em>Text</em> — basic hershey vector font</li>
-<li><em>Primitives</em> — Circles, stars, grids for testing and geometric compositions.</li>
-<li><em>Image</em> - Can&rsquo;t be plotted, you need to convert to a PathSet</li>
+<li><strong>SVG Import</strong> — Parses SVG files via nanosvg, flattening cubic Béziers with adaptive chord-error tolerance.</li>
+<li><strong>OpenStreetMap</strong> — Fetches Mapbox Vector Tiles for any lat/lon region, decodes the the protobuf format, does Mercator projection math, and produces plottable PathSets of streets, buildings, water, parks, and boundaries. The ui is a little clunky but it gets the job done.</li>
+<li><strong>3D Mesh Projection</strong> — Loads OBJ files and projects them to 2D with hidden-line removal. The hidden-line algorithm uses scanline rasterization with a depth buffer (GPU-accelerated via OpenGL). It also supports isoline slicing along any axis for a contour-map effect.</li>
+<li><strong>Text</strong> — basic hershey vector font</li>
+<li><strong>Primitives</strong> — Circles, stars, grids for testing and geometric compositions.</li>
+<li><strong>Image</strong> - Can&rsquo;t be plotted, you need to convert to a PathSet</li>
 </ul>
-<p><a href="/img/minotaur/topo.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
-  <img src="/img/minotaur/topo.png" class="img-responsive" />
-</a>
+<p>
 
-<a href="/img/minotaur/topo2.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
-  <img src="/img/minotaur/topo2.png" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image2">
+  <a href="/img/minotaur/topo.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="isolines on a topo map of Sedona, AZ">
+    <img src="/img/minotaur/topo.png" class="img-responsive" />
+  </a>
+  <figcaption>isolines on a topo map of Sedona, AZ</figcaption>
+</figure>
+
+
+
+
+<figure class="lightbox-image image2">
+  <a href="/img/minotaur/topo2.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="isolines on a mesh of Griffith Park, LA">
+    <img src="/img/minotaur/topo2.png" class="img-responsive" />
+  </a>
+  <figcaption>isolines on a mesh of Griffith Park, LA</figcaption>
+</figure>
 </p>
 <p>Detailed topo maps made from the 3D model -&gt; isoline workflow</p>
-<h2 id="bitmap---bitmap-filters"><strong>Bitmap -&gt; Bitmap Filters</strong></h2>
+<h2 id="bitmap---bitmap-filters">Bitmap -&gt; Bitmap Filters</h2>
 <p>Sometimes you might need to clean up the bitmap before you run a trace.</p>
 <ul>
-<li><em>Color Picker</em> - convert RGB to binary grayscale, by threshold to a specific color. useful when you have different pen passes for different areas. <em>Grayscale</em> just turns RGB-&gt;gray.</li>
-<li><em>Threshold</em>, <em>Levels</em>, <em>CLAHE</em> (adaptive histogram equalization), <em>Blur</em>, <em>Rotate</em>. These have some fancy SIMD vector instructions when appropriate.</li>
-<li><em>Edge Detection</em> — Canny with configurable thresholds and Gaussian prefiltering.</li>
-<li><em>Erode</em>, <em>Dilate</em>, and <em>Skeletonize</em>. The skeletonizer extracts the medial axis of black regions down to single-pixel-wide skeletons, which produce clean single-stroke paths. I totally just stole the algorithm from scikit-image <a href="https://scikit-image.org/docs/0.25.x/auto_examples/edges/plot_skeleton.html">https://scikit-image.org/docs/0.25.x/auto_examples/edges/plot_skeleton.html</a></li>
+<li><strong>Color Picker</strong> - convert RGB to binary grayscale, by threshold to a specific color. useful when you have different pen passes for different areas. <strong>Grayscale</strong> just turns RGB-&gt;gray.</li>
+<li><strong>Threshold</strong>, <strong>Levels</strong>, <strong>CLAHE</strong> (adaptive histogram equalization), <strong>Blur</strong>, <strong>Rotate</strong>. These have some fancy SIMD vector instructions when appropriate.</li>
+<li><strong>Edge Detection</strong> — Canny with configurable thresholds and Gaussian prefiltering.</li>
+<li><strong>Erode</strong>, <strong>Dilate</strong>, and <strong>Skeletonize</strong>. The skeletonizer extracts the medial axis of black regions down to single-pixel-wide skeletons, which produce clean single-stroke paths. I totally just stole the algorithm from scikit-image <a href="https://scikit-image.org/docs/0.25.x/auto_examples/edges/plot_skeleton.html">https://scikit-image.org/docs/0.25.x/auto_examples/edges/plot_skeleton.html</a></li>
 </ul>
-<h2 id="bitmap---pathset-filters"><strong>Bitmap -&gt; PathSet Filters</strong></h2>
+<h2 id="bitmap---pathset-filters">Bitmap -&gt; PathSet Filters</h2>
 <p>This is where the interesting stuff happens. Theres a lot of different ways to try to get an image to a path, and none of them are good in general, depends on the content.</p>
 <h3 id="binary-operators"><em>Binary operators</em></h3>
 <p>These run on a black/white binary image. If the input is grayscale, it will just do a threshold.</p>
-<p><a href="/img/minotaur/stipple.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/minotaur/stipple.png" class="img-responsive" />
-</a>
- <a href="/img/minotaur/hatch.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-   <img src="/img/minotaur/hatch.png" class="img-responsive" />
- </a>
- <a href="/img/minotaur/snake.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-   <img src="/img/minotaur/snake.png" class="img-responsive" />
- </a>
+<p>
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/minotaur/stipple.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="voronoi stipping">
+    <img src="/img/minotaur/stipple.png" class="img-responsive" />
+  </a>
+  <figcaption>voronoi stipping</figcaption>
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/minotaur/hatch.png" data-toggle="lightbox" data-gallery="page-gallery" data-title=" hatching  - 4 layers ">
+    <img src="/img/minotaur/hatch.png" class="img-responsive" />
+  </a>
+  <figcaption> hatching  - 4 layers </figcaption>
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/minotaur/snake.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="flow snake">
+    <img src="/img/minotaur/snake.png" class="img-responsive" />
+  </a>
+  <figcaption>flow snake</figcaption>
+</figure>
 </p>
-<p><strong>1. stippling, 2.hatch, 3. flow snake</strong></p>
 <ul>
-<li><em>Blobs</em> - this is a simple BFS flood-fill. I spent some time optimizing this, but it&rsquo;s still kind fo slow for large images. Just draws an outline for connected components, with optinal hole-filling.</li>
-<li><em>Trace</em> this is just a greedy black-pixel-connector. It works well if you have run a <em>skeletonize</em> filter before, or have very thin lines in your image.</li>
-<li><em>Line Hatch</em>: just Parallel hatching at configurable angles. Simple but effective for shading. I also like to layer multiple plots with varying thresholds to get a full &ldquo;crosshatching&rdquo; effect.</li>
-<li><em>Flow Field Hatch</em>: Hatching that follows the image gradient direction (computed via Sobel filters or distance field tangents). Lines curve to follow the contours of the image rather than running in straight parallels. This doesn&rsquo;t totally work right, still in development.</li>
-<li><em>Concentric Outlines</em>: Generates contours at fixed intervals. This uses the distance field technique, but also is kind of in development. I wanted some more coherent &ldquo;trace&rdquo; type paths, but for fatter line images (multiple pixels wide).</li>
+<li><strong>Blobs</strong> - this is a simple BFS flood-fill. I spent some time optimizing this, but it&rsquo;s still kind fo slow for large images. Just draws an outline for connected components, with optinal hole-filling.</li>
+<li><strong>Trace</strong> this is just a greedy black-pixel-connector. It works well if you have run a <strong>skeletonize</strong> filter before, or have very thin lines in your image.</li>
+<li><strong>Line Hatch</strong>: just Parallel hatching at configurable angles. Simple but effective for shading. I also like to layer multiple plots with varying thresholds to get a full &ldquo;crosshatching&rdquo; effect.</li>
+<li><strong>Flow Field Hatch</strong>: Hatching that follows the image gradient direction (computed via Sobel filters or distance field tangents). Lines curve to follow the contours of the image rather than running in straight parallels. This doesn&rsquo;t totally work right, still in development.</li>
+<li><strong>Concentric Outlines</strong>: Generates contours at fixed intervals. This uses the distance field technique, but also is kind of in development. I wanted some more coherent &ldquo;trace&rdquo; type paths, but for fatter line images (multiple pixels wide).</li>
 </ul>
-<h3 id="grayscale-operators"><em>Grayscale operators</em></h3>
+<h3 id="grayscale-operators"><strong>Grayscale operators</strong></h3>
 <ul>
-<li><em>Voronoi Stippling</em>: Lloyd relaxation on 100k+ seed points to produce density-weighted dot distributions. This gives a hand-stippled look where darker regions have tighter dot clusters.</li>
-<li><em>Flow Snake</em>: This is kind of like the physarum algorithm. There is an &ldquo;agent&rdquo; which crawls around on the page and &ldquo;eats&rdquo; the ink, which increases the value of the pixel and surrouding area using a gaussian. Then, it moves to the darkest area in the range of its sensors (angle and distance is configurable), and repeats. Still haven&rsquo;t dialed this one in but i have made some cool proof of conecpts.</li>
+<li><strong>Voronoi Stippling</strong>: Lloyd relaxation on 100k+ seed points to produce density-weighted dot distributions. This gives a hand-stippled look where darker regions have tighter dot clusters.</li>
+<li><strong>Flow Snake</strong>: This is kind of like the physarum algorithm. There is an &ldquo;agent&rdquo; which crawls around on the page and &ldquo;eats&rdquo; the ink, which increases the value of the pixel and surrouding area using a gaussian. Then, it moves to the darkest area in the range of its sensors (angle and distance is configurable), and repeats. Still haven&rsquo;t dialed this one in but i have made some cool proof of conecpts.</li>
 </ul>
-<h2 id="pathset---pathset-filters"><strong>PathSet -&gt; PathSet Filters</strong></h2>
+<h2 id="pathset---pathset-filters">PathSet -&gt; PathSet Filters</h2>
 <p>Once you have vector paths, these filters clean them up for plotting. Maybe one day this will be automatic, but it&rsquo;s nice to be able to tune all the knobs to get it to have the amount of detail / smoothness you want.</p>
-<a href="/img/minotaur/smooth.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image full">
-  <img src="/img/minotaur/smooth.png" class="img-responsive" />
-</a>
+
+
+
+<figure class="lightbox-image full">
+  <a href="/img/minotaur/smooth.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="smoothing pipelines">
+    <img src="/img/minotaur/smooth.png" class="img-responsive" />
+  </a>
+  <figcaption>smoothing pipelines</figcaption>
+</figure>
 
 <ul>
-<li><em>Simplify</em> — Ramer-Douglas-Peucker polyline simplification with minimum segment length culling.</li>
-<li><em>Laplacian Smooth</em> - moves vertex to a weighted average of neighbors. There&rsquo;s controls for Iterations and amount.</li>
-<li><em>Subdivide</em> — Ensures a maximum distance between consecutive points. This is good to run before a laplacian smoothing so it doesn&rsquo;t move the</li>
-<li><em>Smooth</em> — Chaikin subdivision makes a ton more points, so i don&rsquo;t really use it much.</li>
+<li><strong>Simplify</strong> — <a href="https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm">Ramer-Douglas-Peucker</a> polyline simplification with minimum segment length culling.</li>
+<li><strong>Laplacian Smooth</strong> - moves vertex to a weighted average of neighbors. There&rsquo;s controls for Iterations and amount.</li>
+<li><strong>Subdivide</strong> — Ensures a maximum distance between consecutive points. This is good to run before a laplacian smoothing so it doesn&rsquo;t move the</li>
+<li><strong>Smooth</strong> — Chaikin subdivision makes a ton more points, so i don&rsquo;t really use it much.</li>
 </ul>
-<a href="/img/minotaur/flow.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image full">
-  <img src="/img/minotaur/flow.png" class="img-responsive" />
-</a>
+
+
+
+<figure class="lightbox-image full">
+  <a href="/img/minotaur/flow.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="procedulral filter chains">
+    <img src="/img/minotaur/flow.png" class="img-responsive" />
+  </a>
+  <figcaption>procedulral filter chains</figcaption>
+</figure>
 
 <ul>
-<li><em>Curl Noise</em> — Perlin noise displacement with octave-based control. Adds organic wobble to paths. I thought this would be more useful than it was, but can make things look a little more natural. I thought eventually this could be more a a &ldquo;generative&rdquo; flow where you can make all kinds of cool plots with different filters on generators, but haven&rsquo;t fully implemented any of those floes yet.</li>
+<li><strong>Curl Noise</strong> — Perlin noise displacement with octave-based control. Adds organic wobble to paths. I thought this would be more useful than it was, but can make things look a little more natural. I thought eventually this could be more a a &ldquo;generative&rdquo; flow where you can make all kinds of cool plots with different filters on generators, but haven&rsquo;t fully implemented any of those floes yet.</li>
 </ul>
-<a href="/img/minotaur/opto.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image full">
-  <img src="/img/minotaur/opto.png" class="img-responsive" />
-</a>
+
+
+
+<figure class="lightbox-image full">
+  <a href="/img/minotaur/opto.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/minotaur/opto.png" class="img-responsive" />
+  </a>
+  
+</figure>
 
 <ul>
-<li><em>Optimize</em> — Path reordering and merging to minimize total pen-up travel distance. This is kind of traveling salesman problem, but i just use a KDTree and do the greedy solution. An unoptimized plot can easilt have more pen-up traveling than pen down plotting rtime!</li>
+<li><strong>Optimize</strong> — Path reordering and merging to minimize total pen-up travel distance. This is kind of traveling salesman problem, but i just use a KDTree and do the greedy solution. An unoptimized plot can easilt have more pen-up traveling than pen down plotting time!</li>
 </ul>
 <ol>
 <li><strong>Nearest-neighbor greedy</strong> search (fast, good enough, use kD tree)</li>
 <li><strong>Hilbert curve ordering</strong> which maps 2D path positions to a 1D space-filling curve index. This makes it easier to see the plot progress. I ensure that each cell of a hilbert curve is finished before we start plotting things in aother cell.</li>
 </ol>
-<h2 id="performance"><strong>Performance</strong></h2>
-<p><a href="/img/minotaur/processor1.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image full">
-  <img src="/img/minotaur/processor1.png" class="img-responsive" />
-</a>
+<h2 id="performance">Performance</h2>
+<p>I have tried to pay close attention to making the whole thing efficient and performant from the beginning so we can easily handle millions of nodes and 4k images.</p>
+<p>
 
-<a href="/img/minotaur/circuit.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
-  <img src="/img/minotaur/circuit.png" class="img-responsive" />
-</a>
 
-<a href="/img/minotaur/4004.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
-  <img src="/img/minotaur/4004.png" class="img-responsive" />
-</a>
+<figure class="lightbox-image full">
+  <a href="/img/minotaur/processor1.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/minotaur/processor1.png" class="img-responsive" />
+  </a>
+  
+</figure>
+
+
+
+
+<figure class="lightbox-image image2">
+  <a href="/img/minotaur/circuit.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="close up of above trace showing the detail">
+    <img src="/img/minotaur/circuit.png" class="img-responsive" />
+  </a>
+  <figcaption>close up of above trace showing the detail</figcaption>
+</figure>
+
+
+
+
+<figure class="lightbox-image image2">
+  <a href="/img/minotaur/4004.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="3 layers of silicon on the intel 4004 chip">
+    <img src="/img/minotaur/4004.png" class="img-responsive" />
+  </a>
+  <figcaption>3 layers of silicon on the intel 4004 chip</figcaption>
+</figure>
 </p>
-<p>I have tried to pay close attention to making the whole thing efficient and performant from the beginning so we can easily handle millions of nodes and 4k images. Here is a plot of three layers of intel 4004 chip.</p>
 <h3 id="filter-chain-caching"><em>Filter Chain Caching</em></h3>
 <p>Each filter&rsquo;s output is cached with a generation counter. When you change a parameter, only that filter and everything downstream gets recomputed. The evaluation runs on a background thread so the UI stays responsive even during expensive operations like Voronoi stippling or mesh projection. The output accessor is non-blocking during editing and blocking when you actually spool a plot.</p>
-<h2 id="motion-planning"><strong>Motion Planning</strong></h2>
-<p><a href="/img/minotaur/motion.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image full">
-  <img src="/img/minotaur/motion.png" class="img-responsive" />
-</a>
+<h2 id="motion-planning">Motion Planning</h2>
+<p>
+
+
+<figure class="lightbox-image full">
+  <a href="/img/minotaur/motion.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="trapezoidal velocity ptofile, and cornering">
+    <img src="/img/minotaur/motion.png" class="img-responsive" />
+  </a>
+  <figcaption>trapezoidal velocity ptofile, and cornering</figcaption>
+</figure>
 
 This was the most surprising thing I encountered, i was getting really shit plots with my first custom serial driver. Gowing slow was ok, but I realized the motor can&rsquo;t instantly accelerate and if you tell it to move to a coordinate and then stop at high velocity, it&rsquo;s going to have some kickback or wiggle and your plot&rsquo;s going to look bad.</p>
 <p>The solution is a forward-backward velocity pass. This was based on the <a href="https://onehossshay.wordpress.com/2011/09/24/improving_grbl_cornering_algorithm/">Sunny Jeon&rsquo;s cornering algorithm (2011)</a> and the motion planner from the <a href="https://github.com/evil-mad/axidraw/blob/master/inkscape%20driver/motion.py">Windell Oskay&rsquo;s axidraw plugin</a></p>
 <p>Basically, you want to slow down on corners, and saccelerate smoothly when starting and stopping! Simple enough, but makes a huge difference in plot quality.</p>
-<h3 id="serial-streaming">Serial Streaming</h3>
-<p>The AxiDraw&rsquo;s EBB controller has a tiny command buffer, so the host has to stream commands in real time without gaps (which cause visible pen hesitation) or overflow (which drops commands). The PlotSpooler runs a background thread that has 1s of commands queued up. That way, the frontend can still be responsive, you can see the live plot progress overlaid on the plot!</p>
+<h2 id="serial-streaming">Serial Streaming</h2>
+
+
+
+<figure class="lightbox-image full">
+  <a href="/img/minotaur/progress.png" data-toggle="lightbox" data-gallery="page-gallery" data-title="Paths queued up are in blue, completed paths gray and paths yet to be scheduled are magenta.">
+    <img src="/img/minotaur/progress.png" class="img-responsive" />
+  </a>
+  <figcaption>Paths queued up are in blue, completed paths gray and paths yet to be scheduled are magenta.</figcaption>
+</figure>
+
+<p>The AxiDraw&rsquo;s EBB controller has a small command buffer, so the host has to stream commands in real time without gaps (which cause visible pen hesitation) or overflow (which drops commands). The PlotSpooler runs a background thread that has 1s of commands queued up. That way, the frontend can still be responsive, you can see the live plot progress overlaid on the plot.</p>
 <!-- TODO: add photo of plotter in action -->
 <!-- TODO: add before/after comparison of naive vs planned motion -->
         

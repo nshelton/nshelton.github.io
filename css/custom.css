@@ -24,11 +24,7 @@ body {
 }
 
 * {
-    /* font-family: 'DM Mono', monospace; */
-    /* font-family: 'Roboto', sans-seri*/
-    font-family: 'Noto Sans Mono', sans-serif; 
-    /* font-family: 'Balsamiq Sans', cursive; */
-    /* font-family: 'Major Mono Display', monospace; */
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 
@@ -66,34 +62,76 @@ pageTitle {
     text-decoration: none;
 }
 .content-column a{
-    color:orange;
+    color: #1ad1c6;
     text-decoration: underline;
 }
 
 .sidebar-links a{
-    color: orange;
+    color: #1ad1c6;
     text-decoration: none;
 }
 
+/* =====================================================
+   MARKDOWN ELEMENTS — chill dark palette, tweak here
+   bg is black; accents are muted / warm
+   ===================================================== */
+
+body {
+    color: #d8dcdb;          /* base body text: bright warm gray */
+}
+
+/* Headings */
+h1 { color: #ffd97a; }       /* bright sand / gold */
+h2 { color: #7ecaff; }       /* vivid sky blue */
+h3 { color: #d48cff; }       /* bright lavender */
+h4 { color: #6ee0d0; }       /* bright teal */
+h5, h6 { color: #bbb; }
+
+/* Paragraphs */
+p { color: #d8dcdb; }
+
+/* Bold */
 strong, b {
-    color: orange;
+    color: #f0f0f0;             /* bright neutral gray */
+    font-weight: 700;
 }
 
-h1, h2, h3 {
-    color: #ddd;
+/* Italic */
+em, i {
+    color: #a8a8a8;             /* dim neutral gray */
+    font-style: italic;
 }
 
-p {
-    color : #ccc
+/* Lists (ul = bullet lists get a blueish tint) */
+ul { color: #9ec7e8; }         /* soft blue tint */
+ul li { color: #9ec7e8; margin-bottom: 0.2em; }
+ol { color: #d8dcdb; }
+ol li { color: #d8dcdb; margin-bottom: 0.2em; }
+
+/* Blockquote */
+blockquote {
+    color: #9a9a9a;
+    border-left: 3px solid #333;
+    padding-left: 1em;
+    margin-left: 0;
+    font-style: italic;
 }
 
-em {
-    color: rgb(159, 159, 255);
+/* Horizontal rule */
+hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 2em 0;
 }
 
-* {
-    color:#aaa;
+/* Tables */
+table { border-collapse: collapse; margin: 1em 0; }
+th, td {
+    border: 1px solid #333;
+    padding: 6px 10px;
+    color: #d8dcdb;
 }
+th { color: #ffd97a; }
 
 img {
     margin-top: 1em;
@@ -154,13 +192,55 @@ img {
 
 .lightbox-image {
     display: inline-block;
+    margin: 0 0 1.5em 0;        /* breathing room below figure */
+}
+.lightbox-image a {
     cursor: zoom-in;
+    display: inline-block;
 }
 .lightbox-image img {
     transition: opacity 0.2s;
+    display: block;
 }
 .lightbox-image:hover img {
     opacity: 0.85;
+}
+.lightbox-image figcaption {
+    color: #888;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 1em;             /* space between image & caption */
+    text-align: center;
+}
+
+/* Ekko lightbox modal — match page background */
+.ekko-lightbox .modal-content {
+    background-color: #000;
+    border: 1px solid #222;
+    color: #d8dcdb;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+.ekko-lightbox .modal-header {
+    border-bottom: 1px solid #222;
+    color: #d8dcdb;
+}
+.ekko-lightbox .modal-footer {
+    border-top: 1px solid #222;
+    color: #d8dcdb;
+}
+.ekko-lightbox .modal-title {
+    color: #d8dcdb;
+}
+.ekko-lightbox .close {
+    color: #d8dcdb;
+    text-shadow: none;
+    opacity: 0.8;
+}
+.ekko-lightbox .close:hover {
+    opacity: 1;
+}
+.modal-backdrop.in {
+    opacity: 0.85;               /* darker overlay behind modal */
 }
 .lightbox-image:not(.image2):not(.image3):not(.full) img {
     max-width: 600px;
@@ -175,7 +255,7 @@ img {
 code, pre, pre code {
     background-color: #000;
     color: #3f3;
-    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 code {

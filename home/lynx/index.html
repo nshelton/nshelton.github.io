@@ -18,8 +18,10 @@
 
 
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
+href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap">
 
 
  
@@ -274,14 +276,26 @@ href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
 <h2 id="3d-sensor-structured-lightcalibration">3D Sensor (Structured Light) Calibration</h2>
 <p>Accuracy of our 3D scans was was Lynx Labs primary competitive advantage, after the speed and simple interface. To get globally consistent room-scale models we improved upon the standard calibration of the Structure Sensor and implemented a custom stereo vision pipeline. </p>
 <p>Reconstruction using factory calibration :</p>
-<a href="/img/lynx/uncalibrated.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
-  <img src="/img/lynx/uncalibrated.jpg" class="img-responsive" />
-</a>
+
+
+
+<figure class="lightbox-image ">
+  <a href="/img/lynx/uncalibrated.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/lynx/uncalibrated.jpg" class="img-responsive" />
+  </a>
+  
+</figure>
 
 <p>Reconstruction using custom calibration and stereo vision pipeline :</p>
-<a href="/img/lynx/calibrated.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
-  <img src="/img/lynx/calibrated.jpg" class="img-responsive" />
-</a>
+
+
+
+<figure class="lightbox-image ">
+  <a href="/img/lynx/calibrated.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/lynx/calibrated.jpg" class="img-responsive" />
+  </a>
+  
+</figure>
 
 <h2 id="hd-texture-mapping-on-3d-scans">HD Texture mapping on 3D scans</h2>
 <p>To improve visual quality of 3D scans, textures are just as important as the geometry (if not more). The VGA camera built in the Microsoft Kinect is not suitable for texture mapping, so we connected a HD webcam to the sensor. I created and implemented a novel image alignment technique and used state-of-the-art texture blending techniques.</p>

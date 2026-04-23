@@ -18,8 +18,10 @@
 
 
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet"
-href="https://fonts.googleapis.com/css?family=Noto Sans Mono">
+href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap">
 
 
  
@@ -283,24 +285,48 @@ It seems like a perfect intersection of design and art with computer science and
 <h1 id="mesh-based">Mesh Based</h1>
 <p>These involve splitting a manifold (1d or 2d surface) and then moving the nodes around in a higher dimensional space to minimise overlap</p>
 <p>The simplest version is a line, which can be split and curved to remove intersections:</p>
-<a href="/img/growth/inconvergent.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-   <img src="/img/growth/inconvergent.jpg" class="img-responsive" />
- </a>
+
+ 
+ 
+ <figure class="lightbox-image image3">
+   <a href="/img/growth/inconvergent.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+     <img src="/img/growth/inconvergent.jpg" class="img-responsive" />
+   </a>
+   
+ </figure>
 
 <p>from <a href="https://inconvergent.net/generative/differential-line/">Anders Hoff (inconvergent)</a></p>
 <p>You can also split a mesh, it is just more complicated:</p>
-<p><a href="/img/growth/split.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image2">
-   <img src="/img/growth/split.jpg" class="img-responsive" />
- </a>
+<p>
+ 
+ 
+ <figure class="lightbox-image image2">
+   <a href="/img/growth/split.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+     <img src="/img/growth/split.jpg" class="img-responsive" />
+   </a>
+   
+ </figure>
 
 From <a href="https://www.georgehart.com/Growth/GrowthForms.pdf">Growth Forms, George Hart 2009</a></p>
-<p><a href="/img/growth/thumb.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/growth/thumb.jpg" class="img-responsive" />
-</a>
+<p>
 
-<a href="/img/growth/shiny.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/growth/shiny.jpg" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image3">
+  <a href="/img/growth/thumb.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/growth/thumb.jpg" class="img-responsive" />
+  </a>
+  
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/growth/shiny.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/growth/shiny.jpg" class="img-responsive" />
+  </a>
+  
+</figure>
 </p>
 <p>Mesh generated in unity, wireframe rendered in Blender</p>
 <p>This was based on <a href="https://github.com/mxsage/growth/blob/master/src/simulation.cpp">mxsage cpp implementation</a> of <a href="http://www.andylomas.com/extra/andylomas_paper_cellular_forms_aisb50.pdf">Andy Lomas</a>.</p>
@@ -312,13 +338,25 @@ From <a href="https://www.georgehart.com/Growth/GrowthForms.pdf">Growth Forms, G
 </video>
 <p>There was no advection here, just random particle movement.
 This uses unity sopheres and colliders, which got quite slow as unity only supoorts around 10,000 colliders maximum.</p>
-<p><a href="/img/growth/grow4.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/growth/grow4.png" class="img-responsive" />
-</a>
+<p>
 
-<a href="/img/growth/grow5.png" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-  <img src="/img/growth/grow5.png" class="img-responsive" />
-</a>
+
+<figure class="lightbox-image image3">
+  <a href="/img/growth/grow4.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/growth/grow4.png" class="img-responsive" />
+  </a>
+  
+</figure>
+
+
+
+
+<figure class="lightbox-image image3">
+  <a href="/img/growth/grow5.png" data-toggle="lightbox" data-gallery="page-gallery">
+    <img src="/img/growth/grow5.png" class="img-responsive" />
+  </a>
+  
+</figure>
 </p>
 <p>These particles were advected using divergence-free curl noise</p>
 <video width="500" height="350" controls autoplay loop>
@@ -338,21 +376,39 @@ the most well known is probably turing patterns, using <a href="https://mrob.com
 <video width="250"  controls autoplay loop>
 <source src="/img/growth/gray.mp4" type="video/mp4" >
 </video>
- <a href="/img/growth/gray%20scott.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image ">
-   <img src="/img/growth/gray%20scott.jpg" class="img-responsive" />
- </a>
+ 
+ 
+ 
+ <figure class="lightbox-image ">
+   <a href="/img/growth/gray%20scott.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+     <img src="/img/growth/gray%20scott.jpg" class="img-responsive" />
+   </a>
+   
+ </figure>
 
 <p><a href="https://nshelton.github.io/webgl-shader-demos/rd-fluid-vort.html">live demo</a></p>
 <p>Dendritic solidification, Laplacian growth</p>
 <p>I was intrigued by <a href="https://n-e-r-v-o-u-s.com/projects/albums/laplacian-growth/">Nervous System</a> and wondered how to implement this in real time using compute shaders.</p>
-<a href="/img/growth/formula1.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-   <img src="/img/growth/formula1.jpg" class="img-responsive" />
- </a>
+
+ 
+ 
+ <figure class="lightbox-image image3">
+   <a href="/img/growth/formula1.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+     <img src="/img/growth/formula1.jpg" class="img-responsive" />
+   </a>
+   
+ </figure>
 
 <p>They just showed these equations briefly at the beginning of a video once</p>
-<a href="/img/growth/formula2.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-   <img src="/img/growth/formula2.jpg" class="img-responsive" />
- </a>
+
+ 
+ 
+ <figure class="lightbox-image image3">
+   <a href="/img/growth/formula2.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+     <img src="/img/growth/formula2.jpg" class="img-responsive" />
+   </a>
+   
+ </figure>
 
 <p>Eventually I found this paper  <a href="https://projecteuclid.org/download/pdf_1/euclid.em/1062621004">Ryo Kobayashi 1994</a> with a similar equation. notably the m is now dependeat on the temperateure and gradient of the phase field, creating anisotropic growth.</p>
 <p>The simulation works by storing the temperature and phase of each cell of the grid.
@@ -366,9 +422,15 @@ In this case liquid would be phase=0, solid phase=1</p>
 <source src="/img/growth/mushroom.mp4" type="video/mp4" >
 </video>
 <p>These look like classic dendritic solidificaiton (above)</p>
-<a href="/img/growth/copper.jpg" data-toggle="lightbox" data-gallery="page-gallery" class="lightbox-image image3">
-   <img src="/img/growth/copper.jpg" class="img-responsive" />
- </a>
+
+ 
+ 
+ <figure class="lightbox-image image3">
+   <a href="/img/growth/copper.jpg" data-toggle="lightbox" data-gallery="page-gallery">
+     <img src="/img/growth/copper.jpg" class="img-responsive" />
+   </a>
+   
+ </figure>
 
 <p>Pure copper crystal <a href="https://en.wikipedia.org/wiki/Dendrite_(metal)#/media/File:Copper,_dendritic_crystal.tif">wikipedia</a></p>
 <video width="500" height="350" controls autoplay loop>
